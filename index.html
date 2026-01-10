@@ -12,20 +12,20 @@
 
 
 
-<header class="bg-black text-white pt-[30px] pb-[15px] text-[12px] min-[640px]:text-[13px] min-[960px]:text-[15px]">
-    <div class="max-w-[1200px] mx-auto px-[30px]">
-
-        <div class="flex items-center justify-between sm:hidden h-[40px]">
-            <nav class="flex items-center gap-[24px]">
-                <a href="#">Кампании</a>
-                <a href="#">Исследования</a>
-                <a href="#">VPN</a>
-            </nav>
-            <div class="flex items-center gap-[16px]">
-                <a href="#" class="text-[#555555]">En</a>
-                <a href="#">Ру</a>
-            </div>
+<header class="bg-black text-white pt-[30px] pb-[15px] text-[24px] min-[640px]:text-[13px] min-[960px]:text-[15px]">
+    <div class="max-w-[1200px] mx-auto px-[16px] min-[960px]:px-[30px]">
+      <div class="flex items-center justify-between sm:hidden h-[40px]">
+        <nav class="flex items-center gap-[clamp(12px,4vw,24px)]">
+          <a href="#" class="text-[clamp(13px,3.2vw,16px)]">Кампании</a>
+          <a href="#" class="text-[clamp(13px,3.2vw,16px)]">Исследования</a>
+          <a href="#" class="text-[clamp(13px,3.2vw,16px)]">VPN</a>
+        </nav>
+        <div class="flex items-center gap-[clamp(20px,5vw,32px)]">
+          <a href="#" class="text-[clamp(13px,3.2vw,16px)] text-[#555555]">En</a>
+          <a href="#" class="text-[clamp(13px,3.2vw,16px)]">Ру</a>
         </div>
+      </div>
+
 
         <div class="hidden sm:flex max-w-[1200px] mx-auto  h-[70px] items-center justify-between gap-[80px]">
             <nav class="flex items-center justify-between w-full whitespace-nowrap">
@@ -53,24 +53,26 @@
 
 
 <section class="bg-black text-white">
-  <div class="mx-auto max-w-[1200px] px-4 py-4 h-[500px] sm:h-[600px] lg:h-[400px]">
+  <div class="mx-auto max-w-[1200px] px-4 py-4 ">
     <div class="h-full flex flex-col lg:flex-row justify-between">
-      <div class="flex items-start">
-        <h1 class="text-white font-bold leading-none text-[83px] min-[640px]:text-[140px] min-[960px]:text-[120px]">
+      <div class="flex items-start mb-8">
+        <h1 class="text-white font-bold leading-none text-[clamp(60px,20vw,140px)] min-[960px]:text-[120px]">
           RKS<br>Global
         </h1>
       </div>
-      <div class=" lg:mt-[26px] lg:ml-[160px] flex flex-col gap-5 max-w-md lg:max-w-sm opacity-65">
-        <p class="text-[#e0e0e0] text-[17px] leading-[26px] font-medium" >
-          Мы&nbsp;— команда экспертов в&nbsp;области свободы интернета:
-          журналисты, юристы и&nbsp;технические специалисты.
+      <div class="lg:mt-[26px] lg:ml-[160px] flex flex-col gap-5 lg:max-w-sm opacity-65 mb-[200px]">
+        <p class="text-[#e0e0e0] text-[clamp(14px,5vw,32px)] min-[640px]:text-[17px]  font-normal">
+          Мы — команда экспертов в области свободы интернета:
+          журналисты, юристы и технические специалисты.
         </p>
-        <p class="text-[#e0e0e0] text-[17px] leading-[26px] font-medium" >
-          Цель нашей работы&nbsp;— продвижение и&nbsp;защита прав и&nbsp;свобод
-          человека, а&nbsp;также развитие и&nbsp;расширение его возможностей
-          в&nbsp;цифровой среде.
+
+        <p class="text-[#e0e0e0] text-[clamp(14px,5vw,32px)] min-[640px]:text-[17px] font-normal">
+          Цель нашей работы — продвижение и защита прав и свобод
+          человека, а также развитие и расширение его возможностей
+          в цифровой среде.
         </p>
       </div>
+
     </div>
   </div>
 </section>
@@ -83,23 +85,37 @@
 
 <section class="relative bg-black text-white px-[20px] ">
 
-    <div class="max-w-[1200px] mx-auto flex border-[3px] border-white rounded-[20px] p-[24px]" >
-        <div class="relative">
-            <div class="absolute -top-[38px] bg-white text-black  px-3 py-1 rounded-full text-[10px] font-semibold uppercase">
-                ИССЛЕДОВАНИЕ
-            </div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="max-w-[1200px] mx-auto border-[3px] border-white rounded-[20px] p-[24px]">
+    <div class="relative"> 
+      <div class="absolute -top-[38px] bg-white text-black px-3 py-1 rounded-full text-[10px] font-semibold uppercase"> 
+        ИССЛЕДОВАНИЕ 
+      </div> 
+    </div> 
+    <div class="flex flex-col sm:flex-row items-start gap-6">
+        <div class="order-1 sm:order-2 w-full sm:w-auto">
+            <img src="images/Надзирать.png" alt="" class="w-full h-[284px] min-[640px]:w-[360px] min-[640px]:h-[200px] mx-auto sm:mx-0">
         </div>
-        <div class="flex flex-col justify-between max-w-[800px] ">
+        <div class="flex flex-col justify-between max-w-[800px] order-2 sm:order-1 w-full">
             <div class="space-y-[10px]">
-                <h3 class="text-[30px] font-medium leading-tight">Надзирать и отказывать<br>(в доступе)</h3>
-                <p class="text-[14px] text-[#e0e0e0]">Будущее российской цензуры: сканирование горизонтов до 2028 г.</p>
-            </div>
-            <button class="py-[12px] max-w-[222px] px-[24px] bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] ">Подробнее</button>
+              <h3 class="text-[30px] font-medium leading-tight">Надзирать и отказывать<br>(в доступе)</h3> 
+              <p class="text-[14px] text-[#e0e0e0]">Будущее российской цензуры: сканирование горизонтов до 2028 г.</p> 
+            </div> 
+            <button class="mt-4 py-[12px] w-full min-[640px]:w-[222px] px-[24px] bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] ">Подробнее</button>
         </div>
-        <div class="ml-auto">
-            <img src="images/Надзирать.png" alt="" class="w-[360px] h-[200px]">
-        </div>
+
     </div>
+</div>
 </section>
 
 
