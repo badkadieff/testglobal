@@ -1,8 +1,8 @@
 
 @font-face {
   font-family: "Unbounded";
-  src: url("/fonts/Unbounded-Light.woff2") format("woff2"),
-       url("/fonts/Unbounded-Light.woff") format("woff");
+  src: url("./fonts/Unbounded-Light.woff2") format("woff2"),
+       url("./fonts/Unbounded-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -11,8 +11,8 @@
 
 @font-face {
   font-family: "Unbounded";
-  src: url("/fonts/Unbounded-Regular.woff2") format("woff2"),
-       url("/fonts/Unbounded-Regular.woff") format("woff");
+  src: url("./fonts/Unbounded-Regular.woff2") format("woff2"),
+       url("./fonts/Unbounded-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -21,8 +21,8 @@
 
 @font-face {
   font-family: "Unbounded";
-  src: url("/fonts/Unbounded-Medium.woff2") format("woff2"),
-       url("/fonts/Unbounded-Medium.woff") format("woff");
+  src: url("./fonts/Unbounded-Medium.woff2") format("woff2"),
+       url("./fonts/Unbounded-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -31,8 +31,8 @@
 
 @font-face {
   font-family: "Unbounded";
-  src: url("/fonts/Unbounded-Bold.woff2") format("woff2"),
-       url("/fonts/Unbounded-Bold.woff") format("woff");
+  src: url("./fonts/Unbounded-Bold.woff2") format("woff2"),
+       url("./fonts/Unbounded-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -41,8 +41,8 @@
 
 @font-face {
   font-family: "Unbounded";
-  src: url("/fonts/Unbounded-Black.woff2") format("woff2"),
-       url("/fonts/Unbounded-Black.woff") format("woff");
+  src: url("./fonts/Unbounded-Black.woff2") format("woff2"),
+       url("./fonts/Unbounded-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -53,8 +53,8 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("/fonts/Inter-Regular.woff2") format("woff2"),
-       url("/fonts/Inter-Regular.woff") format("woff");
+  src: url("./fonts/Inter-Regular.woff2") format("woff2"),
+       url("./fonts/Inter-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -63,8 +63,8 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("/fonts/Inter-Medium.woff2") format("woff2"),
-       url("/fonts/Inter-Medium.woff") format("woff");
+  src: url("./fonts/Inter-Medium.woff2") format("woff2"),
+       url("./fonts/Inter-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -73,8 +73,8 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("/fonts/Inter-SemiBold.woff2") format("woff2"),
-       url("/fonts/Inter-SemiBold.woff") format("woff");
+  src: url("./fonts/Inter-SemiBold.woff2") format("woff2"),
+       url("./fonts/Inter-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
