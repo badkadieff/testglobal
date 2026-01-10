@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Пример поста — Блог</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] } } } }
+    </script>
+  </head>
+
+  <body class="bg-white text-black selection:bg-black selection:text-white font-sans">
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-black/10">
+    <div class="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
+      <a href="/" class="text-lg font-semibold tracking-tight">Название проекта</a>
+      <div class="flex items-center gap-4">
+        <nav class="text-sm opacity-80">
+          <a href="/" class="hover:underline">Главная</a>
+        </nav>
+        <div class="text-sm">
+          <a class="hover:underline" href="/en/posts/sample-post.html">En</a>
+          <span class="opacity-30">/</span>
+          <a class="hover:underline" href="/posts/sample-post.html">Ру</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 py-10">
+    <article class="prose lg:prose-xl">
+      <p class="text-sm uppercase tracking-wide opacity-70">Research • 2026</p>
+      <h1>Пример заголовка поста</h1>
+
+      <p>Это демонстрационный пост, чтобы показать структуру страницы статьи в вашем блоге. Здесь обычно размещается лид, картинка и основной текст.</p>
+
+      <figure>
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=60" alt="" />
+        <figcaption>Иллюстрация к статье</figcaption>
+      </figure>
+
+      <h2>Подзаголовок</h2>
+      <p>Текст статьи. Используйте заголовки, списки, цитаты и код, чтобы структурировать материал.</p>
+
+      <p>Автор: Команда проекта</p>
+
+      <p><a href="/">← Вернуться на главную</a></p>
+    </article>
+  </main>
+
+  <footer class="mx-auto max-w-6xl px-4 py-8 border-t border-black/10 text-sm opacity-80">
+    © 2026
+  </footer>
+</body>
+</html>
