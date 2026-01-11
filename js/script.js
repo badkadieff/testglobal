@@ -27,7 +27,7 @@
       const text = document.getElementById('scrollText');
 
       window.addEventListener('scroll', () => {
-        const offset = window.scrollY * 0.3; // скорость движения
+        const offset = window.scrollY * 0.3; //
         text.style.transform = `translateX(${-offset}px)`;
       });
     });
