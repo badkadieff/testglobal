@@ -10,50 +10,62 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="/images/RKSGlobal.png">
     <title>RKS Global</title>
+    
     <link href="css/font.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link rel="icon" href="images/favicon.svg">
     <script src="js/tailwindcss.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/i18next@23.12.2/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@7.2.1/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="js/i18n/page-index.js"></script>
 </head>
 
-
-<body class="no-break-prepositions">
+<body class="no-break-prepositions" data-page="index">
   
   <header class="bg-black text-white pt-[30px] pb-[15px] text-[24px] min-[640px]:text-[13px] min-[960px]:text-[15px]">
       <div class="max-w-[1200px] mx-auto px-[16px] min-[960px]:px-[30px]">
         <div class="flex items-center justify-between sm:hidden h-[40px]">
           <nav class="flex items-center gap-[clamp(12px,4vw,24px)]">
-            <a href="campaigns.html" class="text-[clamp(15px,3.2vw,18px)]">Кампании</a>
-            <a href="research.html" class="text-[clamp(15px,3.2vw,18px)]">Исследования</a>
-            <a href="https://rksvpn.com/" target="_blank" class="text-[clamp(15px,3.2vw,18px)]">VPN</a>
+            <a href="campaign.html" class="text-[clamp(15px,3.2vw,18px)]" data-i18n="nav.campaigns">Кампании</a>
+            <a href="research.html" class="text-[clamp(15px,3.2vw,18px)]" data-i18n="nav.research">Исследования</a>
+            <a href="https://rksvpn.com/" target="_blank" class="text-[clamp(15px,3.2vw,18px)]" data-i18n="nav.vpn">VPN</a>
           </nav>
-          <div class="flex items-center gap-[clamp(20px,5vw,32px)]">
-            <a href="#" class="text-[clamp(15px,3.2vw,18px)] text-[#555555]">En</a>
-            <a href="#" class="text-[clamp(15px,3.2vw,18px)]">Ру</a>
+          <div class="text-white space-x-[20px] text-[15px] font-medium">
+              <button type="button" class="lang-switch opacity-60 hover:opacity-100 transition-opacity" data-lang="en" onclick="setLanguage('en')">
+                  En
+              </button>
+              <button type="button" class="lang-switch opacity-100 hover:opacity-100 transition-opacity" data-lang="ru" onclick="setLanguage('ru')">
+                  Ру
+              </button>
           </div>
         </div>
 
+        <!-- desktop -->
+        <div class="hidden sm:flex max-w-[1200px] mx-auto h-[70px] items-center justify-between gap-[80px]">
+            <nav class="flex items-center justify-between w-full whitespace-nowrap">
+                <a class="pr-[clamp(16px,3vw,60px)]" href="#about" data-i18n="nav.about">О нас</a>
+                <div class="h-[1px] flex-1 bg-white"></div>
+                <a class="px-[clamp(16px,3vw,60px)]" href="campaign.html" data-i18n="nav.campaigns">Кампании</a>
+                <div class="h-[1px] flex-1 bg-white"></div>
+                <a class="px-[clamp(16px,3vw,60px)]" href="research.html" data-i18n="nav.research">Исследования</a>
+                <div class="h-[1px] flex-1 bg-white"></div>
+                <a class="pl-[clamp(16px,3vw,60px)]" href="#contacts" data-i18n="nav.contacts">Контакты</a>
+            </nav>
 
-          <div class="hidden sm:flex max-w-[1200px] mx-auto  h-[70px] items-center justify-between gap-[80px]">
-              <nav class="flex items-center justify-between w-full whitespace-nowrap">
-                  <a class="pr-[clamp(16px,3vw,60px)]" href="#about">О нас</a>
-                  <div class="h-[1px] flex-1 bg-white"></div>
-                  <a class="px-[clamp(16px,3vw,60px)]" href="campaigns.html">Кампании</a>
-                  <div class="h-[1px] flex-1 bg-white"></div>
-                  <a class="px-[clamp(16px,3vw,60px)]" href="research.html">Исследования</a>
-                  <div class="h-[1px] flex-1 bg-white"></div>
-                  <a class="pl-[clamp(16px,3vw,60px)]" href="#contacts">Контакты</a>
-              </nav>
+            <div>
+                <a href="https://rksvpn.com/" target="_blank" data-i18n="nav.vpn">VPN</a>
+            </div>
 
-              <div>
-                  <a href="https://rksvpn.com/" target="_blank">VPN</a>
-              </div>
-              <div class="flex gap-[20px]">
-                  <a href="#">En</a>
-                  <a href="#">Ру</a>
-              </div>
-          </div>
+            <div class="flex gap-[20px]">
+                <button type="button" class="lang-switch opacity-60 hover:opacity-100 transition-opacity" data-lang="en" onclick="setLanguage('en')">
+                  En
+                </button>
+                <button type="button" class="lang-switch opacity-100 hover:opacity-100 transition-opacity" data-lang="ru" onclick="setLanguage('ru')">
+                  Ру
+                </button>
+            </div>
+        </div>
 
       </div>
   </header>
@@ -61,7 +73,7 @@
 
 
   <section class="bg-black text-white">
-    <div class="mx-auto max-w-[1200px] px-4 py-4 ">
+    <div class="mx-auto max-w-[1200px] px-4 py-4">
       <div class="h-full flex flex-col lg:flex-row justify-between">
         <div class="flex items-start mb-8">
           <h1 class="text-white font-bold leading-none text-[clamp(60px,20vw,160px)] min-[960px]:text-[120px]">
@@ -69,12 +81,12 @@
           </h1>
         </div>
         <div class="lg:mt-[26px] lg:ml-[160px] flex flex-col gap-5 lg:max-w-sm opacity-65 mb-[200px]">
-          <p class="text-[#e0e0e0] text-[clamp(14px,5vw,32px)] min-[640px]:text-[17px]  font-normal">
+          <p class="text-[#e0e0e0] text-[clamp(14px,5vw,32px)] min-[640px]:text-[17px] font-normal" data-i18n="hero.p1">
             Мы — команда экспертов в области свободы интернета:
             журналисты, юристы и технические специалисты.
           </p>
 
-          <p class="text-[#e0e0e0] text-[clamp(14px,5vw,32px)] min-[640px]:text-[17px] font-normal">
+          <p class="text-[#e0e0e0] text-[clamp(14px,5vw,32px)] min-[640px]:text-[17px] font-normal" data-i18n="hero.p2">
             Цель нашей работы — продвижение и защита прав и свобод
             человека, а также развитие и расширение его возможностей
             в цифровой среде.
@@ -85,298 +97,303 @@
     </div>
   </section>
 
+  <section class="relative bg-black text-white px-[20px] space-y-[100px] pt-[60px] pb-[100px]">
 
-
-
-
-
-  <section class="relative bg-black text-white px-[20px] space-y-[100px] pt-[60px] pb-[100px] ">
-
-    <div class="max-w-[1200px] mx-auto border-[3px] border-white rounded-[20px] p-[24px] ">
+    <!-- 1 -->
+    <div class="max-w-[1200px] mx-auto border-[3px] border-white rounded-[20px] p-[24px]">
       <div class="relative"> 
-        <div class="absolute -top-[36px] bg-white text-black px-3 py-1 rounded-full text-[12px] min-[640px]:text-[10px] font-semibold uppercase"> 
-          Исследование 
+        <div class="absolute -top-[36px] bg-white text-black px-3 py-1 rounded-full text-[12px] min-[640px]:text-[10px] font-semibold uppercase" data-i18n="badge.research">
+          Исследование
         </div> 
       </div> 
       <div class="flex flex-col sm:flex-row items-start gap-6">
         <div class="order-1 sm:order-2 w-full sm:w-auto sm:flex-none sm:shrink-0">
-          <img  src="images/blog/Надзирать.png"  class="mx-auto sm:mx-0 object-cover rounded-[10px] w-full max-[639px]:aspect-[510/284] min-[640px]:max-[959px]:w-[clamp(16rem,50vw,20rem)] min-[640px]:max-[959px]:aspect-[320/176] min-[960px]:w-[22.5rem] min-[960px]:h-[12.5rem] min-[960px]:min-w-[22.5rem] ">
+          <img src="images/blog/Надзирать.png"
+               class="mx-auto sm:mx-0 object-cover rounded-[10px] w-full max-[639px]:aspect-[510/284] min-[640px]:max-[959px]:w-[clamp(16rem,50vw,20rem)] min-[640px]:max-[959px]:aspect-[320/176] min-[960px]:w-[22.5rem] min-[960px]:h-[12.5rem] min-[960px]:min-w-[22.5rem]">
         </div>
-        <div class="flex flex-col justify-between max-w-[800px] order-2 sm:order-1 w-full">
+        <div class="flex flex-col justify-between max-w-[800px] order-2 sm:order-1 w-full min-h-[220px]">
           <div class="space-y-[10px] max-w-[700px]">
-            <h3 class="text-[#e0e0e0] font-medium leading-tight text-[23px] max-[639px]:text-[clamp(16px,5vw,29px)] min-[960px]:text-[30px] ">
+            <h3 class="text-[#e0e0e0] font-medium leading-tight text-[23px] max-[639px]:text-[clamp(16px,5vw,29px)] min-[960px]:text-[30px]" data-i18n="cards.supervise_title">
               Надзирать и отказывать<br>(в доступе)
             </h3> 
-            <p class="text-[#e0e0e0] text-[13px] max-[639px]:text-[clamp(13px,3vw,16px)]">
+            <p class="text-[#e0e0e0] text-[13px] max-[639px]:text-[clamp(13px,3vw,16px)]" data-i18n="cards.supervise_subtitle">
               Будущее российской цензуры: сканирование горизонтов до 2028 г.
             </p> 
           </div> 
-          <button onclick="window.location.href='posts/supervise-and-deny.html'" class="mt-12 w-full min-[640px]:w-[222px] bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] transition-colors duration-200 text-[14px] py-[12px] px-[24px] max-[639px]:text-[clamp(15px,3vw,17px)] max-[639px]:py-[clamp(14px,3vw,18px)] max-[639px]:px-[clamp(24px,5vw,32px)]">
+          <button onclick="window.location.href='posts/supervise-and-deny.html'" class="mt-auto w-full min-[640px]:w-[222px] bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] transition-colors duration-200 text-[14px] py-[12px] px-[24px] max-[639px]:text-[clamp(15px,3vw,17px)] max-[639px]:py-[clamp(14px,3vw,18px)] max-[639px]:px-[clamp(24px,5vw,32px)]" data-i18n="buttons.more">
             Подробнее
           </button>
         </div>
       </div>
     </div>
 
+    <!-- 2 -->
     <div class="max-w-[1200px] mx-auto border-[3px] border-white rounded-[20px] p-[24px]">
       <div class="relative"> 
-        <div class="absolute -top-[36px] bg-white text-black px-3 py-1 rounded-full text-[12px] min-[640px]:text-[10px] font-semibold uppercase"> 
-          Исследование 
+        <div class="absolute -top-[36px] bg-white text-black px-3 py-1 rounded-full text-[12px] min-[640px]:text-[10px] font-semibold uppercase" data-i18n="badge.research">
+          Исследование
         </div> 
       </div> 
       <div class="flex flex-col sm:flex-row items-start gap-6">
         <div class="order-1 sm:order-2 w-full sm:w-auto sm:flex-none sm:shrink-0">
-          <img  src="images/blog/Тестирование MAX.png"  class="mx-auto sm:mx-0 object-cover rounded-[10px] w-full max-[639px]:aspect-[510/284] min-[640px]:max-[959px]:w-[clamp(16rem,50vw,20rem)] min-[640px]:max-[959px]:aspect-[320/176] min-[960px]:w-[22.5rem] min-[960px]:h-[12.5rem] min-[960px]:min-w-[22.5rem] ">
+          <img src="images/blog/Тестирование MAX.png" class="mx-auto sm:mx-0 object-cover rounded-[10px] w-full max-[639px]:aspect-[510/284] min-[640px]:max-[959px]:w-[clamp(16rem,50vw,20rem)] min-[640px]:max-[959px]:aspect-[320/176] min-[960px]:w-[22.5rem] min-[960px]:h-[12.5rem] min-[960px]:min-w-[22.5rem]">
         </div>
-        <div class="flex flex-col justify-between max-w-[800px] order-2 sm:order-1 w-full">
+        <div class="flex flex-col justify-between max-w-[800px] order-2 sm:order-1 w-full min-h-[220px]">
           <div class="space-y-[10px] max-w-[700px]">
-            <h3 class="text-[#e0e0e0] font-medium leading-tight text-[23px] max-[639px]:text-[clamp(16px,5vw,29px)] min-[960px]:text-[30px] ">
+            <h3 class="text-[#e0e0e0] font-medium leading-tight text-[23px] max-[639px]:text-[clamp(16px,5vw,29px)] min-[960px]:text-[30px]" data-i18n="cards.max_title">
               Тестирование слежки в MAX на Android и iPhone
             </h3> 
           </div> 
-          <button onclick="window.location.href='posts/testirovanie-slezhki-v-max-na-android-i-iphone.html'" class="mt-20 w-full min-[640px]:w-[222px] bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] transition-colors duration-200 text-[14px] py-[12px] px-[24px] max-[639px]:text-[clamp(15px,3vw,17px)] max-[639px]:py-[clamp(14px,3vw,18px)] max-[639px]:px-[clamp(24px,5vw,32px)]">
+          <button onclick="window.location.href='posts/testirovanie-slezhki-v-max-na-android-i-iphone.html'" class="mt-auto w-full min-[640px]:w-[222px] bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] transition-colors duration-200 text-[14px] py-[12px] px-[24px] max-[639px]:text-[clamp(15px,3vw,17px)] max-[639px]:py-[clamp(14px,3vw,18px)] max-[639px]:px-[clamp(24px,5vw,32px)]" data-i18n="buttons.more">
             Подробнее
           </button>
         </div>
       </div>
     </div>
 
+    <!-- 3 -->
     <div class="max-w-[1200px] mx-auto border-[3px] border-white rounded-[20px] p-[24px]">
       <div class="relative"> 
-        <div class="absolute -top-[36px] bg-white text-black px-3 py-1 rounded-full text-[12px] min-[640px]:text-[10px] font-semibold uppercase"> 
-          Исследование 
+        <div class="absolute -top-[36px] bg-white text-black px-3 py-1 rounded-full text-[12px] min-[640px]:text-[10px] font-semibold uppercase" data-i18n="badge.research">
+          Исследование
         </div> 
       </div> 
       <div class="flex flex-col sm:flex-row items-start gap-6">
         <div class="order-1 sm:order-2 w-full sm:w-auto sm:flex-none sm:shrink-0">
-          <img  src="images/blog/Худшие времена Рунета.png"  class="mx-auto sm:mx-0 object-cover rounded-[10px] w-full max-[639px]:aspect-[510/284] min-[640px]:max-[959px]:w-[clamp(16rem,50vw,20rem)] min-[640px]:max-[959px]:aspect-[320/176] min-[960px]:w-[22.5rem] min-[960px]:h-[12.5rem] min-[960px]:min-w-[22.5rem] ">
+          <img src="images/blog/ХудшиевременаРунета.png" class="mx-auto sm:mx-0 object-cover rounded-[10px] w-full max-[639px]:aspect-[510/284] min-[640px]:max-[959px]:w-[clamp(16rem,50vw,20rem)] min-[640px]:max-[959px]:aspect-[320/176] min-[960px]:w-[22.5rem] min-[960px]:h-[12.5rem] min-[960px]:min-w-[22.5rem]">
         </div>
-        <div class="flex flex-col justify-between max-w-[800px] order-2 sm:order-1 w-full">
+        <div class="flex flex-col justify-between max-w-[800px] order-2 sm:order-1 w-full min-h-[220px]">
           <div class="space-y-[10px] max-w-[700px]">
-            <h3 class="text-[#e0e0e0] font-medium leading-tight text-[23px] max-[639px]:text-[clamp(16px,5vw,29px)] min-[960px]:text-[30px] ">
+            <h3 class="text-[#e0e0e0] font-medium leading-tight text-[23px] max-[639px]:text-[clamp(16px,5vw,29px)] min-[960px]:text-[30px]" data-i18n="cards.runet_title">
               Худшие времена Рунета. Обзор интернет-цензуры в России в 2024-м году
             </h3> 
           </div> 
-          <button onclick="window.location.href='posts/hudshie-vremena-runeta.html'" class="mt-16 w-full min-[640px]:w-[222px] bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] transition-colors duration-200 text-[14px] py-[12px] px-[24px] max-[639px]:text-[clamp(15px,3vw,17px)] max-[639px]:py-[clamp(14px,3vw,18px)] max-[639px]:px-[clamp(24px,5vw,32px)]">
+          <button onclick="window.location.href='posts/hudshie-vremena-runeta.html'" class="mt-auto w-full min-[640px]:w-[222px] bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] transition-colors duration-200 text-[14px] py-[12px] px-[24px] max-[639px]:text-[clamp(15px,3vw,17px)] max-[639px]:py-[clamp(14px,3vw,18px)] max-[639px]:px-[clamp(24px,5vw,32px)]" data-i18n="buttons.more">
             Подробнее
           </button>
         </div>
       </div>
     </div>
 
+    <!-- 4 – открытое письмо (праздники) -->
     <div class="max-w-[1200px] mx-auto border-[3px] border-white rounded-[20px] p-[24px]">
       <div class="relative"> 
-        <div class="absolute -top-[36px] bg-white text-black px-3 py-1 rounded-full text-[12px] min-[640px]:text-[10px] font-semibold uppercase"> 
-          Открытое письмо 
+        <div class="absolute -top-[36px] bg-white text-black px-3 py-1 rounded-full text-[12px] min-[640px]:text-[10px] font-semibold uppercase" data-i18n="badge.openLetter">
+          Открытое письмо
         </div> 
       </div> 
       <div class="flex flex-col sm:flex-row items-start gap-6">
         <div class="order-1 sm:order-2 w-full sm:w-auto sm:flex-none sm:shrink-0">
-          <img  src="images/blog/отключения во время национальных праздников.png"  class="mx-auto sm:mx-0 object-cover rounded-[10px] w-full max-[639px]:aspect-[510/284] min-[640px]:max-[959px]:w-[clamp(16rem,50vw,20rem)] min-[640px]:max-[959px]:aspect-[320/176] min-[960px]:w-[22.5rem] min-[960px]:h-[12.5rem] min-[960px]:min-w-[22.5rem] ">
+          <img src="images/blog/отключения во время национальных праздников.png" class="mx-auto sm:mx-0 object-cover rounded-[10px] w-full  max-[639px]:aspect-[510/284]  min-[640px]:max-[959px]:w-[clamp(16rem,50vw,20rem)] min-[640px]:max-[959px]:aspect-[320/176] min-[960px]:w-[22.5rem] min-[960px]:h-[12.5rem] min-[960px]:min-w-[22.5rem]">
         </div>
-        <div class="flex flex-col justify-between max-w-[800px] order-2 sm:order-1 w-full">
+        <div class="flex flex-col justify-between max-w-[800px] order-2 sm:order-1 w-full min-h-[220px]">
           <div class="space-y-[10px] max-w-[700px]">
-            <h3 class="text-[#e0e0e0] font-medium leading-tight text-[23px] max-[639px]:text-[clamp(16px,5vw,29px)] min-[960px]:text-[30px] ">
+            <h3 class="text-[#e0e0e0] font-medium leading-tight text-[23px] max-[639px]:text-[clamp(16px,5vw,29px)] min-[960px]:text-[30px]" data-i18n="cards.holidays_letter_title">
               Российские власти должны воздержаться от отключений во время национальных праздников и мероприятий
             </h3> 
           </div> 
-          <button onclick="window.location.href='posts/rossiyskie-otklyucheniya-prazdniki.html'" class="mt-4 w-full min-[640px]:w-[222px] bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] transition-colors duration-200 text-[14px] py-[12px] px-[24px] max-[639px]:text-[clamp(15px,3vw,17px)] max-[639px]:py-[clamp(14px,3vw,18px)] max-[639px]:px-[clamp(24px,5vw,32px)]">
+          <button onclick="window.location.href='posts/rossiyskie-otklyucheniya-prazdniki.html'" class="mt-auto w-full min-[640px]:w-[222px] bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] transition-colors duration-200 text-[14px] py-[12px] px-[24px] max-[639px]:text-[clamp(15px,3vw,17px)] max-[639px]:py-[clamp(14px,3vw,18px)] max-[639px]:px-[clamp(24px,5vw,32px)]" data-i18n="buttons.more">
             Подробнее
           </button>
         </div>
       </div>
     </div>
 
+    <!-- 5 – VPN отчет -->
     <div class="max-w-[1200px] mx-auto border-[3px] border-white rounded-[20px] p-[24px]">
       <div class="relative"> 
-        <div class="absolute -top-[36px] bg-white text-black px-3 py-1 rounded-full text-[12px] min-[640px]:text-[10px] font-semibold uppercase"> 
+        <div class="absolute -top-[36px] bg-white text-black px-3 py-1 rounded-full text-[12px] min-[640px]:text-[10px] font-semibold uppercase" data-i18n="badge.research">
           Исследование
         </div> 
       </div> 
       <div class="flex flex-col sm:flex-row items-start gap-6">
         <div class="order-1 sm:order-2 w-full sm:w-auto sm:flex-none sm:shrink-0">
-          <img  src="images/blog/vpn-censorship-report.png"  class="mx-auto sm:mx-0 object-cover rounded-[10px] w-full max-[639px]:aspect-[510/284] min-[640px]:max-[959px]:w-[clamp(16rem,50vw,20rem)] min-[640px]:max-[959px]:aspect-[320/176] min-[960px]:w-[22.5rem] min-[960px]:h-[12.5rem] min-[960px]:min-w-[22.5rem] ">
+          <img src="images/blog/vpn-censorship-report.png" class="mx-auto sm:mx-0 object-cover rounded-[10px] w-full max-[639px]:aspect-[510/284] min-[640px]:max-[959px]:w-[clamp(16rem,50vw,20rem)] min-[640px]:max-[959px]:aspect-[320/176] min-[960px]:w-[22.5rem] min-[960px]:h-[12.5rem] min-[960px]:min-w-[22.5rem]">
         </div>
-        <div class="flex flex-col justify-between max-w-[800px] order-2 sm:order-1 w-full">
+        <div class="flex flex-col justify-between max-w-[800px] order-2 sm:order-1 w-full min-h-[220px]">
           <div class="space-y-[10px] max-w-[700px]">
-            <h3 class="text-[#e0e0e0] font-medium leading-tight text-[23px] max-[639px]:text-[clamp(16px,5vw,29px)] min-[960px]:text-[30px] ">
+            <h3 class="text-[#e0e0e0] font-medium leading-tight text-[23px] max-[639px]:text-[clamp(16px,5vw,29px)] min-[960px]:text-[30px]" data-i18n="cards.vpn_report_title">
               Отчет о воздействии цензуры VPN на права человека в России
             </h3> 
           </div> 
-          <button onclick="window.location.href='posts/cenzura-vpn-prava-cheloveka-rossiya.html'" class="mt-20 w-full min-[640px]:w-[222px] bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] transition-colors duration-200 text-[14px] py-[12px] px-[24px] max-[639px]:text-[clamp(15px,3vw,17px)] max-[639px]:py-[clamp(14px,3vw,18px)] max-[639px]:px-[clamp(24px,5vw,32px)]">
+          <button onclick="window.location.href='posts/cenzura-vpn-prava-cheloveka-rossiya.html'" class="mt-auto w-full min-[640px]:w-[222px] bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] transition-colors duration-200 text-[14px] py-[12px] px-[24px] max-[639px]:text-[clamp(15px,3vw,17px)] max-[639px]:py-[clamp(14px,3vw,18px)] max-[639px]:px-[clamp(24px,5vw,32px)]" data-i18n="buttons.more">
             Подробнее
           </button>
         </div>
       </div>
     </div>
 
+    <!-- 6 – китайский сценарий -->
     <div class="max-w-[1200px] mx-auto border-[3px] border-white rounded-[20px] p-[24px]">
       <div class="relative"> 
-        <div class="absolute -top-[36px] bg-white text-black px-3 py-1 rounded-full text-[12px] min-[640px]:text-[10px] font-semibold uppercase"> 
+        <div class="absolute -top-[36px] bg-white text-black px-3 py-1 rounded-full text-[12px] min-[640px]:text-[10px] font-semibold uppercase" data-i18n="badge.research">
           Исследование
         </div> 
       </div> 
       <div class="flex flex-col sm:flex-row items-start gap-6">
         <div class="order-1 sm:order-2 w-full sm:w-auto sm:flex-none sm:shrink-0">
-          <img  src="images/blog/китайский сценарий.png"  class="mx-auto sm:mx-0 object-cover rounded-[10px] w-full max-[639px]:aspect-[510/284] min-[640px]:max-[959px]:w-[clamp(16rem,50vw,20rem)] min-[640px]:max-[959px]:aspect-[320/176] min-[960px]:w-[22.5rem] min-[960px]:h-[12.5rem] min-[960px]:min-w-[22.5rem] ">
+          <img src="images/blog/китайский сценарий.png" class="mx-auto sm:mx-0 object-cover rounded-[10px] w-full max-[639px]:aspect-[510/284] min-[640px]:max-[959px]:w-[clamp(16rem,50vw,20rem)] min-[640px]:max-[959px]:aspect-[320/176] min-[960px]:w-[22.5rem] min-[960px]:h-[12.5rem] min-[960px]:min-w-[22.5rem]">
         </div>
-        <div class="flex flex-col justify-between max-w-[800px] order-2 sm:order-1 w-full">
+        <div class="flex flex-col justify-between max-w-[800px] order-2 sm:order-1 w-full min-h-[220px]">
           <div class="space-y-[10px] max-w-[700px]">
-            <h3 class="text-[#e0e0e0] font-medium leading-tight text-[23px] max-[639px]:text-[clamp(16px,5vw,29px)] min-[960px]:text-[30px] ">
+            <h3 class="text-[#e0e0e0] font-medium leading-tight text-[23px] max-[639px]:text-[clamp(16px,5vw,29px)] min-[960px]:text-[30px]" data-i18n="cards.china_scenario_title">
               Китайский сценарий для российского интернета
             </h3> 
           </div> 
-          <button onclick="window.location.href='posts/rossiya-kitaiskaya-internet-model.html'" class="mt-20 w-full min-[640px]:w-[222px] bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] transition-colors duration-200 text-[14px] py-[12px] px-[24px] max-[639px]:text-[clamp(15px,3vw,17px)] max-[639px]:py-[clamp(14px,3vw,18px)] max-[639px]:px-[clamp(24px,5vw,32px)]">
+          <button onclick="window.location.href='posts/rossiya-kitaiskaya-internet-model.html'" class="mt-auto w-full min-[640px]:w-[222px] bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] transition-colors duration-200 text-[14px] py-[12px] px-[24px] max-[639px]:text-[clamp(15px,3vw,17px)] max-[639px]:py-[clamp(14px,3vw,18px)] max-[639px]:px-[clamp(24px,5vw,32px)]" data-i18n="buttons.more">
             Подробнее
           </button>
         </div>
       </div>
     </div>
 
-    <div class="max-w-[1200px] mx-auto border-[3px] border-white rounded-[20px] p-[24px]">
+    <!-- 7 – За кулисами ботов -->
+    <div  data-hide-lang="en" class=" max-w-[1200px] mx-auto border-[3px] border-white rounded-[20px] p-[24px]">
       <div class="relative"> 
-        <div class="absolute -top-[36px] bg-white text-black px-3 py-1 rounded-full text-[12px] min-[640px]:text-[10px] font-semibold uppercase"> 
-          Исследование 
+        <div class="absolute -top-[36px] bg-white text-black px-3 py-1 rounded-full text-[12px] min-[640px]:text-[10px] font-semibold uppercase" data-i18n="badge.research">
+          Исследование
         </div> 
       </div> 
       <div class="flex flex-col sm:flex-row items-start gap-6">
         <div class="order-1 sm:order-2 w-full sm:w-auto sm:flex-none sm:shrink-0">
-          <img  src="images/blog/За кулисами ботов.png"  class="mx-auto sm:mx-0 object-cover rounded-[10px] w-full max-[639px]:aspect-[510/284] min-[640px]:max-[959px]:w-[clamp(16rem,50vw,20rem)] min-[640px]:max-[959px]:aspect-[320/176] min-[960px]:w-[22.5rem] min-[960px]:h-[12.5rem] min-[960px]:min-w-[22.5rem] ">
+          <img src="images/blog/За кулисами ботов.png" class="mx-auto sm:mx-0 object-cover rounded-[10px] w-full max-[639px]:aspect-[510/284] min-[640px]:max-[959px]:w-[clamp(16rem,50vw,20rem)] min-[640px]:max-[959px]:aspect-[320/176] min-[960px]:w-[22.5rem] min-[960px]:h-[12.5rem] min-[960px]:min-w-[22.5rem]">
         </div>
-        <div class="flex flex-col justify-between max-w-[800px] order-2 sm:order-1 w-full">
+        <div class="flex flex-col justify-between max-w-[800px] order-2 sm:order-1 w-full min-h-[220px]">
           <div class="space-y-[10px] max-w-[700px]">
-            <h3 class="text-[#e0e0e0] font-medium leading-tight text-[23px] max-[639px]:text-[clamp(16px,5vw,29px)] min-[960px]:text-[30px] ">
+            <h3 class="text-[#e0e0e0] font-medium leading-tight text-[23px] max-[639px]:text-[clamp(16px,5vw,29px)] min-[960px]:text-[30px]" data-i18n="cards.bots_title">
               За кулисами ботов
             </h3> 
-            <p class="text-[#e0e0e0] text-[13px] max-[639px]:text-[clamp(13px,3vw,16px)]">
+            <p class="text-[#e0e0e0] text-[13px] max-[639px]:text-[clamp(13px,3vw,16px)]" data-i18n="cards.bots_subtitle">
               Как технологии позволяют выявлять фейковые аккануты<br>и комментарии
             </p> 
           </div> 
-          <button onclick="window.location.href='posts/bots-backstage.html'" class="mt-20 w-full min-[640px]:w-[222px] bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] transition-colors duration-200 text-[14px] py-[12px] px-[24px] max-[639px]:text-[clamp(15px,3vw,17px)] max-[639px]:py-[clamp(14px,3vw,18px)] max-[639px]:px-[clamp(24px,5vw,32px)]">
+          <button onclick="window.location.href='posts/bots-backstage.html'" class="mt-auto w-full min-[640px]:w-[222px] bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] transition-colors duration-200 text-[14px] py-[12px] px-[24px] max-[639px]:text-[clamp(15px,3vw,17px)] max-[639px]:py-[clamp(14px,3vw,18px)] max-[639px]:px-[clamp(24px,5vw,32px)]" data-i18n="buttons.more">
             Подробнее
           </button>
         </div>
       </div>
     </div>
 
+    <!-- 8 – Хроники цензуры -->
     <div class="max-w-[1200px] mx-auto border-[3px] border-white rounded-[20px] p-[24px]">
       <div class="relative"> 
-        <div class="absolute -top-[36px] bg-white text-black px-3 py-1 rounded-full text-[12px] min-[640px]:text-[10px] font-semibold uppercase"> 
-          Исследование 
+        <div class="absolute -top-[36px] bg-white text-black px-3 py-1 rounded-full text-[12px] min-[640px]:text-[10px] font-semibold uppercase" data-i18n="badge.research">
+          Исследование
         </div> 
       </div> 
       <div class="flex flex-col sm:flex-row items-start gap-6">
         <div class="order-1 sm:order-2 w-full sm:w-auto sm:flex-none sm:shrink-0">
-          <img  src="images/blog/Хроники цензуры.png"  class="mx-auto sm:mx-0 object-cover rounded-[10px] w-full max-[639px]:aspect-[510/284] min-[640px]:max-[959px]:w-[clamp(16rem,50vw,20rem)] min-[640px]:max-[959px]:aspect-[320/176] min-[960px]:w-[22.5rem] min-[960px]:h-[12.5rem] min-[960px]:min-w-[22.5rem] ">
+          <img src="images/blog/Хроники цензуры.png" class="mx-auto sm:mx-0 object-cover rounded-[10px] w-full max-[639px]:aspect-[510/284] min-[640px]:max-[959px]:w-[clamp(16rem,50vw,20rem)] min-[640px]:max-[959px]:aspect-[320/176] min-[960px]:w-[22.5rem] min-[960px]:h-[12.5rem] min-[960px]:min-w-[22.5rem]">
         </div>
-        <div class="flex flex-col justify-between max-w-[800px] order-2 sm:order-1 w-full">
+        <div class="flex flex-col justify-between max-w-[800px] order-2 sm:order-1 w-full min-h-[220px]">
           <div class="space-y-[10px] max-w-[700px]">
-            <h3 class="text-[#e0e0e0] font-medium leading-tight text-[23px] max-[639px]:text-[clamp(16px,5vw,29px)] min-[960px]:text-[30px] ">
+            <h3 class="text-[#e0e0e0] font-medium leading-tight text-[23px] max-[639px]:text-[clamp(16px,5vw,29px)] min-[960px]:text-[30px]" data-i18n="cards.chronicles_title">
               Хроники цензуры
             </h3> 
-            <p class="text-[#e0e0e0] text-[13px] max-[639px]:text-[clamp(10px,3vw,13px)]">
+            <p class="text-[#e0e0e0] text-[13px] max-[639px]:text-[clamp(10px,3vw,13px)]" data-i18n="cards.chronicles_subtitle">
               Документирование давления на независимые медиа
             </p> 
           </div> 
-          <button onclick="window.location.href='posts/hroniki-cenzury.html'" class="mt-24 w-full min-[640px]:w-[222px] bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] transition-colors duration-200 text-[14px] py-[12px] px-[24px] max-[639px]:text-[clamp(15px,3vw,17px)] max-[639px]:py-[clamp(14px,3vw,18px)] max-[639px]:px-[clamp(24px,5vw,32px)]">
+          <button onclick="window.location.href='posts/hroniki-cenzury.html'" class="mt-auto w-full min-[640px]:w-[222px] bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] transition-colors duration-200 text-[14px] py-[12px] px-[24px] max-[639px]:text-[clamp(15px,3vw,17px)] max-[639px]:py-[clamp(14px,3vw,18px)] max-[639px]:px-[clamp(24px,5vw,32px)]" data-i18n="buttons.more">
             Подробнее
           </button>
         </div>
       </div>
     </div>
 
+    <!-- 9 – ситуация Apple -->
     <div class="max-w-[1200px] mx-auto border-[3px] border-white rounded-[20px] p-[24px]">
       <div class="relative"> 
-        <div class="absolute -top-[36px] bg-white text-black px-3 py-1 rounded-full text-[12px] min-[640px]:text-[10px] font-semibold uppercase"> 
+        <div class="absolute -top-[36px] bg-white text-black px-3 py-1 rounded-full text-[12px] min-[640px]:text-[10px] font-semibold uppercase" data-i18n="badge.situation">
           Cитуация
         </div> 
       </div> 
       <div class="flex flex-col sm:flex-row items-start gap-6">
         <div class="order-1 sm:order-2 w-full sm:w-auto sm:flex-none sm:shrink-0">
-          <img  src="images/blog/apple.png"  class="mx-auto sm:mx-0 object-cover rounded-[10px] w-full max-[639px]:aspect-[510/284] min-[640px]:max-[959px]:w-[clamp(16rem,50vw,20rem)] min-[640px]:max-[959px]:aspect-[320/176] min-[960px]:w-[22.5rem] min-[960px]:h-[12.5rem] min-[960px]:min-w-[22.5rem] ">
+          <img src="images/blog/apple.png" class="mx-auto sm:mx-0 object-cover rounded-[10px] w-full max-[639px]:aspect-[510/284] min-[640px]:max-[959px]:w-[clamp(16rem,50vw,20rem)] min-[640px]:max-[959px]:aspect-[320/176] min-[960px]:w-[22.5rem] min-[960px]:h-[12.5rem] min-[960px]:min-w-[22.5rem]">
         </div>
-        <div class="flex flex-col justify-between max-w-[800px] order-2 sm:order-1 w-full">
+        <div class="flex flex-col justify-between max-w-[800px] order-2 sm:order-1 w-full min-h-[220px]">
           <div class="space-y-[10px] max-w-[700px]">
-            <h3 class="text-[#e0e0e0] font-medium leading-tight text-[23px] max-[639px]:text-[clamp(16px,5vw,29px)] min-[960px]:text-[30px] ">
+            <h3 class="text-[#e0e0e0] font-medium leading-tight text-[23px] max-[639px]:text-[clamp(16px,5vw,29px)] min-[960px]:text-[30px]" data-i18n="cards.apple_4h_title">
               Apple меньше чем за 4 часа выполняет цензурные требования от Роскомнадзора
             </h3> 
-
           </div> 
-          <button onclick="window.location.href='posts/apple-roskomnadzor.html'" class="mt-12 w-full min-[640px]:w-[222px] bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] transition-colors duration-200 text-[14px] py-[12px] px-[24px] max-[639px]:text-[clamp(15px,3vw,17px)] max-[639px]:py-[clamp(14px,3vw,18px)] max-[639px]:px-[clamp(24px,5vw,32px)]">
+          <button onclick="window.location.href='posts/apple-roskomnadzor.html'" class="mt-auto w-full min-[640px]:w-[222px] bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] transition-colors duration-200 text-[14px] py-[12px] px-[24px] max-[639px]:text-[clamp(15px,3vw,17px)] max-[639px]:py-[clamp(14px,3vw,18px)] max-[639px]:px-[clamp(24px,5vw,32px)]" data-i18n="buttons.more">
             Подробнее
           </button>
         </div>
       </div>
     </div>
 
+    <!-- 10 – Шифрование для всех! -->
     <div class="max-w-[1200px] mx-auto border-[3px] border-white rounded-[20px] p-[24px]">
       <div class="relative"> 
-        <div class="absolute -top-[36px] bg-white text-black px-3 py-1 rounded-full text-[12px] min-[640px]:text-[10px] font-semibold uppercase"> 
+        <div class="absolute -top-[36px] bg-white text-black px-3 py-1 rounded-full text-[12px] min-[640px]:text-[10px] font-semibold uppercase" data-i18n="badge.openLetter">
           Открытое письмо
         </div> 
       </div> 
       <div class="flex flex-col sm:flex-row items-start gap-6">
         <div class="order-1 sm:order-2 w-full sm:w-auto sm:flex-none sm:shrink-0">
-          <img  src="images/blog/Шифрование для всех!.png"  class="mx-auto sm:mx-0 object-cover rounded-[10px] w-full max-[639px]:aspect-[510/284] min-[640px]:max-[959px]:w-[clamp(16rem,50vw,20rem)] min-[640px]:max-[959px]:aspect-[320/176] min-[960px]:w-[22.5rem] min-[960px]:h-[12.5rem] min-[960px]:min-w-[22.5rem] ">
+          <img src="images/blog/Шифрование для всех!.png" class="mx-auto sm:mx-0 object-cover rounded-[10px] w-full max-[639px]:aspect-[510/284] min-[640px]:max-[959px]:w-[clamp(16rem,50vw,20rem)] min-[640px]:max-[959px]:aspect-[320/176] min-[960px]:w-[22.5rem] min-[960px]:h-[12.5rem] min-[960px]:min-w-[22.5rem]">
         </div>
-        <div class="flex flex-col justify-between max-w-[800px] order-2 sm:order-1 w-full">
+        <div class="flex flex-col justify-between max-w-[800px] order-2 sm:order-1 w-full min-h-[220px]">
           <div class="space-y-[10px]">
-            <h3 class="text-[#e0e0e0] font-medium leading-tight text-[23px] max-[639px]:text-[clamp(16px,5vw,29px)] min-[960px]:text-[30px] ">
+            <h3 class="text-[#e0e0e0] font-medium leading-tight text-[23px] max-[639px]:text-[clamp(16px,5vw,29px)] min-[960px]:text-[30px]" data-i18n="cards.encryption_title">
               Шифрование<br>для всех!
             </h3> 
-
           </div> 
-          <button onclick="window.location.href='posts/shifrovanie-dlya-vseh.html'" class="mt-20 w-full min-[640px]:w-[222px] bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] transition-colors duration-200 text-[14px] py-[12px] px-[24px] max-[639px]:text-[clamp(15px,3vw,17px)] max-[639px]:py-[clamp(14px,3vw,18px)] max-[639px]:px-[clamp(24px,5vw,32px)]">
+          <button onclick="window.location.href='posts/shifrovanie-dlya-vseh.html'" class="mt-auto w-full min-[640px]:w-[222px] bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] transition-colors duration-200 text-[14px] py-[12px] px-[24px] max-[639px]:text-[clamp(15px,3vw,17px)] max-[639px]:py-[clamp(14px,3vw,18px)] max-[639px]:px-[clamp(24px,5vw,32px)]" data-i18n="buttons.more">
             Подробнее
           </button>
         </div>
       </div>
     </div>
 
+    <!-- 11 – Открытое письмо Apple -->
     <div class="max-w-[1200px] mx-auto border-[3px] border-white rounded-[20px] p-[24px]">
       <div class="relative"> 
-        <div class="absolute -top-[36px] bg-white text-black px-3 py-1 rounded-full text-[12px] min-[640px]:text-[10px] font-semibold uppercase"> 
+        <div class="absolute -top-[36px] bg-white text-black px-3 py-1 rounded-full text-[12px] min-[640px]:text-[10px] font-semibold uppercase" data-i18n="badge.openLetter">
           Открытое письмо
         </div> 
       </div> 
       <div class="flex flex-col sm:flex-row items-start gap-6">
         <div class="order-1 sm:order-2 w-full sm:w-auto sm:flex-none sm:shrink-0">
-          <img  src="images/blog/Открытое письмо Apple- Хватит помогать цензурировать Рунет.png"  class="mx-auto sm:mx-0 object-cover rounded-[10px] w-full max-[639px]:aspect-[510/284] min-[640px]:max-[959px]:w-[clamp(16rem,50vw,20rem)] min-[640px]:max-[959px]:aspect-[320/176] min-[960px]:w-[22.5rem] min-[960px]:h-[12.5rem] min-[960px]:min-w-[22.5rem] ">
+          <img src="images/blog/Открытое письмо Apple- Хватит помогать цензурировать Рунет.png" class="mx-auto sm:mx-0 object-cover rounded-[10px] w-full max-[639px]:aspect-[510/284] min-[640px]:max-[959px]:w-[clamp(16rem,50vw,20rem)] min-[640px]:max-[959px]:aspect-[320/176] min-[960px]:w-[22.5rem] min-[960px]:h-[12.5rem] min-[960px]:min-w-[22.5rem]">
         </div>
-        <div class="flex flex-col justify-between max-w-[800px] order-2 sm:order-1 w-full">
-          <div class="space-y-[10px] ">
-            <h3 class="text-[#e0e0e0] font-medium leading-tight text-[23px] max-[639px]:text-[clamp(16px,5vw,29px)] min-[960px]:text-[30px] ">
-            Открытое письмо Apple:<br>Хватит помогать<br>цензурировать Рунет
+        <div class="flex flex-col justify-between max-w-[800px] order-2 sm:order-1 w-full min-h-[220px]">
+          <div class="space-y-[10px]">
+            <h3 class="text-[#e0e0e0] font-medium leading-tight text-[23px] max-[639px]:text-[clamp(16px,5vw,29px)] min-[960px]:text-[30px]" data-i18n="cards.apple_open_letter_title">
+              Открытое письмо Apple:<br>Хватит помогать<br>цензурировать Рунет
             </h3> 
-
           </div> 
-          <button onclick="window.location.href='posts/open-letter-apple-runet.html'" class="mt-12 w-full min-[640px]:w-[222px] bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] transition-colors duration-200 text-[14px] py-[12px] px-[24px] max-[639px]:text-[clamp(15px,3vw,17px)] max-[639px]:py-[clamp(14px,3vw,18px)] max-[639px]:px-[clamp(24px,5vw,32px)]">
+          <button onclick="window.location.href='posts/open-letter-apple-runet.html'" class="mt-auto w-full min-[640px]:w-[222px] bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] transition-colors duration-200 text-[14px] py-[12px] px-[24px] max-[639px]:text-[clamp(15px,3vw,17px)] max-[639px]:py-[clamp(14px,3vw,18px)] max-[639px]:px-[clamp(24px,5vw,32px)]" data-i18n="buttons.more">
             Подробнее
           </button>
         </div>
       </div>
     </div>
 
+    <!-- 12 – Государство слежки -->
     <div class="max-w-[1200px] mx-auto border-[3px] border-white rounded-[20px] p-[24px]">
       <div class="relative"> 
-        <div class="absolute -top-[36px] bg-white text-black px-3 py-1 rounded-full text-[12px] min-[640px]:text-[10px] font-semibold uppercase"> 
-          Исследование 
+        <div class="absolute -top-[36px] bg-white text-black px-3 py-1 rounded-full text-[12px] min-[640px]:text-[10px] font-semibold uppercase" data-i18n="badge.research">
+          Исследование
         </div> 
       </div> 
       <div class="flex flex-col sm:flex-row items-start gap-6">
         <div class="order-1 sm:order-2 w-full sm:w-auto sm:flex-none sm:shrink-0">
-          <img  src="images/blog/Хроники цензуры.png"  class="mx-auto sm:mx-0 object-cover rounded-[10px] w-full max-[639px]:aspect-[510/284] min-[640px]:max-[959px]:w-[clamp(16rem,50vw,20rem)] min-[640px]:max-[959px]:aspect-[320/176] min-[960px]:w-[22.5rem] min-[960px]:h-[12.5rem] min-[960px]:min-w-[22.5rem] ">
+          <img src="images/blog/Государство слежки.png" class="mx-auto sm:mx-0 object-cover rounded-[10px] w-full max-[639px]:aspect-[510/284] min-[640px]:max-[959px]:w-[clamp(16rem,50vw,20rem)] min-[640px]:max-[959px]:aspect-[320/176] min-[960px]:w-[22.5rem] min-[960px]:h-[12.5rem] min-[960px]:min-w-[22.5rem]">
         </div>
-        <div class=" flex flex-col justify-between max-w-[800px] order-2 sm:order-1 w-full">
+        <div class="flex flex-col justify-between max-w-[800px] order-2 sm:order-1 w-full min-h-[220px]">
           <div class="space-y-[10px] max-w-[500px]">
-            <h3 class="text-[#e0e0e0] font-medium leading-tight text-[23px] max-[639px]:text-[clamp(16px,5vw,29px)] min-[960px]:text-[30px] ">
+            <h3 class="text-[#e0e0e0] font-medium leading-tight text-[23px] max-[639px]:text-[clamp(16px,5vw,29px)] min-[960px]:text-[30px]" data-i18n="cards.surveillance_state_title">
               Государство слежки
             </h3> 
-            <p class="text-[#e0e0e0] text-[13px] max-[639px]:text-[clamp(13px,3vw,16px)]">
+            <p class="text-[#e0e0e0] text-[13px] max-[639px]:text-[clamp(13px,3vw,16px)]" data-i18n="cards.surveillance_state_subtitle">
               Исследование о том, как российское государство с помощью законов и технологий осуществляет цифровое наблюдение
             </p> 
           </div> 
-          <button onclick="window.location.href='posts/gosudarstvo-slezhki.html'" class="mt-16 w-full min-[640px]:w-[222px] bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] transition-colors duration-200 text-[14px] py-[12px] px-[24px] max-[639px]:text-[clamp(15px,3vw,17px)] max-[639px]:py-[clamp(14px,3vw,18px)] max-[639px]:px-[clamp(24px,5vw,32px)]">
+          <button onclick="window.location.href='posts/gosudarstvo-slezhki.html'" class="mt-auto w-full min-[640px]:w-[222px] bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] transition-colors duration-200 text-[14px] py-[12px] px-[24px] max-[639px]:text-[clamp(15px,3vw,17px)] max-[639px]:py-[clamp(14px,3vw,18px)] max-[639px]:px-[clamp(24px,5vw,32px)]" data-i18n="buttons.openResearch">
             Открыть исследование
           </button>
         </div>
@@ -385,22 +402,17 @@
 
   </section>
 
-
-
-
-
-
-
+  <!-- О нас -->
   <section id="about" class="relative min-h-[790px] md:min-h-[930px] lg:min-h-[1250px] overflow-hidden pb-[60px]">
-  <div class="pointer-events-none select-none absolute max-w-none w-[100vw] -top-[96vw] -left-[42vw] rotate-90 sm:rotate-0 sm:w-[100vw] sm:-top-[50vw] sm:-left-[50vw] md:w-[70vw] md:-top-[40vw] md:-left-[38vw] ">
-    <img src="images/arw.svg" class="block "/>
-  </div>
+    <div class="pointer-events-none select-none absolute max-w-none w-[100vw] -top-[96vw] -left-[42vw] rotate-90 sm:rotate-0 sm:w-[100vw] sm:-top-[50vw] sm:-left-[50vw] md:w-[70vw] md:-top-[40vw] md:-left-[38vw]">
+      <img src="images/arw.svg" class="block" />
+    </div>
     <div class="relative mx-auto max-w-[1200px] px-4">
-      <div class="flex flex-col justify-center  pt-[clamp(160px,60vw,340px)] min-[640px]:pt-[220px] min-[960px]:pt-[300px]">
-        <h2 class="font-semibold text-[50px] leading-[1.1] sm:text-[50px] lg:text-[65px] lg:leading-[94px] max-w-[340px] sm:max-w-[400px] lg:max-w-[599px] sm:ml-[350px] lg:ml-[400px] ">
+      <div class="flex flex-col justify-center pt-[clamp(160px,60vw,340px)] min-[640px]:pt-[220px] min-[960px]:pt-[300px]">
+        <h2 class="font-semibold text-[50px] leading-[1.1] sm:text-[50px] lg:text-[65px] lg:leading-[94px] max-w-[340px] sm:max-w-[400px] lg:max-w-[599px] sm:ml-[350px] lg:ml-[400px]" data-i18n="about.heading">
           Наша миссия
         </h2>
-        <p class="mt-12 max-[639px]:mt-4 text-[17px] max-[639px]:text-[20px] leading-[1.4] sm:text-[20px] lg:text-[30px] lg:leading-[44px] max-w-[400px] sm:max-w-[600px] lg:max-w-[758px] sm:ml-[350px] lg:ml-[400px]">
+        <p class="mt-12 max-[639px]:mt-4 text-[17px] max-[639px]:text-[20px] leading-[1.4] sm:text-[20px] lg:text-[30px] lg:leading-[44px] max-w-[400px] sm:max-w-[600px] lg:max-w-[758px] sm:ml-[350px] lg:ml-[400px]" data-i18n="about.text">
           Вносить вклад в создание безопасного и свободного цифрового пространства, в котором каждый человек
           сможет свободно выражать свое мнение, обмениваться идеями и получать доступ к информации без страха
           цензуры, ущемления прав или преследования.
@@ -412,43 +424,37 @@
     </div>
   </section>
 
-
-
-    <div class="bg-white py-[60px]">
-      <div class="relative w-full overflow-hidden h-20">
-        <div id="scrollText" class="whitespace-nowrap text-[20px]  opacity-50 font-medium leading-[29px] will-change-transform" style="font-family: 'Unbounded', sans-serif;">
-          Задачи //// Задачи //// Задачи //// Задачи //// Задачи ////
-          Задачи //// Задачи //// Задачи //// Задачи //// Задачи ////
-          Задачи //// Задачи //// Задачи //// Задачи //// Задачи ////
-          Задачи //// Задачи //// Задачи //// Задачи //// Задачи ////
-          Задачи //// Задачи //// Задачи //// Задачи //// Задачи ////
-          Задачи //// Задачи //// Задачи //// Задачи //// Задачи ////
-        </div>
+  <!-- бегущая строка "Задачи" -->
+  <div class="bg-white py-[60px]">
+    <div class="relative w-full overflow-hidden h-20">
+      <div id="scrollText" class="whitespace-nowrap text-[20px] opacity-50 font-medium leading-[29px] will-change-transform" style="font-family: 'Unbounded', sans-serif;" data-i18n="tasks.marquee">
+        Задачи //// Задачи //// Задачи //// Задачи //// Задачи ////
+        Задачи //// Задачи //// Задачи //// Задачи //// Задачи ////
+        Задачи //// Задачи //// Задачи //// Задачи //// Задачи ////
+        Задачи //// Задачи //// Задачи //// Задачи //// Задачи ////
+        Задачи //// Задачи //// Задачи //// Задачи //// Задачи ////
+        Задачи //// Задачи //// Задачи //// Задачи //// Задачи ////
       </div>
     </div>
+  </div>
 
-
-
-
-
-
-
+  <!-- Задачи 1–3 -->
   <section class="bg-white py-16 min-[960px]:ml-[100px]">
-    <div class="max-w-[1200px]  mx-auto px-[clamp(8px,5vw,12px)]">
+    <div class="max-w-[1200px] mx-auto px-[clamp(8px,5vw,12px)]">
       <div class="grid grid-cols-[1%,6%,minmax(0,1fr)] gap-x-[clamp(10px,3vw,17px)] min-[640px]:gap-x-[20px] min-[960px]:gap-x-[128px]">
         <div class="flex flex-col justify-between items-center py-6 w-[10px] min-w-[640px]:w-auto">
           <div class="h-[100%]">
-            <span class="text-[clamp(24px,8vw,30px)] min-[640px]:text-[50px] min-[960px]:text-[150px] font-light leading-none" style="font-family: 'Unbounded', sans-serif;" >
+            <span class="text-[clamp(24px,8vw,30px)] min-[640px]:text-[50px] min-[960px]:text-[150px] font-light leading-none" style="font-family: 'Unbounded', sans-serif;">
               1
             </span>
           </div>
           <div class="h-[100%]">
-            <span class="text-[clamp(24px,8vw,30px)] min-[640px]:text-[50px] min-[960px]:text-[150px] font-light leading-none" style="font-family: 'Unbounded', sans-serif;" >
+            <span class="text-[clamp(24px,8vw,30px)] min-[640px]:text-[50px] min-[960px]:text-[150px] font-light leading-none" style="font-family: 'Unbounded', sans-serif;">
               2
             </span>
           </div>
           <div class="h-[80%]">
-            <span class="text-[clamp(24px,8vw,30px)] min-[640px]:text-[50px] min-[960px]:text-[150px] font-light leading-none" style="font-family: 'Unbounded', sans-serif;" >
+            <span class="text-[clamp(24px,8vw,30px)] min-[640px]:text-[50px] min-[960px]:text-[150px] font-light leading-none" style="font-family: 'Unbounded', sans-serif;">
               3
             </span>
           </div>
@@ -469,30 +475,30 @@
         </div>
         <div class="flex flex-col justify-between py-6 space-y-[clamp(40px,12vw,60px)] min-[640px]:space-y-[120px] max-w-[750px]">
           <div>
-            <h3 class="text-[clamp(16px,4.5vw,20px)] min-[640px]:text-[20px] min-[960px]:text-[30px] font-semibold mb-[clamp(12px,4vw,20px)] min-[960px]:mb-[40px]" style="font-family: 'inter', sans-serif;">
+            <h3 class="text-[clamp(16px,4.5vw,20px)] min-[640px]:text-[20px] min-[960px]:text-[30px] font-semibold mb-[clamp(12px,4vw,20px)] min-[960px]:mb-[40px]" style="font-family: 'inter', sans-serif;" data-i18n="tasks.t1_title">
               Поддержка свободы интернета
             </h3>
-            <p class="text-[clamp(14px,4vw,18px)] min-[640px]:text-[20px] min-[960px]:text-[30px] leading-relaxed min-[960px]:leading-[39px] font-medium">
+            <p class="text-[clamp(14px,4vw,18px)] min-[640px]:text-[20px] min-[960px]:text-[30px] leading-relaxed min-[960px]:leading-[39px] font-medium" data-i18n="tasks.t1_text">
               Противодействие цензуре и ограничению доступа к информации, разработка и
               распространение технологий, обеспечивающих доступ к заблокированным ресурсам
               и обход интернет-фильтров, защита персональных цифровых прав граждан.
             </p>
           </div>
           <div>
-            <h3 class="text-[clamp(16px,4.5vw,20px)] min-[640px]:text-[20px] min-[960px]:text-[30px] font-semibold mb-[clamp(12px,4vw,20px)] min-[960px]:mb-[40px]" style="font-family: 'inter', sans-serif;" >
+            <h3 class="text-[clamp(16px,4.5vw,20px)] min-[640px]:text-[20px] min-[960px]:text-[30px] font-semibold mb-[clamp(12px,4vw,20px)] min-[960px]:mb-[40px]" style="font-family: 'inter', sans-serif;" data-i18n="tasks.t2_title">
               Защита приватности
             </h3>
-            <p class="text-[clamp(14px,4vw,18px)] min-[640px]:text-[20px] min-[960px]:text-[30px] leading-relaxed min-[960px]:leading-[39px] font-medium">
+            <p class="text-[clamp(14px,4vw,18px)] min-[640px]:text-[20px] min-[960px]:text-[30px] leading-relaxed min-[960px]:leading-[39px] font-medium" data-i18n="tasks.t2_text">
               Работа над обеспечением приватности, конфиденциальности и анонимности
               пользователей интернета, противодействие незаконной слежке, ограничение
               доступа к личным данным.
             </p>
           </div>
           <div>
-            <h3 class="text-[clamp(16px,4.5vw,20px)] min-[640px]:text-[20px] min-[960px]:text-[30px] font-semibold mb-[clamp(12px,4vw,20px)] min-[960px]:mb-[40px]" style="font-family: 'inter', sans-serif;" >
+            <h3 class="text-[clamp(16px,4.5vw,20px)] min-[640px]:text-[20px] min-[960px]:text-[30px] font-semibold mb-[clamp(12px,4vw,20px)] min-[960px]:mb-[40px]" style="font-family: 'inter', sans-serif;" data-i18n="tasks.t3_title">
               Формирование навыков осознанного использования интернета
             </h3>
-            <p class="text-[clamp(14px,4vw,18px)] min-[640px]:text-[20px] min-[960px]:text-[30px] leading-relaxed min-[960px]:leading-[39px] font-medium">
+            <p class="text-[clamp(14px,4vw,18px)] min-[640px]:text-[20px] min-[960px]:text-[30px] leading-relaxed min-[960px]:leading-[39px] font-medium" data-i18n="tasks.t3_text">
               Организация образовательных и информационных кампаний, направленных на
               повышение уровня знаний граждан в области безопасности и правил
               использования интернета.
@@ -503,17 +509,10 @@
     </div>
   </section>
 
-
-
-
-
-
-
-
-
-  <section id="contacts" class="bg-black pt-[clamp(140px,25vw,180px)] pb-[clamp(160px,30vw,210px)] h-[clamp(550px,120vw,790px)">
+  <!-- Контакты -->
+  <section id="contacts" class="bg-black pt-[clamp(140px,25vw,180px)] pb-[clamp(160px,30vw,210px)] h-[clamp(550px,120vw,790px)]">
     <div class="mx-auto max-w-[1200px] px-[20px]">
-      <h2 class="font-bold text-white leading-[clamp(40px,12vw,94px)] text-[clamp(34px,7vw,50px)] sm:text-[50px] lg:text-[65px]">
+      <h2 class="font-bold text-white leading-[clamp(40px,12vw,94px)] text-[clamp(34px,7vw,50px)] sm:text-[50px] lg:text-[65px]" data-i18n="contacts.heading">
         Контакты
       </h2>
       <p class="font-inter text-white font-normal leading-[clamp(28px,8vw,47px)] text-[clamp(16px,4.5vw,18px)] sm:text-[30px] mt-[clamp(80px,25vw,220px)]">
@@ -524,9 +523,6 @@
       <div class="mt-[20px] h-[5px] bg-white max-w-[1160px] w-full"></div>
     </div>
   </section>
-
-
-
 
 </body>
 </html>
