@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:url" content="https://rks.global/posts/open-letter-apple-runet.html">
     <meta property="og:title" content="Открытое письмо Apple">
-    <meta property="og: description" content="Хватит помогать цензурировать Рунет">
+    <meta property="og:description" content="Хватит помогать цензурировать Рунет">
     <meta property="og:type" content="website">
     <meta name="description" content="Хватит помогать цензурировать Рунет">
     <meta property="og:image" content="https://rks.global/images/blog/отключения во время праздников.png">
@@ -15,134 +15,148 @@
     <link rel="icon" href="../images/favicon.svg">
     <script src="../js/tailwindcss.min.js"></script>
     <script src="../js/script.js"></script>
+    <script src="https://unpkg.com/i18next@23.12.2/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@7.2.1/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="../js/i18n/blog/page-open-letter-apple-runet.js"></script>
+    <script src="../js/i18n/init.js"></script>
 </head>
-
-
-
-
 
 <body class="no-break-prepositions">
 
-    <header class="bg-black py-[4px] min-[640px]:py-[10px] flex ">
-        <div class="max-w-[1200px] px-[10px] min-[640px]:px-[20px] flex mx-auto w-full justify-between items-center">
-            <div class="flex items-center gap-[64px]">
-                <a href="../index.html"><img src="../images/logo.svg" alt="RKS Global" class="w-[16vw] h-[8vw] min-[640px]:w-[95px] min-[640px]:h-[48px]"></a>
-                <a href="../campaigns.html" class="text-white text-[15px] tracking-[0.5px] font-semibold leading-[23px]">Кампании</a>
-            </div>
-            <div class="text-white space-x-[20px] text-[15px] font-medium">
-                <a href="#">En</a>
-                <a href="#">Ру</a>
-            </div>
+<header class="bg-black py-[4px] min-[640px]:py-[10px] flex">
+    <div class="max-w-[1200px] px-[10px] min-[640px]:px-[20px] flex mx-auto w-full justify-between items-center">
+        <div class="flex items-center gap-[64px]">
+            <a href="../index.html">
+                <img src="../images/logo.svg" alt="RKS Global" class="w-[16vw] h-[8vw] min-[640px]:w-[95px] min-[640px]:h-[48px]">
+            </a>
+
+            <a href="../campaign.html" class="text-white text-[15px] tracking-[0.5px] font-semibold leading-[23px]" data-i18n="nav.campaigns">
+                Кампании
+            </a>
         </div>
-    </header>
 
-
-    <section class="max-w-[1200px] mx-auto px-[10px] min-[640px]:px-[20px] pt-[40px] pb-[120px]">
-        <img src="../images/blog/open-letter-apple-runet.png" class="w-full h-[80vw] object-cover min-[640px]:h-auto mb-[8px] min-[640px]:mb-[20px]">
-        <div class="pb-[120px] flex justify-between  flex-col min-[640px]:flex-row justify-between items-start">
-            <div class="">
-                <h1 class="mb-6 text-[34px] min-[960px]:text-[53px] min-[1200px]:text-[43px] font-medium tracking-[0.5px] leading-none min-[640px]:order-1">
-                  Открытое письмо Apple:<br>Хватит помогать<br>цензурировать Рунет
-                </h1>
-
-            </div>
-            <div class="pr-[24px]">
-                <p class="mb-8">
-                    Скачать текст письма в PDF<br><a class="border-b-[1px] border-blue-600 pb-[1px]" href="https://files.rks.global/apple_2024_ru.pdf" target="_blank">на русском</a>, <a class="border-b-[1px] border-blue-600 pb-[1px]" href="https://files.rks.global/apple_2024_en.pdf" target="_blank">английском</a><br>языках
-                </p>
-                <p class="text-[12px] text-[#888] whitespace-nowrap mb-[16px] min-[640px]:order-2 min-[640px]:mt-[16px]">
-                    2 сентября 2024
-                </p>
-            </div>
+        <div class="text-white space-x-[20px] text-[15px] font-medium">
+            <button type="button" class="lang-switch opacity-60 hover:opacity-100 transition-opacity" data-lang="en" onclick="setLanguage('en')">
+                En
+            </button>
+            <button type="button" class="lang-switch opacity-100 hover:opacity-100 transition-opacity" data-lang="ru" onclick="setLanguage('ru')">
+                Ру
+            </button>
         </div>
-            <div class="space-y-[50px] max-w-[860px] mx-0 min-[640px]:mx-auto  min-[640px]:w-[760px] ">
-                <p class="text-[22px] leading-[1.55] font-normal">
-                  Более 50 правозащитных организаций, СМИ, IT-компаний, журналистских коллективов и публичных персон подписали письмо 
-                  к Apple о недопустимости цензуры по требованию российских властей. Общественный резонанс возник после массового <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://techcrunch.com/2024/07/08/apple-removes-vpn-apps-at-request-of-russian-authorities-say-app-makers/" target="_blank">удаления</a> 
-                  VPN-приложений из российского App Store, среди которых оказались Red Shield VPN, Le VPN, HideMyName, PlanetVPN, AdGuard VPN, 
-                  и многие другие. В самой компании Apple объяснили, что сделали это в ответ на требование российского цензурного ведомства (Роскомнадзора).
-                </p>
+    </div>
+</header>
 
-                <p class="text-[22px] leading-[1.55] font-normal">
-                    Правозащитники считают, что подобная практика демонстрирует игнорирование компанией Apple интересов и прав пользователей 
-                    её устройств на доступ к информации и защиту частных коммуникаций. Это особенно очевидно в России, где в условиях жёсткой 
-                    военной цензуры и <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://ooni.org/post/2023-russia-a-year-after-the-conflict/" target="_blank">блокировки</a> тысяч сайтов с неугодной властям информацией, 
-                    VPN-сервисы остаются пропуском в мир свободного интернета.<br><br>
+<section class="max-w-[1200px] mx-auto px-[10px] min-[640px]:px-[20px] pt-[40px] pb-[120px]">
+    <img src="../images/blog/open-letter-apple-runet.png" class="w-full h-[80vw] object-cover min-[640px]:h-auto mb-[8px] min-[640px]:mb-[20px]">
 
-                    Правозащитники отмечают, что Apple в данном случае отступает от собственных <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://www.apple.com/compliance/pdfs/Apple-Human-Rights-Policy.pdf" target="_blank">стандартов</a> и правил, в которых признает «критическую важность 
-                    открытого общества, где информация распространяется свободно» и четко заявляет, что «рука об руку с конфиденциальностью наших пользователей 
-                    идет приверженность свободе информации и свободе выражения мнения». Более того, Руководящие <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://www.ohchr.org/sites/default/files/documents/publications/guidingprinciplesbusinesshr_en.pdf" target="_blank">принципы</a> предпринимательской деятельности в 
-                    аспекте прав человека, приверженность к которым подтвердила Apple, требуют от частных компаний избегать содействия оказанию неблагоприятного 
-                    воздействия на права человека в рамках своей деятельности.<br><br>
-
-                    Российские нормы законов об информации, на основании которых требует блокировку Роскомнадзор, противоречат как самим <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://www.apple.com/compliance/pdfs/Apple-Human-Rights-Policy.pdf" target="_blank">принципам</a> 
-                    и правилам Apple, так и международным стандартам в области прав человека. ЕСПЧ неоднократно устанавливал размытость российских 
-                    норм права в части ограничения доступа к информации и их очевидное противоречие Европейской конвенции о защите прав человека.<br><br>
-
-                    Саркис Дарбинян, киберадвокат, эксперт RKS Global, сооснователь Роскомсвободы:
-                </p>
-
-                <div class="py-[24px] border-t-[4px] border-b-[4px] border-[#e8e8e8] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[760px]">
-                    <p class="text-black text-[24px] leading-[1.5] font-normal" style="font-family: 'Unbounded', sans-serif;">
-                        “Удалив VPN-сервисы из своего магазина приложений для россиян, Apple решила подорвать свою политику, 
-                        которая признает критическую важность открытого общества, свободы информации и выражения мнений.<br><br>
-
-                        Apple должна осознать последствия своих действий и немедленно исправить ситуацию, иначе она станет соучастницей 
-                        наступления российских властей на гражданское пространство и установления тотальной цензуры.<br><br>
-
-                        Отмахнуться тем, что мы просто исполняем законы страны, которые, очевидно, противоречат и самой политике компании, 
-                        и международным стандартам, уже не получится”.
-                    </p>
-                </div>
-                <p class="text-[22px] leading-[1.55] font-normal">
-                    Среди организаций, подписавших петицию: Access Now, Electronic Frontier Foundation, Human Rights Watch, 
-                    RKS Global, GreatFire, Reporters Without Borders (RSF), Amnezia VPN, Hidemyname VPN, Red Shield VPN и др., 
-                    а также десятки журналистов и представителей либеральных СМИ
-                </p>
-            </div>
-    </section>
-
-
-
-
-    <section class="px-[10px] min-[640px]:px-[20px] bg-[#e5e5e5]"> 
-        <div class="w-full max-w-[1200px] mx-auto py-[180px] text-center min-[640px]:max-w-[600px] min-[1200px]:max-w-[1200px]">
-            <h2 class="text-[30px] min-[640px]:text-[44px] min-[1200px]:text-[48px] leading-[1.23] font-bold">
-                Скачать полный текст<br>письма
-            </h2>
-            <div class="flex flex-col min-[640px]:flex-row justify-center gap-6 mt-[64px]">
-                <a href="https://files.rks.global/apple_2024_ru.pdf" target="_blank" class="w-full min-[640px]:w-auto text-[16px] px-[56px] py-[16px] font-medium bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] transition-colors duration-300 flex items-center justify-center" style="font-family: 'Unbounded', sans-serif;">
-                    На русском
-                </a>
-                <a href="https://files.rks.global/apple_2024_en.pdf" target="_blank" class="w-full min-[640px]:w-auto text-[16px] px-[56px] py-[16px] font-medium border-[3px] border-black hover:bg-[#3A40FF] bg-transparent text-black rounded-[10px] transition-colors duration-300" style="font-family: 'Unbounded', sans-serif;">
-                    На английском
-                </a >
-
-            </div>
+    <div class="pb-[120px] flex justify-between flex-col min-[640px]:flex-row justify-between items-start">
+        <div>
+            <h1 class="mb-6 text-[34px] min-[960px]:text-[53px] min-[1200px]:text-[43px] font-medium tracking-[0.5px] leading-none min-[640px]:order-1" data-i18n="article.title" data-i18n-html="true">
+                Открытое письмо Apple:<br>Хватит помогать<br>цензурировать Рунет
+            </h1>
         </div>
-    </section>
 
+        <div class="pr-[24px]">
+            <p class="mb-8" data-i18n="article.download_inline" data-i18n-html="true">
+                Скачать текст письма в PDF<br>
+                <a class="border-b-[1px] border-blue-600 pb-[1px]" href="https://files.rks.global/apple_2024_ru.pdf" target="_blank">на русском</a>,
+                <a class="border-b-[1px] border-blue-600 pb-[1px]" href="https://files.rks.global/apple_2024_en.pdf" target="_blank">английском</a><br>
+                языках
+            </p>
 
+            <p class="text-[12px] text-[#888] whitespace-nowrap mb-[16px] min-[640px]:order-2 min-[640px]:mt-[16px]" data-i18n="article.date">
+                2 сентября 2024
+            </p>
+        </div>
+    </div>
 
+    <div class="space-y-[50px] max-w-[860px] mx-0 min-[640px]:mx-auto min-[640px]:w-[600px] min-[1200px]:w-[760px]">
+        <p class="text-[22px] leading-[1.55] font-normal" data-i18n="article.p1" data-i18n-html="true">
+            Более 50 правозащитных организаций, СМИ, IT-компаний, журналистских коллективов и публичных персон подписали письмо
+            к Apple о недопустимости цензуры по требованию российских властей. Общественный резонанс возник после массового
+            <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://techcrunch.com/2024/07/08/apple-removes-vpn-apps-at-request-of-russian-authorities-say-app-makers/" target="_blank">удаления</a>
+            VPN-приложений из российского App Store, среди которых оказались Red Shield VPN, Le VPN, HideMyName, PlanetVPN, AdGuard VPN,
+            и многие другие. В самой компании Apple объяснили, что сделали это в ответ на требование российского цензурного ведомства (Роскомнадзора).
+        </p>
 
+        <p class="text-[22px] leading-[1.55] font-normal" data-i18n="article.p2" data-i18n-html="true">
+            Правозащитники считают, что подобная практика демонстрирует игнорирование компанией Apple интересов и прав пользователей
+            её устройств на доступ к информации и защиту частных коммуникаций. Это особенно очевидно в России, где в условиях жёсткой
+            военной цензуры и
+            <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://ooni.org/post/2023-russia-a-year-after-the-conflict/" target="_blank">блокировки</a>
+            тысяч сайтов с неугодной властям информацией, VPN-сервисы остаются пропуском в мир свободного интернета.<br><br>
 
+            Правозащитники отмечают, что Apple в данном случае отступает от собственных
+            <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://www.apple.com/compliance/pdfs/Apple-Human-Rights-Policy.pdf" target="_blank">стандартов</a>
+            и правил, в которых признает «критическую важность открытого общества, где информация распространяется свободно» и четко заявляет, что
+            «рука об руку с конфиденциальностью наших пользователей идет приверженность свободе информации и свободе выражения мнения».
+            Более того, Руководящие
+            <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://www.ohchr.org/sites/default/files/documents/publications/guidingprinciplesbusinesshr_en.pdf" target="_blank">принципы</a>
+            предпринимательской деятельности в аспекте прав человека, приверженность к которым подтвердила Apple, требуют от частных компаний избегать
+            содействия оказанию неблагоприятного воздействия на права человека в рамках своей деятельности.<br><br>
 
-    <section id="contacts" class="bg-black pt-[clamp(140px,25vw,180px)] pb-[clamp(160px,30vw,210px)] h-[clamp(550px,120vw,790px)">
-        <div class="mx-auto max-w-[1200px] px-[20px]">
-        <h2 class="font-bold text-white leading-[clamp(40px,12vw,94px)] text-[clamp(34px,7vw,50px)] sm:text-[50px] lg:text-[65px]">
+            Российские нормы законов об информации, на основании которых требует блокировку Роскомнадзор, противоречат как самим
+            <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://www.apple.com/compliance/pdfs/Apple-Human-Rights-Policy.pdf" target="_blank">принципам</a>
+            и правилам Apple, так и международным стандартам в области прав человека. ЕСПЧ неоднократно устанавливал размытость российских
+            норм права в части ограничения доступа к информации и их очевидное противоречие Европейской конвенции о защите прав человека.<br><br>
+
+            Саркис Дарбинян, киберадвокат, эксперт RKS Global, сооснователь Роскомсвободы:
+        </p>
+
+        <div class="py-[24px] border-t-[4px] border-b-[4px] border-[#e8e8e8] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[760px]">
+            <p class="text-black text-[24px] leading-[1.5] font-normal" style="font-family: 'Unbounded', sans-serif;" data-i18n="article.quote" data-i18n-html="true">
+                “Удалив VPN-сервисы из своего магазина приложений для россиян, Apple решила подорвать свою политику,
+                которая признает критическую важность открытого общества, свободы информации и выражения мнений.<br><br>
+
+                Apple должна осознать последствия своих действий и немедленно исправить ситуацию, иначе она станет соучастницей
+                наступления российских властей на гражданское пространство и установления тотальной цензуры.<br><br>
+
+                Отмахнуться тем, что мы просто исполняем законы страны, которые, очевидно, противоречат и самой политике компании,
+                и международным стандартам, уже не получится”.
+            </p>
+        </div>
+
+        <p class="text-[22px] leading-[1.55] font-normal" data-i18n="article.p3" data-i18n-html="true">
+            Среди организаций, подписавших петицию: Access Now, Electronic Frontier Foundation, Human Rights Watch,
+            RKS Global, GreatFire, Reporters Without Borders (RSF), Amnezia VPN, Hidemyname VPN, Red Shield VPN и др.,
+            а также десятки журналистов и представителей либеральных СМИ
+        </p>
+    </div>
+</section>
+
+<section class="px-[10px] min-[640px]:px-[20px] bg-[#e5e5e5]">
+    <div class="w-full max-w-[1200px] mx-auto py-[180px] text-center min-[640px]:max-w-[600px] min-[1200px]:max-w-[1200px]">
+        <h2 class="text-[30px] min-[640px]:text-[44px] min-[1200px]:text-[48px] leading-[1.23] font-bold" data-i18n="download.heading" data-i18n-html="true">
+            Скачать полный текст<br>письма
+        </h2>
+
+        <div class="flex flex-col min-[640px]:flex-row justify-center gap-6 mt-[64px]">
+            <a href="https://files.rks.global/apple_2024_ru.pdf" target="_blank" class="w-full min-[640px]:w-auto text-[16px] px-[56px] py-[16px] font-medium bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] transition-colors duration-300 flex items-center justify-center" style="font-family: 'Unbounded', sans-serif;" data-i18n="download.ru">
+                На русском
+            </a>
+
+            <a href="https://files.rks.global/apple_2024_en.pdf" target="_blank" class="w-full min-[640px]:w-auto text-[16px] px-[56px] py-[16px] font-medium border-[3px] border-black hover:bg-[#3A40FF] bg-transparent text-black rounded-[10px] transition-colors duration-300" style="font-family: 'Unbounded', sans-serif;" data-i18n="download.en">
+                На английском
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="contacts" class="bg-black pt-[clamp(140px,25vw,180px)] pb-[clamp(160px,30vw,210px)] h-[clamp(550px,120vw,790px)]">
+    <div class="mx-auto max-w-[1200px] px-[20px]">
+        <h2 class="font-bold text-white leading-[clamp(40px,12vw,94px)] text-[clamp(34px,7vw,50px)] sm:text-[50px] lg:text-[65px]" data-i18n="contacts.heading">
             Контакты
         </h2>
+
         <p class="font-inter text-white font-normal leading-[clamp(28px,8vw,47px)] text-[clamp(16px,4.5vw,18px)] sm:text-[30px] mt-[clamp(80px,25vw,220px)]">
             <a href="mailto:info@rks.global" target="_blank">
-            info@rks.global
+                info@rks.global
             </a>
         </p>
+
         <div class="mt-[20px] h-[5px] bg-white max-w-[1160px] w-full"></div>
-        </div>
-    </section>
-
-
-
+    </div>
+</section>
 
 </body>
 </html>

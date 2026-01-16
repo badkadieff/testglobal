@@ -13,246 +13,186 @@
     <link rel="icon" href="../images/favicon.svg">
     <script src="../js/tailwindcss.min.js"></script>
     <script src="../js/script.js"></script>
+    <script src="https://unpkg.com/i18next@23.12.2/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@7.2.1/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="../js/i18n/blog/page-testirovanie-max.js"></script>
+    <script src="../js/i18n/init.js"></script>
 </head>
-
-
-
-
 
 <body class="no-break-prepositions">
 
-    <header class="bg-black py-[4px] min-[640px]:py-[10px] flex ">
-        <div class="max-w-[1200px] px-[10px] min-[640px]:px-[20px] flex mx-auto w-full justify-between items-center">
-            <div>
-                <a href="../index.html"><img src="../images/logo.svg" alt="RKS Global" class="w-[16vw] h-[8vw] min-[640px]:w-[95px] min-[640px]:h-[48px]"></a>
-            </div>
-            <div class="text-white space-x-[20px] text-[15px] font-medium">
-                <a href="#">En</a>
-                <a href="#">Ру</a>
-            </div>
-        </div>
-    </header>
-
-
-    <section class="max-w-[1200px] mx-auto px-[10px] min-[640px]:px-[20px] pt-[40px] pb-[80px]">
-        <img src="../images/blog/Тестирование MAX.png" class="w-full h-[80vw] object-cover min-[640px]:h-auto mb-[8px] min-[640px]:mb-[20px]">
-        <div class="border-b border-[#CCCCCC] pb-[80px]">
-            <div class="flex flex-col min-[640px]:flex-row justify-between items-start">
-                <p class="text-[12px] text-[#888] whitespace-nowrap mb-[16px] min-[640px]:order-2 min-[640px]:mt-[16px]">
-                    Сентябрь 2025
-                </p>
-                <h1 class="mb-6 text-[34px] min-[960px]:text-[53px] min-[1200px]:text-[66px] font-bold tracking-[-1px] leading-[34px] min-[640px]:leading-[53px] min-[1200px]:leading-[66px] min-[640px]:order-1">
-                    Тестирование слежки в MAX на Android и iPhone
-                </h1>
-            </div>
-
+<header class="bg-black py-[4px] min-[640px]:py-[10px] flex">
+    <div class="max-w-[1200px] px-[10px] min-[640px]:px-[20px] flex mx-auto w-full justify-between items-center">
+        <div>
+            <a href="../index.html">
+                <img src="../images/logo.svg" alt="RKS Global" class="w-[16vw] h-[8vw] min-[640px]:w-[95px] min-[640px]:h-[48px]">
+            </a>
         </div>
 
+        <div class="text-white space-x-[20px] text-[15px] font-medium">
+            <button type="button" class="lang-switch opacity-60 hover:opacity-100 transition-opacity" data-lang="en" onclick="setLanguage('en')">
+                En
+            </button>
+            <button type="button" class="lang-switch opacity-100 hover:opacity-100 transition-opacity" data-lang="ru" onclick="setLanguage('ru')">
+                Ру
+            </button>
+        </div>
+    </div>
+</header>
 
-            <div class="max-w-[1200px] mx-auto py-[80px] w-full min-[640px]:w-[600px] min-[1200px]:w-auto">
-                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23] pb-[80px]">Контекст</h2>
-                <p class="text-[24px] leading-[1.6]  first-letter:text-[100px]  first-letter:leading-[0.7]  first-letter:font-normal  first-letter:mr-6  first-letter:float-left">
-                     В марте 2025 года компания VK <a class="text-[#0007ff] hover:text-[#3A40FF] underline decoration-1 decoration-[#ff3503] hover:decoration-[#ccc] underline-offset-[5px]" href="https://www.rbc.ru/technology_and_media/25/03/2025/67e258309a79475ac76ddf29" target="_blank">заявила</a> о выпуске бета-версии российского супераппа 
-                     MAX, а к середине августа 2025 пресс-служба мессенджера <a class="text-[#0007ff] hover:text-[#3A40FF] underline decoration-1 decoration-[#ff3503] hover:decoration-[#ccc] underline-offset-[5px]" href="https://www.interfax-russia.ru/moscow/news/chislo-polzovateley-max-dostiglo-18-mln-press-sluzhba-messendzhera" target="_blank">отчиталась</a> о 18 млн 
-                     пользователей. Благодаря административному давлению и агрессивной медийной 
-                     кампании за короткое время в приложение удалось привести значительяное количество 
-                     пользователей, которые установили его для работы, учебы или в личных целях.
-                </p>
-            </div>
+<section class="max-w-[1200px] mx-auto px-[10px] min-[640px]:px-[20px] pt-[40px] pb-[80px]">
+    <img src="../images/blog/Тестирование MAX.png" class="w-full h-[80vw] object-cover min-[640px]:h-auto mb-[8px] min-[640px]:mb-[20px]">
 
-            <div class="space-y-[50px] pb-[80px] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px]">
-                <p class="text-[18px] leading-[1.55] font-normal">
-                    Параллельно в стране <a class="text-[#0007ff] hover:text-[#3A40FF] underline decoration-1 decoration-[#ff3503] hover:decoration-[#ccc] underline-offset-[5px]" href="https://www.bbc.com/russian/articles/cj0y7lrrn4lo" target="_blank">началась</a> блокировка звонков в популярных глобальных мессенджерах 
-                    Whatsapp и Telegram, наблюдаются <a class="text-[#0007ff] hover:text-[#3A40FF] underline decoration-1 decoration-[#ff3503] hover:decoration-[#ccc] underline-offset-[5px]" href="https://www.vedomosti.ru/technology/news/2025/08/27/1134494-google-meet-sboi" target="_blank">сбои</a> в работе Google Meet, что стимулирует переход людей 
-                    на российский мессенджер. С 1 сентября 2025 года Max должен быть <a class="text-[#0007ff] hover:text-[#3A40FF] underline decoration-1 decoration-[#ff3503] hover:decoration-[#ccc] underline-offset-[5px]" href="https://www.cnews.ru/news/top/2025-08-26_samsungxiaomi_i_drugie_krupnejshie." target="_blank">предустановлен</a> на всех 
-                    новых смартфонах, продаваемых в России.<br><br>
+    <div class="border-b border-[#CCCCCC] pb-[80px]">
+        <div class="flex flex-col min-[640px]:flex-row justify-between items-start">
+            <p class="text-[12px] text-[#888] whitespace-nowrap mb-[16px] min-[640px]:order-2 min-[640px]:mt-[16px]" data-i18n="article.date">
+                Сентябрь 2025
+            </p>
 
-                    Российское государство настойчиво <a class="text-[#0007ff] hover:text-[#3A40FF] underline decoration-1 decoration-[#ff3503] hover:decoration-[#ccc] underline-offset-[5px]" href="https://www.vedomosti.ru/politics/articles/2025/07/31/1128185-regionam-rekomendovali-aktivnei-ispolzovat-mah" target="_blank">продвигает</a> MAX, пытаясь повторить успех китайского
-                    WeChat, где собрано всё от госуслуг до электронной коммерции. По подобию китайского 
-                    приложения, российский MAX спроектирован так, чтобы вся информация и переписка в нём 
-                    хранились на российских серверах и были доступны всем заинтересованным 
-                    государственным службам и подрядчикам, в том числе с использованием ИИ. 
-                    В MAX не предусмотрено сквозное шифрование, а значит информация, которой пользователи 
-                    обмениваются с помощью приложения, может стать доступной для третьих лиц. Личная 
-                    информация пользователей, которая будет в большом объеме агрегироваться в приложении, может быть подвержена утечкам или атакам.<br><br>
+            <h1 class="mb-6 text-[34px] min-[960px]:text-[53px] min-[1200px]:text-[66px] font-bold tracking-[-1px] leading-[34px] min-[640px]:leading-[53px] min-[1200px]:leading-[66px] min-[640px]:order-1" data-i18n="article.title">
+                Тестирование слежки в MAX на Android и iPhone
+            </h1>
+        </div>
+    </div>
 
-                    Компания VK, являющаяся материнской организацией ООО "Коммуникационная платформа" — 
-                    <a class="text-[#0007ff] hover:text-[#3A40FF] underline decoration-1 decoration-[#ff3503] hover:decoration-[#ccc] underline-offset-[5px]" href="https://www.kommersant.ru/doc/7942062" target="_blank">разработчика</a> мессенджера MAX — внесена в реестр организаторов распространения 
-                    информации (ОРИ). В соответствии с "<a class="text-[#0007ff] hover:text-[#3A40FF] underline decoration-1 decoration-[#ff3503] hover:decoration-[#ccc] underline-offset-[5px]" href="https://roskomsvoboda.org/ru/39999/" target="_blank">законом</a> Яровой", все ресурсы, признанные ОРИ, 
-                    обязаны собирать и хранить данные пользователей (включая переписки и документы 
-                    до 6 месяцев, а метаданные — до 3-х лет), а также предоставлять их силовым структурам по запросу.
-                </p>
-                <div class=" py-[24px] border-t-[4px] border-b-[4px] border-[#e8e8e8] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px]">
-                    <p class="text-[#0007ff] text-[24px] leading-[1.5] font-normal" style="font-family: 'Unbounded', sans-serif;">
-                        Это вызывает обеспокоенность среди экспертов: они 
-                        допускают, что мессенджер MAX, находящийся под контролем структуры, 
-                        связанной с государством, может не только выполнять требования по хранению 
-                        и передаче данных, но и теоретически обладать возможностями для более глубокого контроля — 
-                        вплоть до незаметного доступа к устройству пользователя и слежки в реальном времени. Такие 
-                        сценарии, хотя и не подтверждены, рассматриваются как потенциально возможные с технической точки зрения.
-                    </p>
-                </div>
-            </div>
-
-
-
-            <div class="space-y-[50px] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px]">
-                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]">Гипотеза</h2>
-                <p class="text-[18px] leading-[1.55] font-normal">
-                   До настоящего момента не было данных, достаточных для того, чтобы эксперты могли сделать 
-                   полноценные выводы о том, какие именно риски несёт пользователям установка супераппа 
-                   MAX. Отсутствие эмпирических данных создаёт прецеденты ошибок и субъективных толкований.<br><br>
-
-                   Одна из самых тиражируемых в сети гипотез — это перманентная слежка, которую MAX ведёт 
-                   за пользователями, запрашивая чрезмерно много доступов и/или используя 
-                   их несанкционированно. В частности в сети распространялись <a class="text-[#0007ff] hover:text-[#3A40FF] underline decoration-1 decoration-[#ff3503] hover:decoration-[#ccc] underline-offset-[5px]" href="https://t.me/redbinder/1451" target="_blank">мнения</a>, что приложение может 
-                   вести скрытую прослушку, самостоятельно делать скриншоты и в режиме реального времени 
-                   наблюдать за тем, что происходит в других приложениях. Другая популярная гипотеза, что 
-                   с точки зрения слежки активности на телефоне, MAX <a class="text-[#0007ff] hover:text-[#3A40FF] underline decoration-1 decoration-[#ff3503] hover:decoration-[#ccc] underline-offset-[5px]" href="https://habr.com/ru/articles/939006/" target="_blank">ведёт себе</a> похоже на Whatsapp или Telegram.<br><br>
-
-                   Чтобы проверить гипотезу о непрерывной слежке, которую ведёт за пользователями 
-                   приложение MAX, эксперты RKS Global провели специальное тестирование, чтобы понять, как 
-                   приложение ведёт себя, попадая на телефон пользователей.
-                </p>
-            </div>
-
-            <div class="space-y-[50px] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px] pt-[80px]">
-                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]">Методология</h2>
-                <p class="text-[18px] leading-[1.55] font-normal">
-                   Для тестирования были использованы мобильные устройства iPhone и Google Pixel. Перед 
-                   тестированием, телефоны были сброшены до заводских настроек и потом обновлены 
-                   до новейших версий ОС. Приложение MAX было впервые загружено на них через AppStore и Google Play. <br><br>
-
-                   Задачей было проверить когда и какие разрешения запрашиваются приложением MAX 
-                   на телефоне пользователей, как приложение пользуется этими разрешениями, делает ли что-то 
-                   без разрешения и как приложение связывается со своими серверами.
-                   Тестирование длилось двое суток. На обоих устройствах приложению сначала был разрешён 
-                   доступ ко всему, что приложение запрашивало (камере, микрофону, контактам, местоположению, звонкам, 
-                   файлам, фотографиям и видео). В это время за тем, что происходит на телефоне наблюдали эксперты и 
-                   фиксировали аномалии. По прошествии двух суток у приложения были отозваны все ранее выданные разрешения — 
-                   теперь наблюдение шло за тем, будет ли MAX запрашивать их снова и при каких условиях.<br><br>
-
-                   Во время тестирования на Android использовался мониторинг приложения по названию приложения
-                    (ru.oneme.app) или ID, мониторинг активности приложения через adb, штатные средства Android 
-                    (Панель управления разрешениями), журнал с ошибками adb bugreport.
-                   Для iPhone проведён анализ файла sysdiagnose с логами приложений и системы с помощью 
-                   iLEAPP, мониторинг активности приложения через штатные средства iPhone (Отчёт о конфиденциальности приложений).<br><br>
-
-                   Мониторинг трафика с обоих устройств происходил с помощью <a class="text-[#0007ff] hover:text-[#3A40FF] underline decoration-1 decoration-[#ff3503] hover:decoration-[#ccc] underline-offset-[5px]" href="https://pts-project.org/" target="_blank">PiRouge</a>.
-                   Приложение тестировалось с российскими IP-адресом, геолокацией и номером телефона. А также с IP-адресом и геолокацией вне России. 
-                </p>
-            </div>
-
-            <div class="space-y-[50px] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px] pt-[80px]">
-                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]">Выводы</h2>
-                    <p class="text-[18px] leading-[1.55] font-normal">
-                    На протяжении двух суток наблюдения ни в одной из конфигураций тестирования 
-                    не было выявлено неправомерного доступа к камере, местоположению, микрофону, 
-                    уведомлениям, контактам, фото и видео. Технически, у приложения была возможность 
-                    собирать эти данные и отправлять их, но эксперты не зафиксировали, что такое происходило. 
-                    После отзыва разрешений у приложения не зафиксировано попыток получить эти доступы снова через запросы или несанкционированно.
-                    </p>
-
-                <div class=" py-[24px] border-t-[4px] border-b-[4px] border-[#e8e8e8] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px]">
-                    <p class="text-[#0007ff] text-[24px] leading-[1.5] font-normal" style="font-family: 'Unbounded', sans-serif;">
-                        Исследование экспертов RKS Global показывает, что в настоящее время приложение MAX не ведёт слежку по умолчанию за пользователями. 
-                    </p>
-                </div>
-
-                <p class="text-[18px] leading-[1.55] font-normal">
-                    Тем не менее наблюдения необходимо продолжать, изменяя локацию и условия. 
-                    Есть вероятность, что у разных пользователей, находящихся в разных географических точках, 
-                    приложение может вести себя по-разному. Также есть вероятность, что с течением времени приложение 
-                    все-таки может начать делать запросы на доступы или же несанкционированно вторгаться в пользовательское устройство. 
-                    Требуется более детальный анализ трафика, его расшифровка, а также более глубокий анализ действий приложения – мануально и автоматизировано, например через mvt.<br><br>
-
-                    Также следует помнить, что любые приложения и сайты получают IP-адреса, которые косвенно могут указывать на геолокацию. 
-                    То есть любые российские приложения, включая МАX, могут фиксировать, где приблизительно находится пользователь. 
-                    Это означает, что силовики с помощью СОРМ тоже могут получить эту информацию.
-
-                </p>
-            </div>
-
-            <div class="space-y-[50px] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px] pt-[80px]">
-                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]">Рекомендации</h2>
-                <div class=" py-[24px] border-t-[4px] border-b-[4px] border-[#e8e8e8] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px]">
-                    <p class="text-[#0007ff] text-[24px] leading-[1.5] font-normal" style="font-family: 'Unbounded', sans-serif;">
-                        Эксперты RKS Global напоминают, что через мессенджер MAX не стоит вести конфиденциальную переписку и 
-                        пересылать чувствительные документы. Необходимо помнить, что у MAX есть большой потенциал к слежке, 
-                        так как вся информация в нём, все переписки могут быть доступны государственным органам в реальном времени.
-                    </p>
-                </div>
-                <p class="text-[18px] leading-[1.55] font-normal">
-                   В любой момент поведение мессенджера, связанного с государством, может измениться, 
-                   он может просить больше доступов или пытаться получить их самостоятельно, может передавать 
-                   больше информации для анализа и слежки. Все ваши дальнейшие действия по установке приложения MAX 
-                   и работе внутри него должны исходить из этого знания и необходимых мер безопасности. <br><br>
-
-                  Эксперты рекомендуют по возможности использовать безопасные аналоги (Google Meet, FaceTime, Jitsi, Zoom и пр.) 
-                  или восстановить доступ к привычным звонкам через WhatsApp и Telegram с помощью <a class="text-[#0007ff] hover:text-[#3A40FF] underline decoration-1 decoration-[#ff3503] hover:decoration-[#ccc] underline-offset-[5px]" href="https://storage.googleapis.com/vpnlove/index.html#/rating" target="_blank">устойчивых</a> к блокировке VPN.<br><br>
-                </p>
-            </div>
-
-            <div class="space-y-[50px] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px] pb-[80px] pt-[140px]">
-                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]">Скачать полный текст</h2>
-
-                <div class="flex-col gap-[30px]">
-                    <a href="https://files.rks.global/max_surveil_test_android_ru.pdf" target="_blank">
-                        <div class="flex items-center gap-[16px]">
-                            <img class="w-[30px] h-[30px]" src="../images/pdficons.svg">
-                            <p class="text-[#001eff] text-[18px] min-[640px]:text-[20px] min-[1200px]:text-[22px] leading-[1.55] font-normal">Тестирование слежки в MAX на Android </p>
-                        </div>
-                    </a>
-                    <a href="https://files.rks.global/max_surveil_test_android_ru.pdf" target="_blank">
-                        <div class="flex items-center gap-[16px]">
-                            <img class="w-[30px] h-[30px]" src="../images/pdficons.svg">
-                            <p class="text-[#001eff] text-[18px] min-[640px]:text-[20px] min-[1200px]:text-[22px] leading-[1.55] font-normal">Тестирование слежки в MAX на Android </p>
-                        </div>
-                    </a>
-                </div>
-                <div>
-                    <a href="https://files.rks.global/max_surveil_test_android_ru.pdf" target="_blank">
-                        <div class="flex items-center gap-[16px]">
-                            <img class="w-[30px] h-[30px]" src="../images/pdficons.svg">
-                            <p class="text-[#001eff] text-[18px] min-[640px]:text-[20px] min-[1200px]:text-[22px] leading-[1.55] font-normal">Тестирование слежки в MAX на Android </p>
-                        </div>
-                    </a>
-                    <a href="https://files.rks.global/max_surveil_test_android_ru.pdf" target="_blank">
-                        <div class="flex items-center gap-[16px]">
-                            <img class="w-[30px] h-[30px]" src="../images/pdficons.svg">
-                            <p class="text-[#001eff] text-[18px] min-[640px]:text-[20px] min-[1200px]:text-[22px] leading-[1.55] font-normal">Тестирование слежки в MAX на Android </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-    <section class="bg-black pt-[clamp(140px,25vw,180px)] pb-[clamp(160px,30vw,210px)] h-[clamp(550px,120vw,790px)">
-    <div class="mx-auto max-w-[1200px] px-[10px] min-[640px]:px-[20px]">
-        <h2 class="font-bold text-white leading-[clamp(40px,12vw,94px)] text-[clamp(34px,7vw,50px)] sm:text-[50px] lg:text-[65px]">
-        Контакты
+    <div class="max-w-[1200px] mx-auto py-[80px] w-full min-[640px]:w-[600px] min-[1200px]:w-auto">
+        <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23] pb-[80px]" data-i18n="sections.context.heading">
+            Контекст
         </h2>
-        <p class="font-inter text-white font-normal leading-[clamp(28px,8vw,47px)] text-[clamp(16px,4.5vw,18px)] sm:text-[30px] mt-[clamp(80px,25vw,220px)]">
-        <a class="text-[#0007ff] hover:text-[#3A40FF] underline decoration-1 decoration-[#ff3503] hover:decoration-white underline-offset-[7px]" href="mailto:info@rks.global">
-            info@rks.global
-        </a>
+
+        <p class="text-[24px] leading-[1.6] first-letter:text-[100px] first-letter:leading-[0.7] first-letter:font-normal first-letter:mr-6 first-letter:float-left" data-i18n="sections.context.lead" data-i18n-html="true">
+            В марте 2025 года компания VK ...
         </p>
+    </div>
+
+    <div class="space-y-[50px] pb-[80px] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px]">
+        <p class="text-[18px] leading-[1.55] font-normal" data-i18n="sections.context.body1" data-i18n-html="true">
+            Параллельно в стране началась блокировка...
+        </p>
+
+        <div class="py-[24px] border-t-[4px] border-b-[4px] border-[#e8e8e8] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px]">
+            <p class="text-[#0007ff] text-[24px] leading-[1.5] font-normal" style="font-family: 'Unbounded', sans-serif;" data-i18n="sections.context.quote1" data-i18n-html="true">
+                Это вызывает обеспокоенность среди экспертов...
+            </p>
+        </div>
+    </div>
+
+    <div class="space-y-[50px] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px]">
+        <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]" data-i18n="sections.hypothesis.heading">
+            Гипотеза
+        </h2>
+        <p class="text-[18px] leading-[1.55] font-normal" data-i18n="sections.hypothesis.body" data-i18n-html="true">
+            До настоящего момента не было данных...
+        </p>
+    </div>
+
+    <div class="space-y-[50px] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px] pt-[80px]">
+        <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]" data-i18n="sections.method.heading">
+            Методология
+        </h2>
+        <p class="text-[18px] leading-[1.55] font-normal" data-i18n="sections.method.body" data-i18n-html="true">
+            Для тестирования были использованы мобильные устройства...
+        </p>
+    </div>
+
+    <div class="space-y-[50px] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px] pt-[80px]">
+        <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]" data-i18n="sections.findings.heading">
+            Выводы
+        </h2>
+
+        <p class="text-[18px] leading-[1.55] font-normal" data-i18n="sections.findings.body1" data-i18n-html="true">
+            На протяжении двух суток наблюдения...
+        </p>
+
+        <div class="py-[24px] border-t-[4px] border-b-[4px] border-[#e8e8e8] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px]">
+            <p class="text-[#0007ff] text-[24px] leading-[1.5] font-normal" style="font-family: 'Unbounded', sans-serif;" data-i18n="sections.findings.quote1" data-i18n-html="true">
+                Исследование экспертов RKS Global показывает...
+            </p>
+        </div>
+
+        <p class="text-[18px] leading-[1.55] font-normal" data-i18n="sections.findings.body2" data-i18n-html="true">
+            Тем не менее наблюдения необходимо продолжать...
+        </p>
+    </div>
+
+    <div class="space-y-[50px] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px] pt-[80px]">
+        <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]" data-i18n="sections.reco.heading">
+            Рекомендации
+        </h2>
+
+        <div class="py-[24px] border-t-[4px] border-b-[4px] border-[#e8e8e8] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px]">
+            <p class="text-[#0007ff] text-[24px] leading-[1.5] font-normal" style="font-family: 'Unbounded', sans-serif;" data-i18n="sections.reco.quote1" data-i18n-html="true">
+                Эксперты RKS Global напоминают...
+            </p>
+        </div>
+
+        <p class="text-[18px] leading-[1.55] font-normal" data-i18n="sections.reco.body" data-i18n-html="true">
+            В любой момент поведение мессенджера...
+        </p>
+    </div>
+
+    <div class="space-y-[50px] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px] pb-[80px] pt-[140px]">
+        <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]" data-i18n="download.heading">
+            Скачать полный текст
+        </h2>
+
+        <div class="flex-col gap-[30px]">
+            <a href="https://files.rks.global/max_surveil_test_android_ru.pdf" target="_blank">
+                <div class="flex items-center gap-[16px]">
+                    <img class="w-[30px] h-[30px]" src="../images/pdficons.svg" alt="PDF">
+                    <p class="text-[#001eff] text-[18px] min-[640px]:text-[20px] min-[1200px]:text-[22px] leading-[1.55] font-normal" data-i18n="download.items.0">
+                        Тестирование слежки в MAX на Android
+                    </p>
+                </div>
+            </a>
+
+            <a href="https://files.rks.global/max_surveil_test_iphone_ru.pdf" target="_blank">
+                <div class="flex items-center gap-[16px]">
+                    <img class="w-[30px] h-[30px]" src="../images/pdficons.svg" alt="PDF">
+                    <p class="text-[#001eff] text-[18px] min-[640px]:text-[20px] min-[1200px]:text-[22px] leading-[1.55] font-normal" data-i18n="download.items.1">
+                        Тестирование слежки в MAX на iPhone
+                    </p>
+                </div>
+            </a>
+        </div>
+
+        <div>
+            <a href="https://files.rks.global/max_surveil_test_iphone_en.pdf" target="_blank">
+                <div class="flex items-center gap-[16px]">
+                    <img class="w-[30px] h-[30px]" src="../images/pdficons.svg" alt="PDF">
+                    <p class="text-[#001eff] text-[18px] min-[640px]:text-[20px] min-[1200px]:text-[22px] leading-[1.55] font-normal" data-i18n="download.items.2">
+                        Surveillance testing in MAX on iPhone
+                    </p>
+                </div>
+            </a>
+
+            <a href="https://files.rks.global/max_surveil_test_android_en.pdf" target="_blank">
+                <div class="flex items-center gap-[16px]">
+                    <img class="w-[30px] h-[30px]" src="../images/pdficons.svg" alt="PDF">
+                    <p class="text-[#001eff] text-[18px] min-[640px]:text-[20px] min-[1200px]:text-[22px] leading-[1.55] font-normal" data-i18n="download.items.3">
+                        Surveillance testing in MAX on Android
+                    </p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="bg-black pt-[clamp(140px,25vw,180px)] pb-[clamp(160px,30vw,210px)] h-[clamp(550px,120vw,790px)]">
+    <div class="mx-auto max-w-[1200px] px-[10px] min-[640px]:px-[20px]">
+        <h2 class="font-bold text-white leading-[clamp(40px,12vw,94px)] text-[clamp(34px,7vw,50px)] sm:text-[50px] lg:text-[65px]" data-i18n="contacts.heading">
+            Контакты
+        </h2>
+
+        <p class="font-inter text-white font-normal leading-[clamp(28px,8vw,47px)] text-[clamp(16px,4.5vw,18px)] sm:text-[30px] mt-[clamp(80px,25vw,220px)]">
+            <a class="text-[#0007ff] hover:text-[#3A40FF] underline decoration-1 decoration-[#ff3503] hover:decoration-white underline-offset-[7px]" href="mailto:info@rks.global">
+                info@rks.global
+            </a>
+        </p>
+
         <div class="mt-[20px] h-[5px] bg-white max-w-[1160px] w-full"></div>
     </div>
-    </section>
-
-
-
+</section>
 
 </body>
 </html>

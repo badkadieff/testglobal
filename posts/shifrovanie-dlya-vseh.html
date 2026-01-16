@@ -15,195 +15,194 @@
     <link rel="icon" href="../images/favicon.svg">
     <script src="../js/tailwindcss.min.js"></script>
     <script src="../js/script.js"></script>
-</head> 
-
-
-
-
+    <script src="https://unpkg.com/i18next@23.12.2/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@7.2.1/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="../js/i18n/blog/page-shifrovanie-dlya-vseh.js"></script>
+    <script src="../js/i18n/init.js"></script>
+</head>
 
 <body class="no-break-prepositions">
 
-    <header class="bg-black py-[4px] min-[640px]:py-[10px] flex ">
-        <div class="max-w-[1200px] px-[10px] min-[640px]:px-[20px] flex mx-auto w-full justify-between items-center">
-            <div class="flex items-center gap-[64px]">
-                <a href="../index.html"><img src="../images/logo.svg" alt="RKS Global" class="w-[16vw] h-[8vw] min-[640px]:w-[95px] min-[640px]:h-[48px]"></a>
-                <a href="../campaigns.html" class="text-white text-[15px] tracking-[0.5px] font-semibold leading-[23px]">Кампании</a>
-            </div>
-            <div class="text-white space-x-[20px] text-[15px] font-medium">
-                <a href="#">En</a>
-                <a href="#">Ру</a>
-            </div>
-        </div>
-    </header>
-
-
-    <section class="max-w-[1200px] mx-auto px-[10px] min-[640px]:px-[20px] pt-[40px] pb-[80px]">
-        <img src="../images/blog/shifrovanie-dlya-vseh.png" class="w-full h-[80vw] object-cover min-[640px]:h-auto mb-[8px] min-[640px]:mb-[20px]">
-        <div>
-            <div class="flex flex-col min-[640px]:flex-row justify-between items-start">
-                <p class="text-[12px] font-normal text-[#888] whitespace-nowrap mb-[16px] min-[640px]:order-2 min-[640px]:mt-[16px]">
-                   21.10.2024
-                </p>
-                <h1 class="mb-6 text-[30px] min-[960px]:text-[40px] min-[1200px]:text-[60px] font-bold tracking-[0.5px] leading-none min-[640px]:order-1">
-                    Шифрование<br>для всех!
-                </h1>
-            </div>
+<header class="bg-black py-[4px] min-[640px]:py-[10px] flex">
+    <div class="max-w-[1200px] px-[10px] min-[640px]:px-[20px] flex mx-auto w-full justify-between items-center">
+        <div class="flex items-center gap-[64px]">
+            <a href="../index.html">
+                <img src="../images/logo.svg" alt="RKS Global" class="w-[16vw] h-[8vw] min-[640px]:w-[95px] min-[640px]:h-[48px]">
+            </a>
+            <a href="../campaign.html" class="text-white text-[15px] tracking-[0.5px] font-semibold leading-[23px]" data-i18n="nav.campaigns">
+                Кампании
+            </a>
         </div>
 
+        <div class="text-white space-x-[20px] text-[15px] font-medium">
+            <button type="button" class="lang-switch opacity-60 hover:opacity-100 transition-opacity" data-lang="en" onclick="setLanguage('en')">
+                En
+            </button>
+            <button type="button" class="lang-switch opacity-100 hover:opacity-100 transition-opacity" data-lang="ru" onclick="setLanguage('ru')">
+                Ру
+            </button>
+        </div>
+    </div>
+</header>
 
-            <div class="max-w-[1200px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 py-[80px] w-full min-[640px]:w-[600px] min-[1200px]:w-[860px]">
-                <p class="text-[24px] leading-[1.6]  ">
-                    Мы всегда стояли на устойчивом шифровании. В цифровую эпоху право на приватность и безопасность коммуникаций становится 
-                    как никогда важным. Надёжное шифрование играет ключевую роль в защите этих фундаментальных прав человека.<br><br>
+<section class="max-w-[1200px] mx-auto px-[10px] min-[640px]:px-[20px] pt-[40px] pb-[80px]">
+    <img src="../images/blog/shifrovanie-dlya-vseh.png" class="w-full h-[80vw] object-cover min-[640px]:h-auto mb-[8px] min-[640px]:mb-[20px]">
 
-                    RKS Global поддерживает <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://www.globalencryption.org/2024/10/global-encryption-day-2024-statement/" target="_blank">манифест Global Encryption Coalition</a>, который призывает к защите и продвижению устойчивого 
-                    шифрования, как основы свободного и открытого общества.<br><br>
+    <div>
+        <div class="flex flex-col min-[640px]:flex-row justify-between items-start">
+            <p class="text-[12px] font-normal text-[#888] whitespace-nowrap mb-[16px] min-[640px]:order-2 min-[640px]:mt-[16px]" data-i18n="article.date">
+                21.10.2024
+            </p>
 
-                    Мы призываем правительства государств, организации и пользователей Интернет поддержать и защищать право на 
-                    использование сквозного шифрования. Ослабление шифрования недопустимо даже под предлогом национальной безопасности.
+            <h1 class="mb-6 text-[30px] min-[960px]:text-[40px] min-[1200px]:text-[60px] font-bold tracking-[0.5px] leading-none min-[640px]:order-1" data-i18n="article.title" data-i18n-html="true">
+                Шифрование<br>для всех!
+            </h1>
+        </div>
+    </div>
 
+    <div class="max-w-[1200px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 py-[80px] w-full min-[640px]:w-[600px] min-[1200px]:w-[860px]">
+        <p class="text-[24px] leading-[1.6]" data-i18n="article.lead" data-i18n-html="true">
+            Мы всегда стояли на устойчивом шифровании...
+        </p>
+    </div>
 
-                </p>
-            </div>
+    <div class="space-y-[80px] pb-[80px] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px]">
+        <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]" data-i18n="principles.heading">
+            Основные положения
+        </h2>
 
-            <div class="space-y-[80px] pb-[80px] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px]">
-                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]">Основные положения</h2>
-                <div class="space-y-[60px]">
-                    <div class="flex gap-4">
-                        <div class="flex items-start">
-                            <div class="w-[50px] h-[50px] flex items-center justify-center rounded-full border-[2px] border-black text-[20px] font-medium" style="font-family: 'Unbounded', sans-serif;">
-                                1
-                            </div>
-                        </div>
-                        <div class="pl-[20px]">
-                            <h3 class="text-[24px] md:text-[22px] font-medium leading-[1.35] mb-[14px]">
-                                Шифрование — фундаментальное право
-                            </h3>
-                            <p class="text-[22px] leading-[1.5] text-[#222]">
-                                Каждый человек имеет право на защиту своих личных данных и коммуникаций
-                                посредством надёжного шифрования.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4">
-                        <div class="flex items-start">
-                            <div class="w-[50px] h-[50px] flex items-center justify-center rounded-full border-[2px] border-black text-[20px] font-medium" style="font-family: 'Unbounded', sans-serif;">
-                            2
-                            </div>
-                        </div>
-                        <div class="pl-[20px]">
-                            <h3 class="text-[24px] md:text-[22px] font-medium mb-[14px]">
-                                Недопустимость ослабления шифрования
-                            </h3>
-                            <p class="text-[22px] leading-[1.5] text-[#222]">
-                                Любые попытки ослабить шифрование, создать «чёрные ходы» или требовать
-                                передачи ключей шифрования третьим лицам недопустимы и представляют
-                                угрозу для безопасности всех пользователей.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4">
-                        <div class="flex items-start">
-                            <div class="w-[50px] h-[50px] flex items-center justify-center rounded-full border-[2px] border-black text-[20px] font-medium" style="font-family: 'Unbounded', sans-serif;">
-                                3
-                            </div>
-                        </div>
-                        <div class="pl-[20px]">
-                            <h3 class="text-[24px] md:text-[22px] font-medium mb-[14px]">
-                                Прозрачность и открытость
-                            </h3>
-                            <p class="text-[22px] leading-[1.5] text-[#222]">
-                                Алгоритмы шифрования должны быть открытыми для проверки экспертным
-                                сообществом.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4">
-                        <div class="flex items-start">
-                            <div class="w-[50px] h-[50px] flex items-center justify-center rounded-full border-[2px] border-black text-[20px] font-medium" style="font-family: 'Unbounded', sans-serif;">
-                                4
-                            </div>
-                        </div>
-                        <div class="pl-[20px]">
-                            <h3 class="text-[20px] md:text-[22px] font-medium mb-[14px]">
-                                Образование и просвещение
-                            </h3>
-                            <p class="text-[22px] leading-[1.5] text-[#222]">
-                                Необходимо повышать осведомлённость общества о важности шифрования и
-                                обучать людей его правильному использованию.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4">
-                        <div class="flex items-start">
-                            <div class="w-[50px] h-[50px] flex items-center justify-center rounded-full border-[2px] border-black text-[20px] font-medium" style="font-family: 'Unbounded', sans-serif;">
-                            5
-                            </div>
-                        </div>
-                        <div class="pl-[20px]">
-                            <h3 class="text-[20px] md:text-[22px] font-medium mb-[14px]">
-                                Защита разработчиков
-                            </h3>
-                            <p class="text-[22px] leading-[1.5] text-[#222]">
-                                Разработчики и компании, создающие инструменты для устойчивого шифрования, должны быть защищены от давления со стороны государств.
-                            </p>
-                        </div>
+        <div class="space-y-[60px]">
+            <!-- 1 -->
+            <div class="flex gap-4">
+                <div class="flex items-start">
+                    <div class="w-[50px] h-[50px] flex items-center justify-center rounded-full border-[2px] border-black text-[20px] font-medium" style="font-family: 'Unbounded', sans-serif;">
+                        1
                     </div>
                 </div>
-            </div>
-
-            <div class="space-y-[60px] pb-[80px] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px]">
-                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]">Правовой стандарт</h2>
-                <p class="text-[22px] leading-[1.5] text-[#222] max-w-[760px]">
-                    Шифрование - это не просто наша прихоть или баг интернета. Право на шифрование - это неотъемлемое право человека в цифровой век. 
-                    В <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://documents.un.org/doc/undoc/gen/g15/095/85/pdf/g1509585.pdf" target="_blank">докладе</a> A/HRC/29/32 22 мая 2015 года Специального докладчика ООН, посвященного использованию средств шифрования и анонимности 
-                    при передаче цифровых сообщений, отмечается, что:
-                </p>
-                <div class=" py-[24px] border-t-[4px] border-b-[4px] border-[#e8e8e8] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[760px]">
-                    <p class="text-[#0007ff] text-[24px] leading-[1.5] font-normal" style="font-family: 'Unbounded', sans-serif;">
-                        «Шифрование и анонимность рассматриваются как инструменты, позволяющие людям осуществлять свои права на свободу мнений 
-                        и их свободное выражение в цифровую эпоху»
+                <div class="pl-[20px]">
+                    <h3 class="text-[24px] md:text-[22px] font-medium leading-[1.35] mb-[14px]" data-i18n="principles.items.0.title">
+                        Шифрование — фундаментальное право
+                    </h3>
+                    <p class="text-[22px] leading-[1.5] text-[#222]" data-i18n="principles.items.0.text">
+                        Каждый человек имеет право на защиту своих личных данных и коммуникаций посредством надёжного шифрования.
                     </p>
                 </div>
-                <p class="text-[22px] leading-[1.5] text-[#222] max-w-[760px]">
-                    Европейский суд по правам человека в деле «<a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://hudoc.echr.coe.int/eng#{%22sort%22:[%22kpdate%20Descending%22],%22itemid%22:[%22001-230854%22]}" target="_blank">Подчасов и другие против России</a>» (2024) по иску Роскомсвободы 
-                    и пользователей Telegram безоговорочно подчеркнул важность защиты шифрования:
-                </p>
-                <div class=" py-[24px] border-t-[4px] border-b-[4px] border-[#e8e8e8] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[760px]">
-                    <p class="text-[#0007ff] text-[24px] leading-[1.5] font-normal" style="font-family: 'Unbounded', sans-serif;">
-                        «Статутное обязательство расшифровывать сквозные зашифрованные коммуникации непропорционально»
+            </div>
+
+            <!-- 2 -->
+            <div class="flex gap-4">
+                <div class="flex items-start">
+                    <div class="w-[50px] h-[50px] flex items-center justify-center rounded-full border-[2px] border-black text-[20px] font-medium" style="font-family: 'Unbounded', sans-serif;">
+                        2
+                    </div>
+                </div>
+                <div class="pl-[20px]">
+                    <h3 class="text-[24px] md:text-[22px] font-medium mb-[14px]" data-i18n="principles.items.1.title">
+                        Недопустимость ослабления шифрования
+                    </h3>
+                    <p class="text-[22px] leading-[1.5] text-[#222]" data-i18n="principles.items.1.text">
+                        Любые попытки ослабить шифрование, создать «чёрные ходы» или требовать передачи ключей шифрования третьим лицам недопустимы и представляют угрозу для безопасности всех пользователей.
                     </p>
                 </div>
-                <p class="text-[22px] leading-[1.5] text-[#222] max-w-[760px]">
-                    Суд пришел к выводу, что предписания о расшифровке сообщений ослабляют шифрование для всех пользователей, делая системы уязвимыми 
-                    для эксплуатации преступными сетями. Требование расшифровать «секретные чаты» Telegram было расценено как несоразмерное нарушение 
-                    безопасности пользователей. Суд отметил альтернативные, менее интрузивные методы получения правоохранительными органами доступа к 
-                    сообщениям, такие как экспертиза изъятых устройств и более эффективное обеспечение полицейских ресурсами, которые не подрывают шифрование.<br><br>
-
-                    Устойчивое шифрование - это краеугольный камень цифровой безопасности и свободы в современном мире. Каждый должен иметь право на 
-                    шифрование коммуникаций! Только так мы сможем обеспечить безопасное и свободное цифровое будущее для всех!<br><br>
-
-                    Наша команда рекомендует использовать надёжные и доверенные инструменты для шифрования данных, а также помнить о том, что не все 
-                    мессенджеры и социальные сети используют сквозное шифрование. Если вы хотели бы узнать об этом больше, а также научиться выбирать 
-                    надёжные инструменты, воспользуйтесь тренажёром на сайте <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://securno.org/" target="_blank">securno.org</a>.
-                </p>
             </div>
-    </section>
 
+            <!-- 3 -->
+            <div class="flex gap-4">
+                <div class="flex items-start">
+                    <div class="w-[50px] h-[50px] flex items-center justify-center rounded-full border-[2px] border-black text-[20px] font-medium" style="font-family: 'Unbounded', sans-serif;">
+                        3
+                    </div>
+                </div>
+                <div class="pl-[20px]">
+                    <h3 class="text-[24px] md:text-[22px] font-medium mb-[14px]" data-i18n="principles.items.2.title">
+                        Прозрачность и открытость
+                    </h3>
+                    <p class="text-[22px] leading-[1.5] text-[#222]" data-i18n="principles.items.2.text">
+                        Алгоритмы шифрования должны быть открытыми для проверки экспертным сообществом.
+                    </p>
+                </div>
+            </div>
 
-    <section id="contacts" class="bg-black pt-[clamp(140px,25vw,180px)] pb-[clamp(160px,30vw,210px)] h-[clamp(550px,120vw,790px)">
-        <div class="mx-auto max-w-[1200px] px-[20px]">
-        <h2 class="font-bold text-white leading-[clamp(40px,12vw,94px)] text-[clamp(34px,7vw,50px)] sm:text-[50px] lg:text-[65px]">
+            <!-- 4 -->
+            <div class="flex gap-4">
+                <div class="flex items-start">
+                    <div class="w-[50px] h-[50px] flex items-center justify-center rounded-full border-[2px] border-black text-[20px] font-medium" style="font-family: 'Unbounded', sans-serif;">
+                        4
+                    </div>
+                </div>
+                <div class="pl-[20px]">
+                    <h3 class="text-[20px] md:text-[22px] font-medium mb-[14px]" data-i18n="principles.items.3.title">
+                        Образование и просвещение
+                    </h3>
+                    <p class="text-[22px] leading-[1.5] text-[#222]" data-i18n="principles.items.3.text">
+                        Необходимо повышать осведомлённость общества о важности шифрования и обучать людей его правильному использованию.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="flex gap-4">
+                <div class="flex items-start">
+                    <div class="w-[50px] h-[50px] flex items-center justify-center rounded-full border-[2px] border-black text-[20px] font-medium" style="font-family: 'Unbounded', sans-serif;">
+                        5
+                    </div>
+                </div>
+                <div class="pl-[20px]">
+                    <h3 class="text-[20px] md:text-[22px] font-medium mb-[14px]" data-i18n="principles.items.4.title">
+                        Защита разработчиков
+                    </h3>
+                    <p class="text-[22px] leading-[1.5] text-[#222]" data-i18n="principles.items.4.text">
+                        Разработчики и компании, создающие инструменты для устойчивого шифрования, должны быть защищены от давления со стороны государств.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="space-y-[60px] pb-[80px] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px]">
+        <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]" data-i18n="legal.heading">
+            Правовой стандарт
+        </h2>
+
+        <p class="text-[22px] leading-[1.5] text-[#222] max-w-[760px]" data-i18n="legal.p1" data-i18n-html="true">
+            Шифрование - это не просто наша прихоть...
+        </p>
+
+        <div class="py-[24px] border-t-[4px] border-b-[4px] border-[#e8e8e8] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[760px]">
+            <p class="text-[#0007ff] text-[24px] leading-[1.5] font-normal" style="font-family: 'Unbounded', sans-serif;" data-i18n="legal.quote1" data-i18n-html="true">
+                «Шифрование и анонимность рассматриваются как инструменты...»
+            </p>
+        </div>
+
+        <p class="text-[22px] leading-[1.5] text-[#222] max-w-[760px]" data-i18n="legal.p2" data-i18n-html="true">
+            Европейский суд по правам человека...
+        </p>
+
+        <div class="py-[24px] border-t-[4px] border-b-[4px] border-[#e8e8e8] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[760px]">
+            <p class="text-[#0007ff] text-[24px] leading-[1.5] font-normal" style="font-family: 'Unbounded', sans-serif;" data-i18n="legal.quote2" data-i18n-html="true">
+                «Статутное обязательство расшифровывать...»
+            </p>
+        </div>
+
+        <p class="text-[22px] leading-[1.5] text-[#222] max-w-[760px]" data-i18n="legal.p3" data-i18n-html="true">
+            Суд пришел к выводу, что предписания о расшифровке сообщений...
+        </p>
+    </div>
+</section>
+
+<section id="contacts" class="bg-black pt-[clamp(140px,25vw,180px)] pb-[clamp(160px,30vw,210px)] h-[clamp(550px,120vw,790px)]">
+    <div class="mx-auto max-w-[1200px] px-[20px]">
+        <h2 class="font-bold text-white leading-[clamp(40px,12vw,94px)] text-[clamp(34px,7vw,50px)] sm:text-[50px] lg:text-[65px]" data-i18n="contacts.heading">
             Контакты
         </h2>
+
         <p class="font-inter text-white font-normal leading-[clamp(28px,8vw,47px)] text-[clamp(16px,4.5vw,18px)] sm:text-[30px] mt-[clamp(80px,25vw,220px)]">
-            <a href="mailto:info@rks.global" target="_blank">
-            info@rks.global
-            </a>
+            <a href="mailto:info@rks.global" target="_blank">info@rks.global</a>
         </p>
+
         <div class="mt-[20px] h-[5px] bg-white max-w-[1160px] w-full"></div>
-        </div>
-    </section>
+    </div>
+</section>
 
 </body>
 </html>
