@@ -1,4 +1,3 @@
-// js/i18n/page-gosudarstvo-slezhki.js
 
 const resources = {
   ru: {
@@ -261,228 +260,173 @@ const resources = {
   en: {
     translation: {
       meta: {
-        title: "The Surveillance State. A study",
+        title: "State of Surveillance",
         description:
           "A study of how the Russian state uses laws and technology to carry out digital surveillance",
-        og_title: "The Surveillance State. A study",
+        og_title: "State of Surveillance",
         og_description:
           "A study of how the Russian state uses laws and technology to carry out digital surveillance"
       },
       article: {
-        title: "The<br>Surveillance State",
+        title: "State of<br>Surveillance",
 
         subtitle:
-          "A study of how the Russian state uses laws and technology to carry out digital surveillance",
+          "A study on how the Russian state, through laws and technology, carries out digital surveillance",
 
         download_main: "Download full version (pdf)",
 
         lead_intro:
-          "We cannot underestimate the importance of studying digital surveillance. This is a global trend — more and more countries " +
-          "are moving towards deeper state interference in the digital lives of their citizens and the development of total cyber-surveillance.<br><br>" +
-          "Russia is at the forefront of these processes. The specific political reality that has emerged in the Russian Federation presupposes " +
-          "a large number of restrictions — and therefore constant monitoring of those who might violate them. The peculiarities of Russian legislation, " +
-          "which allows very broad interpretations of the law, create wide scope for abuse by state authorities. The court system at present " +
-          "cannot guarantee effective protection of the rights of citizens subjected to unlawful surveillance.",
+          "We cannot underestimate the importance of researching digital surveillance. This is a global trend — more and more countries are moving towards increased state intervention in the digital lives of their citizens and the development of total cyber surveillance.<br><br> " +
+          "Russia is at the forefront of such processes. The distinctive political reality in the Russian Federation imposes a large number of restrictions, and therefore surveillance of their violators. Specific Russian legislation, which also allows for a broad interpretation of laws, gives room for abuse by the authorities. The judicial system is currently unable to guarantee effective protection of the rights of citizens affected by unlawful surveillance." ,
 
         lead_second:
-          "The Russian authorities spend enormous resources on building a system of total surveillance. This system enables them to efficiently persecute political " +
-          "opponents, but does not protect society from tragedies such as the terrorist attack at Crocus City Hall in March 2024 near Moscow. " +
-          "Hundreds of people were killed or injured, and the powerful Moscow facial-recognition system failed to ensure their safety. This incident " +
-          "brought Russian society back to a discussion about the necessity and effectiveness of the surveillance system and whether its use is justified.",
+          "While digital surveillance may be justified in matters of national security, a balance must be struck between security and privacy, as well as between state interests and the rights of citizens<br><br> " +
+          "The enormous resources that Russian authorities spend to deploy total surveillance allow them to effectively prosecute political rivals, but do not protect society from tragedies like the recent terrorist attack at Crocus City Hall, in which hundreds of people were killed and injured and Moscow’s powerful facial recognition system failed to provide security. This incident brought Russian society back to the debate about the necessity and effectiveness of the surveillance system and the justification for its use. " ,
+
 
         quote_intro:
-          "Today, people in Russia live in an atmosphere of total surveillance — but not in safety.",
+          "Russian citizens live in the atmosphere of total surveillance, but not security",
 
         lead_third:
-          "Nevertheless, understanding the laws that regulate the collection and processing of personal data, the technologies of digital surveillance " +
-          "and the decision-making mechanisms of law-enforcement agencies can help people take steps to protect their privacy and security even under conditions " +
-          "of pervasive surveillance, and make use of the existing tools for defending their rights.",
+          "Nevertheless, knowledge of the laws regulating the collection and processing of personal data, digital surveillance technologies, and law enforcement decision-making mechanisms can help individuals take steps to ensure their privacy and security, even in the face of total surveillance, and take advantage of existing opportunities to protect their rights. " ,
 
-        desc_title: "Study overview",
+        desc_title: "Study Description",
 
         desc_text:
-          "This study presents a concise analytical overview of how the Russian state uses surveillance technologies. It focuses primarily on " +
-          "legislation and law enforcement related to digital monitoring, as well as the positions of law-enforcement agencies and other authorities on these issues.<br><br>" +
-          "We conducted an in-depth legal review of the current regulatory framework governing the use of surveillance technologies by state bodies, " +
-          "along with existing legal safeguards, transparency issues and oversight mechanisms intended to prevent abuse.<br><br>" +
-          "In addition, we examined media reports about leaks from government agencies and related organizations. Such information is not taken at face value: " +
-          "we compare it with other sources in order to assess its accuracy and reliability.<br><br>" +
-          "We also carried out a series of interviews with experts in electronic communications, IT, information security and law to verify the study’s findings.<br><br>" +
-          "In the full version of the report, we review the laws that grant law-enforcement agencies powers to use covert surveillance and related technologies. " +
-          "We then outline a number of special legal provisions in federal laws that together create the regulatory regime for different information-service providers.<br><br>" +
-          "Finally, we focus on the ongoing rollout of facial-recognition systems in public spaces. We also provide relevant case law of the European Court of Human Rights (ECtHR) " +
-          "that highlights the problems of Russia’s legal framework on mass surveillance and violations of the right to privacy.<br><br>" +
-          "We recommend reading the full PDF version of the study. It may be useful to journalists and human-rights defenders, researchers working on digital rights, " +
-          "and activist communities. On this page we publish brief findings and key theses to give a sense of what the report covers.",
+          "This study provides a brief analytical overview of how the Russian state employs surveillance technologies in Russia. The study focuses mainly on aspects of legislation and law enforcement in the field of digital surveillance, as well as the position of law enforcement agencies and public authorities on this issue.<br><br>" +
+          "We conducted a detailed legal review of the existing legal framework governing the use of surveillance technologies by state authorities, as well as existing legal safeguards, transparency issues, and oversight mechanisms to prevent abuse.<br><br> " +
+          "In addition, we examined media information about leaks from government agencies and related organisations. Such information was not interpreted on its own; we compared it with other sources to infer its accuracy and credibility.<br><br>" +
+          "We also conducted a number of interviews with experts in electronic communications, information technology, and information security and law to verify the findings of the study.<br><br> " +
+          "In the full text of the study, which you will find below as a PDF file, we provide an overview of the laws authorising law enforcement agencies to resort to covert surveillance techniques and the use of related technologies. Then, we list a number of specific legal provisions under federal laws that shape the legal regime for various information service providers. Finally, we focus on the ongoing process of deploying facial recognition systems in public settings. Furthermore, we refer to relevant European Court of Human Rights (ECtHR) jurisprudence highlighting the problems with the Russian legal framework on the use of mass surveillance and the violation of the right to privacy.<br><br>" +
 
-        brief_title: "Key findings",
+          "We advise you to read " +
+          '<a href="https://files.rks.global/surveil_2024_en.pdf" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">the full text of the study.</a> ' +
+          "It will be of interest to journalists and human rights activists, digital rights researchers and activist communities. On this page, we will publish a summary of the findings and key messages.",
+
+        brief_title: "Key conclusions",
 
         brief_intro:
-          "Based on our research, we can conclude that state surveillance in Russia:<br><br>",
+          "Based on the study conducted, we note that state surveillance in Russia:<br><br>",
 
         brief_list:
           "<li>" +
-          "relies on technical infrastructure embedded in communication networks and on service providers acting as agents of state surveillance, " +
-          "making large-scale monitoring of users possible;" +
+          "Relies on technical infrastructure integrated into networks and on service providers as agents of state surveillance, which allows for mass surveillance of users. " +
           "</li>" +
+
           "<li>" +
-          "is based on legislation with open-ended goals and vague wording, giving law-enforcement bodies extremely wide discretion and leading to abuses of power;" +
+          "Is based on legislation with open-ended goals and wording, thus providing wide discretion to law enforcers, leading to abuse of power." +
           "</li>" +
+          
           "<li>" +
-          "uses unaccountable monitoring of internet communications and violates the principle of proportionality, since many aspects of surveillance are classified " +
-          "and shielded from public scrutiny;" +
+          "Uses unaccountable surveillance of internet communications, violates the principle of proportionality as many aspects are classified, and does not allow for public oversight." +
           "</li>" +
+
           "<li>" +
-          "does not provide effective legal remedies for people whose right to privacy has been violated by state officials;" +
+          "Fails to provide effective remedies for those whose right to privacy has been infringed by public officials." +
           "</li>" +
+
           "<li>" +
-          "targets both citizens and foreigners indiscriminately, including migrant workers;" +
+          "Indiscriminately targets citizens as well as foreigners, including surveillance of migrant workers." +
           "</li>" +
+
           "<li>" +
-          "strives to “passportise” all internet users and strip them of anonymity, including through technical solutions;" +
+          "Attempts to passport all internet users and de-anonymise them, including through the use of technological solutions." +
           "</li>" +
+
           "<li>" +
-          "lacks a clear legal framework for handling biometric data for surveillance purposes, which blurs the line between online and offline monitoring " +
-          "and creates an unaccountable system prone to abuse and corruption;" +
+          "Has no legal regulation of biometric personal data for surveillance purposes, which blurs the boundaries between online and offline surveillance and makes the system unaccountable, prone to abuse, and corruption. " +
           "</li>" +
+          
           "<li>" +
-          "reveals an explicit strategy by the authorities to disguise the use of facial-recognition technology and other controversial practices behind extremely vague wording, " +
-          "and to hide information about their use by restricting access to internal documents and placing them under various confidentiality regimes." +
+          "Demonstrates a patent strategy by the authorities to disguise the use of facial recognition technology and other controversial practices with extremely vague language, and to conceal usage data by restricting access to internal documents and extending confidentiality and other protections to them." +
           "</li>",
 
         law_title:
-          "Privacy protection laws and extra-judicial access to data",
+          "Legislation on privacy protection and extrajudicial access to data",
 
         law_intro:
-          "There are specific laws that regulate, for example, the secrecy of correspondence, telephone calls, postal and other communications, " +
-          "or the disclosure of personal data in the course of court proceedings. We discuss them in more detail in the full report.",
+          "There are special laws that regulate, for example, guarantees, the secrecy of correspondence, telephone conversations, postal and other communications, or the disclosure of personal data in the course of a trial, and so on. We describe them in detail in the research materials. " ,
 
         law_quote:
-          "The Constitution of the Russian Federation guarantees the right to privacy and the secrecy of communications, but it contains no explicit provisions " +
-          "on personal data and no guarantees directly related to digital rights.",
+          "The Constitution of the Russian Federation provides for the right to privacy and secrecy of communications but does not contain either explicit provisions relating to personal data or provisions directly related to digital rights.",
 
         law_body:
-          "At the same time, Russian legislation in a number of cases allows supervisory and law-enforcement authorities " +
-          "(such as the prosecutor’s office, the police and the FSB) to obtain extra-judicial access to personal data. " +
-          "The Law on Operational-Search Activities directly authorises the police and security services to monitor communications, " +
-          "intercept telephone calls, access computer information and tap communication channels. By law, such requests for information are classified, " +
-          "and recipients of these requests are prohibited from disclosing their contents. As a result, people who were under surveillance and whose data were collected " +
-          "have no realistic way to find out what operational-search measures were carried out against them.<br><br>",
+          "At the same time, Russian legislation in some cases provides the possibility of extrajudicial access to personal data for oversight and law enforcement agencies (eg prosecutor’s office, police, Federal Security Service [FSB]). Thus, the Federal Law 'On Operational-Search Activities' directly grants the police and national security bodies the right to control communications, wiretap telephone conversations, access to computer information, and to withdraw information from communication channels. At the same time, according to the law, requests for such information constitute a state secret, and the recipient of such requests has no right to disclose its contents. In other words, people who have been monitored and about whom information has been collected will not be able to request information about operational and investigative measures taken against them. " ,
 
-        infra_title: "Technical infrastructure",
+        infra_title: "Technical<br>infrastructure",
 
-        infra_sub_providers: "Digital service providers as intermediaries of mass surveillance",
+        infra_sub_providers: "Digital Service Providers as Agents of Mass Surveillance",
 
         infra_providers_body:
-          "State surveillance in Russia largely relies on technical infrastructure embedded in networks and on service providers " +
-          "acting as agents of government monitoring.<br><br>" +
-          "Today, service providers (so-called “organisers of information distribution”, hosting providers, social networks, classified-ads sites and others) " +
-          "are forced to engage in practices that can reasonably be described as surveillance. Recent amendments to Russian law require all domestic online services " +
-          "to authenticate users only via a mobile phone number or through a state identity system (such as the “Gosuslugi” portal).<br><br>" +
-          "With the adoption of the “Blogger Law” in 2014 and, later, the 2016 “Yarovaya package”, certain communication services classified as organisers of information distribution " +
-          "were obliged to store user messages for six months and metadata for up to one year. Both categories of data can be used to monitor users. " +
-          "While metadata mainly provide statistical and technical information about user connections, devices, etc., content data contain the messages themselves — " +
-          "allowing the authorities not only to locate or identify a person of interest, but also to use their messages as evidence in criminal cases.<br><br>" +
-          "We analysed the official registry of organisers of information distribution maintained by the Russian regulator. " +
-          "On this basis we conclude that Roskomnadzor interprets the law very broadly and adds to the register virtually any website or app " +
-          "that allows users to communicate with each other — from messaging services to banking apps with built-in chat features.",
+          "State surveillance in Russia relies heavily on technical infrastructure integrated into networks and service providers as agents of state surveillance.<br><br>" +
+
+          "Currently, service providers (information dissemination organisers, hosting providers, social networks, classifieds sites) are forced to engage in practices that could be considered surveillance. New amendments to Russian legislation introduce requirements for all Russian online services to authorise users only using a cell phone number or through a state identification and authorisation system (eg Gosuslugi, etc)<br><br>" +
+
+          "With the adoption of the 'Law on Bloggers' in 2014, and later in 2016 amendments to the legislation related to the 'Yarovaya Package', some communication services classified by the authorities as information dissemination organisers became obliged to store their users' messages for six months and metadata for up to one year. Both types of data can be used to monitor users. However, while metadata provides mainly statistical and technical information about the user’s connection, device, etc., content data contains the messages themselves, which allows authorities not only to track, locate, or identify the person of interest, but also to use the messages as evidence against them.<br><br>" +
+
+          "We examined the records of information dissemination organisers from the relevant register of the Russian oversight agency. On that basis, we can conclude that Roskomnadzor (the Federal Service for Supervision of Communications, Information Technology, and Mass Media) interprets the law very broadly and includes in the register, without restrictions, any web resources or applications that allow their users to communicate with each other. For example, not only messengers, but also banking applications with a chat function are included. " ,
+
 
         infra_providers_quote:
-          "In practice, almost any online service with user-to-user communication features can be listed as an organiser of information distribution, " +
-          "and thereby be turned into an auxiliary surveillance tool — regardless of its size, audience or ability to comply with legal requirements.",
+          "In fact, the list of information dissemination organizers charged with the function of tracking users may include any web resources with relevant functionality, regardless of their size, number of visitors and ability to meet the requirements established by law.",
 
         infra_providers_second:
-          "By law, organisers of information distribution are obliged to disclose information to law-enforcement agencies. " +
-          "In the study, we look in detail at what data such services collect and retain — and therefore what information they can provide to the authorities on request.<br><br>" +
-          "In the context of mass surveillance, it is particularly alarming that authorities rely not only on traditional information requests, " +
-          "but also on technical infrastructure designed to intercept and extract data transmitted through telecom operators. " +
-          "Organisers of information distribution are required to install special equipment and software and to hand over encryption keys to the authorities.<br><br>" +
-          "We describe the current practice of how organisers of information distribution comply with their surveillance obligations. " +
-          "The level of compliance depends on where a service is based and on its informal relationship with the authorities. " +
-          "Services such as WhatsApp and Telegram do not comply with the law and, presumably, are unwilling to actively cooperate with law-enforcement agencies. " +
-          "By contrast, VKontakte (VK) and other services whose legal entities are located in Russia show far greater readiness to cooperate, " +
-          "sometimes even disregarding procedural safeguards when responding to official requests.<br><br>" +
-          "Recent amendments to the Law on Information, adopted in June 2023, introduced new rules for hosting providers, " +
-          "who had until then largely escaped the obligations imposed on organisers of information distribution. They are now required to identify their customers " +
-          "and to install special monitoring equipment. These rules apply to all hosting providers connected to Russia — whether they process the data of Russian users, " +
-          "receive payments from them or sell hosting services on the Russian market. This means that companies such as GoDaddy Inc. and Amazon Web Services " +
-          "are formally required to comply as well, contributing to the further expansion of the SORM system.<br><br>",
+          "Naturally, according to the law, information dissemination organisers are obliged to disclose information to law enforcement agencies. We elaborate in the study on what kind of information is collected and stored by information dissemination organisers, and therefore what data they hand over to the authorities upon request.<br><br>" +
+
+          "In the context of mass surveillance, it is particularly worrying that the authorities rely not only on regular requests for information, but also on technical infrastructure designed to intercept and extract data transmitted through telecommunications operators. Therefore, by law, the organisers of information dissemination are obliged to install equipment, software, and hardware, as well as to disclose encryption keys to the authorities.<br><br>" +
+
+          "In the study, we examine the current practice on how the organisers of information dissemination comply with their surveillance obligations. In particular, the degree of compliance depends on the location of the information dissemination organisers and their informal relationships with the authorities. Information dissemination organisers such as WhatsApp and Telegram do not comply with the law and are presumably unwilling to actively cooperate with law enforcement authorities. In contrast, VK (Vkontakte) and other information dissemination organisers whose legal entity is located in Russia are more willing to cooperate, sometimes ignoring procedural rules for processing legal requests for information from law enforcement agencies.<br><br> " +
+
+          "The latest amendments to the Law on Information Technologies, introduced in June 2023, establish new rules for hosting providers, who have so far generally managed to avoid compliance with the requirements imposed on information dissemination organisers. They too now have obligations that include, among other things, identifying users of hosting services and installing special surveillance equipment. The requirements apply to all hosting providers that have a connection with the territory of Russia, or process the data of Russian users, or receive money from Russian users, or provide hosting services in the Russian market. That is, services such as GoDaddy Inc. and Amazon Web Services must also comply with the rules. This contributes to the further development of the System for Operative Investigative Activities (SORM). " ,
 
         sorm_title: "SORM",
 
         sorm_body:
-          "In a separate section of the report, we examine SORM — the Russian nationwide technical infrastructure for intercepting telecommunications, " +
-          "used to monitor subscribers receiving services from telecom operators.<br><br>" +
-          "SORM provides round-the-clock, real-time, indiscriminate access to communication data: subscriber information, message content (if not encrypted), " +
-          "registration and billing data, and geolocation data. The system enables law-enforcement agencies to access almost all information transmitted " +
-          "through telecom providers or communication channels, without the knowledge of users or operators. The specialised interception equipment is controlled " +
-          "exclusively by the Federal Security Service (FSB).",
+          "In the study, we specifically address SORM — the Russian state technical infrastructure for wiretapping of telecommunication channels, that is, the surveillance of subscribers receiving telecommunication services from telecom operators. It has survived several generations and now allows not only listening to telephone conversations in a mobile operator’s network, but also monitoring some virtual private network servers, Skype, communication data from encrypted messaging services (eg WhatsApp, Telegram, Signal), satellite communications, and so on. The latest modifications from September 2023 included VoWiFi (voice over WiFi) and WiFi Calling in the scope of surveillance. " ,
 
         sorm_quote:
-          "SORM has gone through several generations. Today it can not only intercept phone calls in mobile networks, " +
-          "but also monitor certain VPN servers, Skype, communications data from encrypted messaging services (such as WhatsApp, Telegram and Signal), " +
-          "satellite communications and more. Recent changes adopted in September 2023 extended SORM’s reach to VoWiFi and Wi-Fi Calling.",
+          "The SORM system provides round-the-clock, real-time, indiscriminate access to communications data, including subscriber data, message content if not encrypted, as well as logging and billing data, and geolocation data. This system allows law enforcement agencies to access virtually all information transmitted through telecommunications providers or channels without the knowledge of users and carriers. The specialised equipment is controlled exclusively by the FSB, a national security agency.",
 
         sorm_second:
-          "The lack of legal safeguards and the way the system is implemented in practice both contribute to abuse. " +
-          "Anyone subjected to surveillance through SORM has no practical possibility to exercise their constitutional right to access information, " +
-          "since data on operational-search activities are classified and the decision whether to disclose them rests with the law-enforcement agency itself. " +
-          "The ability to intercept communications at any time renders judicial oversight almost meaningless, as FSB officers can use SORM whenever they wish, " +
-          "without court approval — unless they intend to introduce SORM data as evidence in a criminal case. Even then, they have a limited right to collect evidence " +
-          "without prior judicial authorisation.<br><br>" +
-          "According to one of our experts, SORM control panels located at FSB premises provide what is effectively root access to the system, " +
-          "meaning that officers can delete or even alter log data and their own request history — further deepening the opacity of SORM-based surveillance. " +
-          "In practice this means that FSB officers can listen in on communications directly at any time, without even formally requesting court permission.<br><br>" +
-          "Different law-enforcement bodies approach message interception and data collection in their own way. In the study we describe three scenarios " +
-          "for how various agencies use SORM infrastructure — either to perform their official surveillance tasks or, in some cases, for corrupt personal gain.<br><br>" +
-          "We also analyse ECtHR case-law on SORM. In the case of Roman Zakharov v. Russia, the Court unanimously found that Russia had violated the right to privacy " +
-          "protected by Article 8 of the European Convention on Human Rights, and held that domestic rules governing secret interception did not provide adequate " +
-          "and effective safeguards against arbitrariness and abuse.<br><br>" +
-          "The Court stressed that the risk of abuse is particularly high in Russia, where security and law-enforcement agencies enjoy direct technical access " +
-          "to all mobile-phone communications. In addition, the effectiveness of legal remedies was undermined by the fact that they were only available to those " +
-          "who could prove that their communications had been intercepted — something that was practically impossible given the absence of any notification system " +
-          "and the classified nature of interception data.<br><br>" +
-          "Another landmark ECtHR case is Podchasov v. Russia (on the Telegram encryption keys), which dealt with legal obligations imposed on organisers of information distribution — " +
-          "specifically, the requirement to install surveillance equipment and hand over encryption keys to the FSB.<br><br>" +
-          "Once again, the Court unanimously held that Russia had violated the right to respect for private life under Article 8 of the Convention. " +
-          "It acknowledged that the interference pursued a legitimate aim, but found that the legal framework was not “necessary in a democratic society”.",
+          "However, the lack of regulatory safeguards, as well as the practical implementation of the system itself, contribute to abuse. Thus, a person subjected to surveillance by means of SORM has no opportunity to exercise his constitutional right to information, since information on operational and investigative activities is a state secret and the decision whether to disclose it or not is made by a law enforcement agency. The capability to wiretap communications using the system at any time makes the existing judicial oversight virtually non-existent, as FSB officers can use it when they like without obtaining court authorisation, unless they want to present data from SORM as evidence in a criminal case. Although, even then, they have a limited right to collect evidence without prior court authorisation.<br><br> " +
+
+          "According to one of our experts, SORM control panels installed on FSB premises also provide so-called root access to the system, which means that FSB agents can delete and even modify log data and the history of requests made by them, thus exacerbating the overall opacity of surveillance through SORM. This means that FSB agents can directly wiretap communications at any time without applying for court authorisation.<br><br> " +
+
+          "Different law enforcement agencies deal with the task of intercepting communications or gathering information about a person of interest in different ways. In the study, we describe three scenarios in which different agencies use the SORM infrastructure to fulfil their official digital surveillance missions or for corrupt purposes for personal enrichment.<br><br> " +
+
+          "We devote a separate section to analysing the practice of the ECtHR in cases related to SORM. In the case of Roman Zakharov v. Russia, the ECtHR unanimously recognised that the right to privacy guaranteed by Article 8 of the European Convention on Human Rights of 1950 had been violated. The Court found that domestic Russian legal norms regulating the interception of communications did not provide adequate and effective safeguards against arbitrariness and the risk of abuse.<br><br> " +
+
+          "According to the ECtHR, the risk of abuse inherent in any system of secret surveillance is particularly high in Russia, where the secret services and the police have direct access by technical means to all mobile telephone communications. Moreover, the effectiveness of the remedies available to challenge the interception of communications was undermined by the fact that they were only available to persons who could produce evidence of interception. Obtaining such evidence was impossible in the absence of any notification system or the ability to access interception information due to its classified status.<br><br> " +
+
+          "Another notable ECtHR case concerning the use of SORM by state authorities is Podchasov v. Russia (the Telegram encryption keys case), which dealt specifically with the legal requirements for organisers of information dissemination, namely, the requirement to install surveillance equipment providing access to data and to hand over encryption keys to the FSB.<br><br>" +
+
+          "Again, the ECtHR unanimously recognised that the right to protection of privacy guaranteed by Article 8 of the European Convention on Human Rights of 1950 had been violated. The Court noted that the challenged provisions pursued a legitimate aim, but the challenged legislation was not necessary in a democratic society. " ,
 
         biom_title: "Biometrics and facial recognition",
 
         biom_body:
-          "At the time of writing, there are no federal laws in Russia that directly regulate the use of facial-recognition technologies by the authorities. " +
-          "There is also no unified federal facial-recognition system. Instead, the authorities appear to rely on a small set of exceptions that allow " +
-          "large-scale surveillance using AI/ML technologies combined with biometric data processing — primarily for counter-terrorism purposes " +
-          "and transport-security measures.<br><br>" +
-          "The absence of clear rules on when facial-recognition systems may be used, whether they are admissible as evidence in court, " +
-          "and the overall lack of transparency around these procedures all contribute to abuses, including police misuse of databases and the emergence " +
-          "of a black market in biometric data. Politically motivated persecution using facial-recognition systems is a separate and growing problem.<br><br>" +
-          "In the report we describe several illustrative cases of unlawful interference with private life and politically motivated prosecution " +
-          "facilitated by facial-recognition systems in Moscow.<br><br>",
+          "There are currently no federal laws in Russia that explicitly regulate the use of facial recognition by authorities. Nor is there a federal facial recognition system. Right now, authorities appear to rely on a couple of exceptions to implement mass surveillance using artificial intelligence/machine learning technologies in conjunction with biometric data processing. These exceptions relate to counterterrorism and transportation security.<br><br> " +
+
+          "The lack of clear regulation of the use of facial recognition, its admissibility as court evidence, and the general lack of transparency of the relevant procedures contribute to the abuse of police access to the database and the existence of a hidden economy in data. Separately, politically motivated harassment through facial recognition can be singled out.<br><br> " +
+
+          "In the study, we collected several illustrative cases of unlawful interference in the personal life of citizens or harassment through facial recognition in Moscow. " ,
 
         biom_quote:
-          "There are now more than one million CCTV cameras in Russia, and roughly one in three is connected to facial-recognition systems. " +
-          "The use of such systems in other regions of the country is steadily expanding.",
+          "Meanwhile, the total number of video cameras in Russia is over 1 million, and every third camera is connected to facial recognition systems. The use of such systems will also gradually increase in Russia’s regions. " ,
 
         biom_second:
-          "In 2023, the ECtHR in the case of Glukhin v. Russia unanimously held that the real-time use of facial-recognition technology " +
-          "in the absence of clear statutory safeguards and oversight mechanisms violates the right to privacy protected by Article 8 " +
-          "of the European Convention on Human Rights.",
+          "In 2023, the ECtHR unanimously ruled in its Glukhin v. Russia judgment that the use of real-time facial recognition technology without the application of appropriate legally defined procedural safeguards and oversight mechanisms constitutes a violation of the right to privacy guaranteed by Article 8 of the European Convention on Human Rights of 1950.",
 
         shadow_title: "Shadow surveillance in Russia",
 
         shadow_body:
-          "The main challenge in studying this dimension of digital surveillance is that practices such as profiling and hacking are very difficult to analyse comprehensively. " +
-          "There are no specialised laws or official documents describing these practices in detail; most information comes from insiders and experts.<br><br>" +
-          "To understand how shadow surveillance operates in Russia, we rely on expert input. We examine modern profiling methods, " +
-          "including both classified investigations carried out by law-enforcement agencies and software tools — state and commercial — " +
-          "developed for information analytics and OSINT (such as Medialogia, Oculus, “Vepr” and others). We also look at unregulated scraping tools that extract " +
-          "information from the internet — often data protected by law — and then distribute it through Telegram bots such as “Glaz Boga”.<br><br>" +
-          "We devote special attention to the problem of user de-anonymisation. To identify internet users and punish them for their online speech, " +
-          "the Russian state seeks to implement digital “passportisation” of society and mass de-anonymisation of users. Special software has already been developed " +
-          "or procured to unmask administrators of anonymous Telegram channels, monitor VK groups and accounts, and de-anonymise Telegram users.<br><br>" +
-          "As for hacking, the legal basis is again found in the Law on Operational-Search Activities. We discuss both the authorities’ use of “black-hat” hackers " +
-          "and the possible use of specialised forensic tools such as Elcomsoft and Cellebrite.",
+          "The main problem with studying this aspect of digital surveillance is that the use of profiling and hacking cannot be comprehensively analysed. The reason for this is the lack of specialised regulations and official documents detailing these practices, which are mostly reported by insiders and experts.<br><br> " +
+
+          "To build a picture of the use of shadow surveillance in Russia, we relied on information obtained from experts. We collected data on current profiling practices in Russia, including both real classified cases run by law enforcement agencies and software solutions (public and private) developed specifically for information analytics or Open Source Intelligence (Medialogia, Oculus, Vepr, etc.). In the study, we describe unregulated parsing programs that extract information from the network, often protected by law, and subsequently disseminate it via Telegram bots ('God's Eye').<br><br>" +
+
+          "We address separately the issue of de-anonymisation of web users. In order to be able to identify internet users and punish them for their words, the Russian state aims to carry out digital passportisation of Russian society and mass de-anonymisation of internet users. Special software packages have already been developed or purchased to reveal the identity of the owners of anonymous Telegram channels, as well as to track groups and accounts in VK and de-anonymise Telegram users.<br><br> " +
+
+          "As for hacking, the legal grounds for this practice are established in Russia by the Federal Law 'On Operational-Search Activities'. In the study, we discuss the use of 'black hackers' by government agencies and also the possible use of Elcomsoft and Cellebrite software tools." ,
 
         full_text_title: "Full text<br>of the study",
 

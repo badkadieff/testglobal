@@ -7,11 +7,18 @@ function applyTranslations() {
     const isHtml = el.dataset.i18nHtml === "true";
 
     if (isHtml) {
+
       el.innerHTML = text;
-    } else if (text.includes("\n")) {
-      el.innerHTML = text.replace(/\n/g, "<br>");
     } else {
-      el.textContent = text;
+
+      const hasNewline = text.includes("\n");
+      const hasBrTag = /<br\s*\/?>/i.test(text);
+
+      if (hasNewline || hasBrTag) {
+        el.innerHTML = text.replace(/\n/g, "<br>");
+      } else {
+        el.textContent = text;
+      }
     }
   });
 
@@ -65,7 +72,6 @@ async function initI18n() {
         caches: ["localStorage"],
         lookupLocalStorage: "lang"
       },
-      // ВАЖНО: не экранировать HTML в переводах
       interpolation: {
         escapeValue: false
       }

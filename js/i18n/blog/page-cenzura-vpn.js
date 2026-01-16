@@ -1,4 +1,4 @@
-// js/i18n/page-vpn-report.js
+
 
 const resources = {
   ru: {

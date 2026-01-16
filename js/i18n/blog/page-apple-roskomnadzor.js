@@ -1,4 +1,4 @@
-// js/i18n/page-apple-roskomnadzor.js
+
 
 const resources = {
   ru: {
