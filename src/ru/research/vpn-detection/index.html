@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:url" content="https://rks.global/ru/research/vpn-detection/">
+    <meta property="og:title" content="Как и зачем российские приложения ищут на телефонах пользователей VPN?">
+    <meta property="og:description" content="Анализ слежки в 30 популярных российских приложениях для Android">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://rks.global/images/blog/card-vpn-detection.jpg">
+    <title>Как и зачем российские приложения ищут на телефонах пользователей VPN?</title>
+    <meta name="description" content="Анализ слежки в 30 популярных российских приложениях для Android">
+    <link href="/css/font.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link rel="icon" href="/images/favicon.svg">
+    <script src="/js/tailwindcss.min.js?v=2"></script>
+    <script src="/js/script.js?v=2"></script>
+    <script src="https://unpkg.com/i18next@23.12.2/i18next.min.js?v=2"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@7.2.1/i18nextBrowserLanguageDetector.min.js?v=2"></script>
+    <script src="/js/i18n/blog/page-vpn-detection.js?v=6"></script>
+    <script src="/js/i18n/init.js?v=7"></script>
+</head>
+
+<body class="no-break-prepositions">
+
+<header class="bg-black py-[4px] min-[640px]:py-[10px] flex">
+    <div class="max-w-[1200px] px-[10px] min-[640px]:px-[20px] flex mx-auto w-full justify-between items-center">
+        <div>
+            <a href="/">
+                <img src="/images/logo.svg" alt="RKS Global" class="w-[16vw] h-[8vw] min-[640px]:w-[95px] min-[640px]:h-[48px]">
+            </a>
+        </div>
+
+        <div class="text-white space-x-[20px] text-[15px] font-medium">
+            <button type="button" class="lang-switch opacity-60 hover:opacity-100 transition-opacity" data-lang="en" onclick="setLanguage('en')">
+                En
+            </button>
+            <button type="button" class="lang-switch opacity-100 hover:opacity-100 transition-opacity" data-lang="ru" onclick="setLanguage('ru')">
+                Ру
+            </button>
+        </div>
+    </div>
+</header>
+
+<section class="max-w-[1200px] mx-auto px-[10px] min-[640px]:px-[20px] pt-[40px] pb-[80px]">
+    <img src="/images/blog/vpn-detection.jpg" class="w-full h-[80vw] object-cover min-[640px]:h-auto mb-[8px] min-[640px]:mb-[20px]">
+
+    <div class="border-b border-[#CCCCCC] pb-[80px]">
+        <div class="flex flex-col min-[640px]:flex-row justify-between items-start">
+            <p class="text-[12px] text-[#888] whitespace-nowrap mb-[16px] min-[640px]:order-2 min-[640px]:mt-[16px]" data-i18n="blog.alt_clients.date">
+                Апрель 2026
+            </p>
+
+            <h1 class="mb-6 text-[33px] min-[640px]:text-[40px] min-[960px]:text-[58px] min-[1200px]:text-[60px] font-medium tracking-[-1px] leading-[34px] min-[640px]:leading-[53px] min-[1200px]:leading-[66px] min-[640px]:order-1" data-i18n="blog.alt_clients.title">
+                Как и зачем российские приложения ищут на телефонах пользователей VPN?
+            </h1>
+        </div>
+         <p class="text-[14px] min-[640px]:text-[16px] min-[1200px]:text-[20px] leading-[1.55]" data-i18n="blog.alt_clients.subtitle">
+            Анализ слежки в 30 популярных российских приложениях для Android
+        </p>
+    </div>
+
+    <div class="max-w-[1200px] mx-auto py-[80px] w-full min-[640px]:w-[600px] min-[1200px]:w-auto">
+        <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23] pb-[80px]" data-i18n="blog.alt_clients.section_context.heading">
+            Контекст
+        </h2>
+
+        <p class="text-[24px] leading-[1.6] first-letter:text-[100px] first-letter:leading-[0.7] first-letter:font-normal first-letter:mr-6 first-letter:float-left" data-i18n="blog.alt_clients.section_context.lead" data-i18n-html="true">
+            Российские власти намерены обязать крупные российские цифровые компании участвовать в цензуре и слежке за пользователями. Об этом стало <a href="https://www.rbc.ru/technology_and_media/02/04/2026/69ce5f9b9a7947408a421405" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">известно</a> в начале апреля 2026 года, 
+            когда Министерство цифрового развития, связи и массовых коммуникаций Российской Федерации (Минцифры России) провело специальные совещания с крупнейшими по размеру аудитории 
+            российскими интернет-компаниями: «Сбером», «Яндексом», VK, Wildberries, Ozon, Avito, X5 и др. Всего более 20 площадок. 
+
+        </p>
+    </div>
+
+    <div class="space-y-[50px] pb-[80px] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px]">
+        <p class="text-[18px] leading-[1.55] font-normal" data-i18n="blog.alt_clients.section_context.body1" data-i18n-html="true">
+            По имеющимся на сегодня данным компаниям было поручено к 15 апреля 2026 года ограничить доступ к интернет-сервисам пользователям, у которых на устройстве включен VPN. 
+            Над теми, кто не выполнит поручение, может нависнуть угроза <a href="https://www.kommersant.ru/doc/8552209" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">лишения</a> IT-аккредитации, отмены льгот, исключения из «белого списка», а значит фактическую невозможность работы при ограничении интернета. <br><br>
+
+            В методических рекомендациях, которые были разосланы крупнейшим интернет-компаниям из Минцифры, <a href="https://t.me/ru_tech_talk/1048" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">описаны</a> этапы проверки, которую должны осуществить приложения на пользовательском устройстве. Приложения должны сканировать сетевые настройки устройства, маршрутизацию и DNS, 
+            наличие VPN и proxy на уровне системы и отдельно поведение пользователя – например, резкие смены стран, нетипичные паттерны подключения. <br><br>
+
+            По мнению экспертов такой набор анализируемых данных всё больше <a href="https://t.me/amnezia_vpn_news_ru/99" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">напоминает</a>  шпионское ПО под видом полезного сервиса, так как предполагает доступ к чувствительной технической информации об устройствах, 
+            с помощью которой можно не только выявить специфические настройки устройства, но и деанонимизировать пользователей. В первую очередь набор таких данные планируется передавать в Роскомнадзор, чтобы он смог находить те VPN-сервисы, которые ранее не идентифицировал и не ограничивал. <br><br>
+
+            Но российские власти накладывают на интернет-компании обязательства не только следить за пользователями через приложения и сливать информацию госам, но и самостоятельно наказывать пользователей с включенным VPN, 
+            создавая им неудобства в использовании привычных ресурсов и заставляя, таким образом, отказаться от инструментов обхода блокировок. Минцифры пытается делегировать цензуру от государства к частным компаниям, которые 
+            должны будут тратить деньги на разработку системы слежки для своих приложений, нести правовые риски, мириться с ложными срабатываниями и оттоком клиентов.<br><br> 
+
+            Уже 7 апреля 2026 года были <a href="https://t.me/paperpaper_ru/67292" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">зафиксированы</a> случаи, когда пользователи из России сталкиваются с проблемами в работе сайтов Wildberries, Ozon и «ВкусВилл» при включенном 
+            VPN: сайты замедляются или перестают открываться, карточки товаров не загружаются. Раньше сервисы только предупреждали о «некорректной работе при использовании VPN», 
+            теперь они лишают доступа к каталогам. Площадки начали <a href="https://iz.ru/2073656/anton-belyi/marketplejsy-nachali-borbu-s-programmami-dlya-obhoda-blokirovok%29" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">ужесточать</a> противодействие VPN. <br><br>
+
+            <em>Цифровая цензура в России выходит на новый уровень. Экперты отмечают переход от пассивной интернет-цензуры к активной. С 2012 года любые блокировки и санкции происходили со стороны цензоров. 
+            Сначала они в ручном режиме наполняли реестр запрещенных сайтов и спускали его провайдерам для осуществления блокировок. Далее разворачивали систему ТСПУ, чтобы в автоматическом режиме выявлять 
+            и ограничивать подозрительный или нежелательный трафик. На новом этапе — становление которого происходит прямо сейчас  —  с устройства пользователя собираются дополнительные данные, на основании которых принимается решение о блокировке.</em>
+
+        </p>
+    </div>
+
+
+    <div class="space-y-[50px] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px] pt-[80px] pb-[60px]">
+        <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]" data-i18n="blog.alt_clients.section_hypothesis.heading">
+            Гипотеза
+        </h2>
+        <p class="text-[18px] leading-[1.55] font-normal " data-i18n="blog.alt_clients.section_hypothesis.body" data-i18n-html="true">
+            Эксперты RKS Global уже <a href="https://www.techradar.com/vpn/vpn-privacy-security/russias-state-backed-max-app-may-know-if-you-are-using-a-vpn-to-bypass-censorship-here-is-everything-we-know" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">исследовали</a>, как на устройстве Android мессенджер MAX определяет активно ли VPN-подключение и передаёт информацию об этом своим разработчикам, 
+            которые сотрудничают с российскими силовиками. VPN-провайдеры уже столкнулись с блокировками IP-адресов их серверов в связи с информацией от мессенджера MAX. Учитывая 
+            давление на цифровой бизнес со стороны властей и первые успехи со слежкой за VPN в MAX, есть повод предположить, что в ближайшее время приложения, которые принадлежат 
+            российским компаниям будут отслеживать VPN и отправлять репорты о выявленных случаях цензорам для блокировок. Эта мера очень эффективна, и российские власти будут стремиться развить успех.
+        </p>
+    </div>
+     <div class=" py-[24px] border-t-[4px] border-b-[4px] border-[#e8e8e8] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px]">
+        <p class="text-[#0007ff] text-[24px] leading-[1.5] font-normal" style="font-family: 'Unbounded', sans-serif;" data-i18n="blog.alt_clients.section_hypothesis.quote" data-i18n-html="true">
+            Гипотеза экспертов RKS-Global состоит в том, что не только приложение MAX активно следит за устройством пользователя, пытаясь выявить использование VPN. Шпионить теперь может любое приложение для Android, выпущенное российскими компаниями для российского рынка. Причем уровень вторжения в устройство может быть очень высоким, а объем собираемой информации может превышать даже предписанный властями.
+        </p>
+     </div>
+
+
+    <div class="space-y-[50px] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px] pt-[80px]">
+        <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]" data-i18n="blog.alt_clients.section_methodology.heading">
+            Методология
+        </h2>
+
+        <p class="text-[18px] leading-[1.55] font-normal" data-i18n="blog.alt_clients.section_methodology.body" data-i18n-html="true">
+           Эксперты провели анализ 30 самых популярных в России приложений для Android, чтобы выяснить, какие данные о VPN они собирают и какой объем слежки, в целом, реализуют. Эксперты устанавливали факты поиска VPN на устройстве пользователя, а также передачи собранной информации на сервера разработчиков. <br><br>
+
+           Для выбора эксперты считали MAU (Monthly Active Users) — количество людей, открывших приложение хотя бы раз за месяц. Источники данных: Mediascope (декабрь 2025 — февраль 2026), рейтинги скачиваний RuStore за 2025 год, отчётность компаний (Сбер, VK, Ozon, 2ГИС), публикации в СМИ. <br><br>
+
+           Для анализа использовался статический анализ APK – декомпиляция через apktool и jadx, поиск по 80 контрольным точкам слежки в 12 категориях слежки. Версии APK получены из RuStore и Google Play, актуальны на апрель 2026. <br><br>
+
+           <strong>Ограничения методологии.</strong> Был проведен только статический анализ, без динамического тестирования на устройстве.
+        </p>
+    </div>
+
+    <div class=" max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px] pt-[80px]">
+        <h2 class="mb-12 text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]" data-i18n="blog.alt_clients.section_findings.heading">
+            Выводы
+        </h2>
+        <p class="mb-[40px] text-[18px] leading-[1.55] font-normal" data-i18n="blog.alt_clients.section_findings.intro" data-i18n-html="true">
+           <strong> 1. Приложения, которые следят за VPN</strong><br><br>
+
+           <strong>В ходе анализа было выявлено, что 22 из 30 приложений детектируют VPN, из них 19 отправляют VPN-статус на сервер.</strong><br><br>
+
+           Это приложения Яндекс Браузер, Яндекс Карты, ВКонтакте, Мой МТС, Сбербанк Онлайн, Т-Банк, VK Видео, Wildberries, Кинопоиск, Ozon, Самокат, RuStore, ВТБ Онлайн, Yandex Music, Avito, Альфа-Банк, 2ГИС, MegaMarket, Одноклассники, MAX, Rutube, VK Music.<br><br>
+
+           Когда приложение детектирует VPN, оно может отправить полученную информацию цензорам, чтобы те смогли предпринять более эффективные меры для блокировки обнаруженного VPN. Но помимо этого, компания, выпустившая приложение, должна будет 
+           самостоятельно наказать пользователя ограничив ему или существенно усложнив использование своего сервиса. <br><br>
+
+           Когда приложение детектирует VPN, оно фиксирует то, что пользователь скрывает свой реальный IP-адрес. Эта информация может передаваться (и передаётся) на серверы компании, а оттуда её могут получить силовики.<br>
+           На момент исследования не найдены следы детекции VPN у 8 из 30 проанализированных приложений: Яндекс Маркет, Яндекс Еда, Почта Mail.ru, МегаФон, Mir Pay, Госуслуги, Яндекс Go, Дзен.<br><br>
+
+           Приложения Самокат и MegaMarket получают список всех VPN-приложений (используют queryIntentServices("android.net.VpnService")), установленных на устройстве. Не просто «включён ли VPN», а какие именно VPN-приложения есть.<br><br>
+
+           Яндекс Браузер — единственное приложение, которое ищет Tor на устройстве. То есть браузер, который сам предлагает режим «Инкогнито», ищет инструмент анонимности на пользовательском устройстве. В целом Яндекс Браузер и Яндекс Карты используют максимальное число методов VPN-детекции (4 из 6).
+        </p>
+
+        <p class="mb-[60px] text-[18px] leading-[1.55] font-normal" data-i18n="blog.alt_clients.section_findings.intro" data-i18n-html="true">
+           <strong> 2. Приложения, которые следят другими способами </strong><br><br>
+
+           <strong>По результатам анализа 11 из 30 </strong>приложений получают рейтинг <strong>RED</strong> (максимальная слежка, см. таблицу в приложении).<br><br>
+
+            Банковские приложения — самая агрессивная группа. Т-Банк (65), Сбербанк (64) и ВТБ (59) входят в топ-10. Все три отправляют VPN-статус на серверы, 
+            используют расширенный fingerprinting устройства, детект рута и инструментов анализа. Т-Банк запрашивает 47 разрешений — больше всех. При этом 24 
+            из них (включая автозапуск, фоновые сервисы камеры, микрофона, геолокации и установку APK) предоставляются автоматически без ведома пользователя. 
+            Банковские приложения лидируют по числу «тихих» install-time разрешений (это устоявшийся термин в Android-разработке. В официальной документации 
+            Google используется <strong>install-time permissions</strong> — разрешения, которые предоставляются автоматически при установке приложения (например, <span class="text-green-600">INTERNET, BLUETOOTH</span>). 
+            Они противопоставляются <strong>runtime permissions</strong>, которые запрашиваются у пользователя во время работы приложения), формирующих постоянную фоновую инфраструктуру.<br><br>
+
+
+            Приложение MegaMarket (принадлежит Сберу) делит первое место с Т-Банк, использует Group-IB SDK и собирает контакты, SMS, журнал звонков.<br>
+            Приложение Avito сканирует 200+ чужих приложений. В блоке <span class="text-green-600">&lt;queries&gt;</span> манифеста перечислено более 200 пакетов — банки (Сбербанк, Т-Банк, ВТБ, Альфа), 
+            маркетплейсы (Ozon, Wildberries), соцсети (VK, Telegram, Instagram, Facebook), сервисы (Яндекс), конкуренты (Drom, CIAN, HH.ru). Avito может определить, какие из этих приложений установлены.<br><br>
+
+
+           Приложения Т-Банк, Альфа-Банк, 2ГИС, Яндекс Еда, MegaMarket, Мой МТС, Одноклассники, Госуслуги, Rutube, Сбербанк Онлайн, Yandex Music перехватывают каждое касание экрана с координатами, 
+           давлением и временем (<span class="text-green-600">dispatchTouchEvent</span>). Сбербанк хранит объекты <span class="text-green-600">TouchData</span> с полями <span class="text-green-600">pressure, size, x, y</span>. Group-IB SDK (в Альфа-Банке, MegaMarket, Мой МТС) перехватывает все touch-события. 
+           Поведенческая биометрия позволяет идентифицировать человека по тому, как он нажимает на экран — даже без логина. Rutube записывает координаты касаний, хотя это просто видеохостинг.<br><br>
+
+           Приложения Т-Банк, Яндекс Браузер, Yandex Music, Яндекс Карты ищут следы <a href="https://frida.re/" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">Frida</a> 
+           (инструмент динамического анализа), то есть эти приложения активно противодействуют тому, чтобы пользователь или исследователь мог проанализировать, что они делают. Яндекс Музыка защищается так, будто это военное ПО.<br><br>
+
+            MAX обфусцирует имена сетевых интерфейсов (tun/ppp/tap/pptp0 закодированы байтовыми массивами), что свидетельствует о намеренном сокрытии VPN-детекции от исследователей.<br><br>
+
+            AppMetrica (Яндекс) и MyTracker (VK) — два главных российских трекера, встроенных в более чем половину проанализированных приложений. Данные с этих SDK доступны по запросу российских правоохранительных органов.
+        </p>
+    </div>
+
+
+
+
+
+
+    <div class="max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px]">
+        <h2 class="mb-12 text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]" data-i18n="blog.alt_clients.section_recommendations.heading">
+            Рекомендации
+        </h2>
+
+        <div class="max-w-[860px] mx-auto">
+            <p class="text-[24px] font-semibold mb-6">
+                Часть 1. Пользователь в России
+            </p>
+
+            <p class="text-[20px] text-gray-800 mb-4">
+                1.1 Изоляция приложений
+            </p>
+            <ul class="space-y-2 text-[18px] leading-relaxed mb-8">
+                <li class="flex gap-4">
+                    <span>-</span>
+                    <p class="text-[18px] leading-[1.55] font-normal">
+                    <strong>Идеальный вариант - иметь два телефона.</strong>
+                    Один для российских приложений, второй для всего остального с использованием VPN.
+                    </p>
+                </li>
+                <li class="flex gap-4">
+                    <span>-</span>
+                    <p class="text-[18px] leading-[1.55] font-normal"><strong>Если телефон один,</strong>необходимо использовать Android Work Profile через <a href="https://f-droid.org/packages/net.typeblog.shelter/" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">Shelter.</a> 
+                    При такой конфигурации приложения из разных профилей не видят друг друга: ни списка приложений, ни контактов, ни файлов. Work Profile не скрывает VPN, только данные между профилями, то есть он не помогает защищать VPN-приложения.
+                    </p>
+                </li>
+            </ul>
+
+            <p class="text-[20px] text-gray-800 mb-4">
+                1.2 VPN
+            </p>
+            <ul class="space-y-2 text-[18px] leading-relaxed mb-8">
+                <li class="flex gap-4">
+                    <span>-</span>
+                    <p><strong>VPN на роутере.</strong>
+                        VPN-туннель создается на роутере, телефон подключается по Wi-Fi. 
+                    </p>
+                </li>
+                <li class="flex gap-4">
+                    <span>-</span>
+                    <p class="text-[18px] leading-[1.55] font-normal"><strong>Split tunneling (частичное решение).</strong> 
+                        В некоторых VPN-клиентах можно исключить российские приложения из туннеля. 
+                        Их трафик идёт напрямую, не соприкасаясь с VPN. Этот вариант помогает против части проверок, но приложения, сканирующие tun0, всё равно увидят VPN.
+                    </p>
+                </li>
+                <li class="flex gap-4">
+                    <span>-</span>
+                    <p><strong>Отключение приложений на устройстве.</strong> 
+                        Стоит выключать шпионящие приложения перед работой с VPN. Важно именно остановить их, а не просто свернуть: приложения работают в фоне и могут зафиксировать момент включения VPN.
+                     </p>
+                </li>
+            </ul>
+
+            <p class="text-[20px] text-gray-800 mb-4">
+                1.3 Отозвать лишние разрешения 
+            </p>
+            <p class="text-[18px] leading-[1.55] font-normal mb-8">
+                Геолокацию оставить только навигаторам и только «при использовании».<br>
+                Доступ к контактам нужно отозвать у всех приложений, кроме мессенджеров.<br>
+                Доступ к микрофону и камере - только по запросу.<br>
+                Доступ к журналу звонков и SMS - отозвать у всех. 
+            </p>
+
+            <p class="text-[20px] text-gray-800 mb-4">
+                1.4 Фоновая активность
+            </p>
+            <p class="text-[18px] leading-[1.55] font-normal mb-8">
+                Все 30 анализируемых приложений автозапускаются и работают в фоне. Их стоит ограничить: Настройки → Приложения → Батарея → «Ограничено». Не разрешать обход оптимизации батареи.
+            </p>
+        </div>
+
+
+        <div class="max-w-[860px] mx-auto">
+            <p class="text-[24px] font-semibold mb-6">
+                Часть 2. Пользователь вне России
+            </p>
+
+            <p class="text-[20px] text-gray-800 mb-4">
+                2.1 Изоляция обязательна
+            </p>
+            <p class="text-[18px] leading-[1.55] font-normal mb-8">
+                Если на одном телефоне рядом с приложением Сбера стоят иностранные приложения — любое из таких приложений, отправляющих список установленных программ на сервер, выдаёт вашу страну.
+            </p>
+
+            <ul class="space-y-2 text-[18px] leading-relaxed mb-8">
+                <li class="flex gap-4">
+                    <span>-</span>
+                    <p class="text-[18px] leading-[1.55] font-normal">
+                    <strong>Лучший вариант - два телефона.</strong>
+                    Стоит выделить старый iPhone только для российских приложений. 
+                    </p>
+                </li>
+                <li class="flex gap-4">
+                    <span>-</span>
+                    <p class="text-[18px] leading-[1.55] font-normal"><strong>Если телефон один,</strong>.
+                        нужно обязательно использовать Work Profile (Shelter). Так российские приложения не увидят список приложений из основного профиля.
+                    </p>
+                </li>
+            </ul>
+
+            <p class="text-[20px] text-gray-800 mb-4">
+                2.2 Геолокация
+            </p>
+            <p class="text-[18px] leading-[1.55] font-normal mb-8">
+                Права на использование геолокации нужно отозвать у <strong>всех</strong> российских приложений. Навигация за рубежом только через Google Maps и подобные сервисы.
+            </p>
+
+            <p class="text-[20px] text-gray-800 mb-4">
+                2.3 Контакты
+            </p>
+            <p class="text-[18px] leading-[1.55] font-normal mb-8">
+                Лучше отозвать доступ к контактам у всех российских приложений. За рубежом у абонентов контакты местных людей и организаций.
+            </p>
+
+            <p class="text-[20px] text-gray-800 mb-4">
+                2.4 SIM-карта
+            </p>
+            <p class="text-[18px] leading-[1.55] font-normal mb-8">
+                Российский оператор сотовой связи, видит роуминг, когда пользователь подключается к его SIM-карте за рубежом. Её нужно перевести в режим «только для SMS» (например, для подтверждения банков). Идеально: российская SIM в телефоне для российских приложений, основная (местная зарубежная) – в основном.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="px-[10px] min-[640px]:px-[20px] bg-[#e5e5e5]">
+    <div class="w-full max-w-[1200px] mx-auto py-[180px] text-center min-[640px]:max-w-[600px] min-[1200px]:max-w-[1200px]">
+        <h2 class="text-[30px] min-[640px]:text-[44px] min-[1200px]:text-[48px] leading-[1.23] font-bold" data-i18n="blog.alt_clients.download.heading" data-i18n-html="true">
+           Скачать полный текст<br> обзора
+        </h2>
+
+        <div class="flex flex-col min-[640px]:flex-row justify-center gap-6 mt-[64px]">
+            <a href="https://files.rks.global/russian_apps_search_for_vpn_ru.pdf" target="_blank" class="w-full min-[640px]:w-auto text-[16px] px-[56px] py-[16px] font-medium bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] transition-colors duration-300 flex items-center justify-center" style="font-family: 'Unbounded', sans-serif;" data-i18n="blog.alt_clients.download.button_ru">
+                На русском
+            </a>
+
+            <a href="" target="_blank" class="w-full min-[640px]:w-auto text-[16px] px-[56px] py-[16px] font-medium border-[3px] border-black hover:bg-[#3A40FF] bg-transparent text-black rounded-[10px] transition-colors duration-300" style="font-family: 'Unbounded', sans-serif;" data-i18n="blog.alt_clients.download.button_en">
+                На английском
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="contacts" class="bg-black pt-[clamp(140px,25vw,180px)] pb-[clamp(160px,30vw,210px)] h-[clamp(550px,120vw,790px)]">
+    <div class="mx-auto max-w-[1200px] px-[10px] min-[640px]:px-[20px]">
+        <h2 class="font-bold text-white leading-[clamp(40px,12vw,94px)] text-[clamp(34px,7vw,50px)] sm:text-[50px] lg:text-[65px]" data-i18n="blog.alt_clients.contacts.heading">
+            Контакты
+        </h2>
+        <div class="mt-[clamp(80px,25vw,220px)]">
+            <a class="font-inter text-white font-normal leading-[clamp(28px,8vw,47px)] text-[clamp(16px,4.5vw,18px)] sm:text-[30px]" href="mailto:info@rks.global">
+                info@rks.global
+            </a>
+            <div class="mt-[10px] h-[2px] bg-white w-full max-w-[1160px]"></div>
+        </div>
+        <div class="mt-[30px]">
+            <a class="font-inter text-white font-normal leading-[clamp(28px,8vw,47px)] text-[clamp(16px,4.5vw,18px)] sm:text-[30px]" href="https://x.com/RKS_global" target="_blank" data-i18n="blog.alt_clients.contacts.x">
+                RKS Global в 𝕏
+            </a>
+            <div class="mt-[10px] h-[2px] bg-white w-full max-w-[1160px]"></div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:url" content="https://rks.global/en/research/alt-telegram-clients/">
+    <meta property="og:title" content="Alternative Clients: Are There Safe Substitutes for Telegram?">
+    <meta property="og:description" content="Analysis of 8 alternative Telegram clients for Android">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://rks.global/images/blog/card-alt-telegram-clients.jpg">
+    <title>Alternative Clients: Are There Safe Substitutes for Telegram?</title>
+    <meta name="description" content="Analysis of 8 alternative Telegram clients for Android">
+    <link href="/css/font.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link rel="icon" href="/images/favicon.svg">
+    <script src="/js/tailwindcss.min.js?v=2"></script>
+    <script src="/js/script.js?v=2"></script>
+    <script src="https://unpkg.com/i18next@23.12.2/i18next.min.js?v=2"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@7.2.1/i18nextBrowserLanguageDetector.min.js?v=2"></script>
+    <script src="/js/i18n/blog/page-alt-telegram-clients.js?v=7"></script>
+    <script src="/js/i18n/init.js?v=7"></script>
+</head>
+
+<body class="no-break-prepositions">
+
+<header class="bg-black py-[4px] min-[640px]:py-[10px] flex">
+    <div class="max-w-[1200px] px-[10px] min-[640px]:px-[20px] flex mx-auto w-full justify-between items-center">
+        <div>
+            <a href="/">
+                <img src="/images/logo.svg" alt="RKS Global" class="w-[16vw] h-[8vw] min-[640px]:w-[95px] min-[640px]:h-[48px]">
+            </a>
+        </div>
+
+        <div class="text-white space-x-[20px] text-[15px] font-medium">
+            <button type="button" class="lang-switch opacity-60 hover:opacity-100 transition-opacity" data-lang="en" onclick="setLanguage('en')">
+                En
+            </button>
+            <button type="button" class="lang-switch opacity-100 hover:opacity-100 transition-opacity" data-lang="ru" onclick="setLanguage('ru')">
+                Ру
+            </button>
+        </div>
+    </div>
+</header>
+
+<section class="max-w-[1200px] mx-auto px-[10px] min-[640px]:px-[20px] pt-[40px] pb-[80px]">
+    <img src="/images/blog/alt-telegram-clients.jpg" class="w-full h-[80vw] object-cover min-[640px]:h-auto mb-[8px] min-[640px]:mb-[20px]">
+
+    <div class="border-b border-[#CCCCCC] pb-[80px]">
+        <div class="flex flex-col min-[640px]:flex-row justify-between items-start">
+            <p class="text-[12px] text-[#888] whitespace-nowrap mb-[16px] min-[640px]:order-2 min-[640px]:mt-[16px]" data-i18n="blog.alt_clients.date">
+                Март 2026
+            </p>
+
+            <h1 class="mb-6 text-[33px] min-[640px]:text-[40px] min-[960px]:text-[58px] min-[1200px]:text-[60px] font-medium tracking-[-1px] leading-[34px] min-[640px]:leading-[53px] min-[1200px]:leading-[66px] min-[640px]:order-1" data-i18n="blog.alt_clients.title">
+                Альтернативные клиенты: существуют  ли безопасные заместители Telegram
+            </h1>
+        </div>
+         <p class="text-[14px] min-[640px]:text-[16px] min-[1200px]:text-[20px] leading-[1.55]" data-i18n="blog.alt_clients.subtitle">
+            Тестирование восьми альтернативных Telegram-клиентов для Android
+        </p>
+    </div>
+
+    <div class="max-w-[1200px] mx-auto py-[80px] w-full min-[640px]:w-[600px] min-[1200px]:w-auto">
+        <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23] pb-[80px]" data-i18n="blog.alt_clients.section_context.heading">
+            Контекст
+        </h2>
+
+        <p class="text-[24px] leading-[1.6] first-letter:text-[100px] first-letter:leading-[0.7] first-letter:font-normal first-letter:mr-6 first-letter:float-left" data-i18n="blog.alt_clients.section_context.lead" data-i18n-html="true">
+            В России <a href="https://www.rbc.ru/technology_and_media/26/02/2026/69a059719a7947a5ece8f4e4" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">готовятся</a> к полной блокировке Telegram c 1 апреля 2026 года.
+            C начала 2026 года сервис работает всё <a href="https://hi-tech.mail.ru/news/140940-chto-s-telegram-16-yanvarya-2026/" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">хуже</a>, 
+            с трудом прогружая видео и фото в чатах и каналах. 10 февраля российские власти публично <a href="https://www.rbc.ru/technology_and_media/10/02/2026/698afe729a79470c08a17b91" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">признали</a>, что ограничили доступ к Telegram. Ранее в августе 2025 года в Telegram уже 
+            <a href="https://www.dw.com/ru/v-rossii-ograniceny-zvonki-v-whatsapp-i-telegram-sag-k-polnoj-blokirovke/a-73637681" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">были</a> заблокированы звонки под предлогом борьбы с телефонным мошенничеством. Теперь у пользователей есть опасения полной блокировки сервиса.
+
+        </p>
+    </div>
+
+    <div class="space-y-[50px] pb-[80px] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px]">
+        <p class="text-[18px] leading-[1.55] font-normal" data-i18n="blog.alt_clients.section_context.body1" data-i18n-html="true">
+            В последние годы Telegram стал в России важнейшей коммуникационной и медиаплатформой. Он не только является удобным мессенджером для частного общения, 
+            но и предоставляет собой набор инструментов для профессиональной деятельности - позволяет создавать приватные или публичные группы и чаты, а также 
+            информационные каналы, которыми активно пользуются блоггеры, эксперты и СМИ с миллионными аудиториями. По оценкам экспертов, к концу 2025 года 
+            количество активных пользователей платформы в России <a href="https://kod.ru/telegram-mau-record-rus" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">достигло</a> 105 миллионов. <br><br>
+
+            Блокировка Telegram – это атака на последнюю крупную медиа-площадку в России, которая до сих пор не подконтрольна российским властям, не смотря на все их усилия. Политические и новостные 
+            каналы доминируют в экосистеме платформы, где контент заблокированных или «нежелательных» независимых СМИ сосуществует с проправительственными блогерами и провоенными комментаторами. 
+            Несмотря на все недостатки, это сосуществование поддерживает хотя фрагментированный, но реальный живой общественный дискурс.<br><br>
+
+            Проблемы в работе Telegram вынуждают пользователей искать пути восстановления полноценного доступа к сервису. Как <a href="https://roskomsvoboda.org/ru/39035/" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">всегда</a> идет рост 
+            продаж коммерческих VPN и скачиваний бесплатных, вместе с которыми повышается доля скама и использования <a href="https://rks.global/ru/research/freevpns/" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">небезопасных</a> решений. <br><br>
+
+            <em>Эксперты RKS-Global советуют относиться к выбору VPN-сервиса осмотрительно, так как создавая для пользователя иллюзию безопасности, недобросовестный VPN-сервис может воровать данные, трекать действия пользователей и передавать их заинтересованным акторам – от мошенников и глобальных корпораций до силовиков разных стран.</em><br><br> 
+
+            Вторым популярным способом решения проблемы блокировки Telegram являются альтернативные телеграм-клиенты. 
+            Это приложения, которые становятся заменителями оригинального клиента Teleram, сохраняя его функционал, 
+            а иногда и привлекая пользователей дополнительными полезными фишками. Некоторые решения, активно продвигаются в России. 
+            Так, например, клиент Telega, рекламируется в самом Telegram на российскую (и <a href="https://news.zerkalo.io/life/111659.html" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">не только</a>) аудиторию <a href="https://vc.ru/services/2283648-messendzher-telega-chto-eto-takoe-i-naskolko-on-bezopasen" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">через</a> дорогостоящий Telegram Ads.
+
+        </p>
+    </div>
+
+
+    <div class="space-y-[50px] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px] pt-[80px] pb-[60px]">
+        <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]" data-i18n="blog.alt_clients.section_hypothesis.heading">
+            Гипотеза
+        </h2>
+        <p class="text-[18px] leading-[1.55] font-normal " data-i18n="blog.alt_clients.section_hypothesis.body" data-i18n-html="true">
+            Официальный Telegram – решение с открытым исходным кодом, что позволяет сообществу создавать альтернативные клиенты (форки) с дополнительной функциональностью: расширенные настройки интерфейса, встроенные переводчики, крипто-кошельки, блокировка рекламы и пр.<br><br>
+
+            Однако альтернативные клиенты могут нести неочевидные для пользователя риски. Они могут содержать аналитические SDK, рекламные сети, собственные бэкенды и модификации протокола MTProto – а внешне при этом выглядеть как «улучшенный Telegram». Пользователь доверяет приложению свои сообщения, контакты, доступы к администрированию каналов и чатов, метаданные, но не всегда осознает, что происходит с этими доступами и данными и что они оказываются в руках у третьих людей за пределамиы  Telegram. То есть они оказываются во власти разработчиков альтернативных клиентов и тех, кому эти разработчики их передают.<br><br>
+
+            Вопрос, который стоит перед авторами этого исследования – передают ли популярные альтернативные Telegram-клиенты данные пользователей на серверы, 
+            не принадлежащие Telegram, и если да – то где находится эта инфраструктура и кому принадлежит. Ввиду ужесточения российского <a href="https://www.consultant.ru/document/cons_doc_LAW_34661/d698a1c3214cb529c29991c00154e985d9d7f607/" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">законодательства</a> о 
+            «поиске заведомо экстремистских материалов и получение доступа к ним» особое внимание сообщества сосредоточено на том, могут ли российские власти 
+            получить доступ к перепискам пользователей в обход <a href="https://telegram.org/privacy/eu" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">политик</a> официального Telegram и необходимости проходить процедуру официальных запросов к администрации сервиса.
+        </p>
+    </div>
+     <div class=" py-[24px] border-t-[4px] border-b-[4px] border-[#e8e8e8] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px]">
+        <p class="text-[#0007ff] text-[24px] leading-[1.5] font-normal" style="font-family: 'Unbounded', sans-serif;" data-i18n="blog.alt_clients.section_hypothesis.quote" data-i18n-html="true">
+            Гипотеза экспертов RKS-Global состоит в том, что клиенты Telegram могут быть небезопасны для использования, так как они обрабатывают весь массив данных пользователей оригинального Telegram, включая текстовые, графические, видео- и аудио-сообщения, документы, а также метаданные, в частности, геолокацию, информацию об устройстве пользователя, приложениях на его устройстве и пр.  
+        </p>
+     </div>
+    <div class="space-y-[50px] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px] pt-[60px] ">
+        <p class="text-[18px] leading-[1.55] font-normal " data-i18n="blog.alt_clients.section_hypothesis.risk_note" data-i18n-html="true">
+           Эта информация может попасть в руки представителей силовых структур, а также мошенников или других заинтересованных лиц.
+            Пользователь, который использует сторонний клиент для восстановления доступа к Telegram, может столкнуться с риском угона аккаунта, стать жертвой фишинговой атаки или преследования со стороны правоохранительных органов. Необдуманно скачанный непроверенный случайный сервис может принести много проблем.
+        </p>
+    </div>
+
+    <div class="space-y-[50px] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px] pt-[80px]">
+        <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]" data-i18n="blog.alt_clients.section_methodology.heading">
+            Методология
+        </h2>
+
+        <p class="text-[18px] leading-[1.55] font-normal" data-i18n="blog.alt_clients.section_methodology.body" data-i18n-html="true">
+           Чтобы ответить на названные выше вопросы, исследователи RKS-Global протестировали и проанализировали 8 популярных альтернативных Telegram-клиентов для Android. Эксперты устанавливали возможности наличия скрытых механизмов слежки, а также факт передачи ими данных на инфраструктуру, находящуюся в пределах досягаемости российских силовиков. <br><br>
+
+           Для анализа использовались методы статического анализа APK (декомпиляция jadx) и динамического анализа сетевого трафика (tcpdump + mitmproxy на рутованном эмуляторе). В качестве эталона использован официальный Telegram v12.4.3. <br><br>
+
+           APK получены из Google Play (Telegram Official, Telegram X, Plus Messenger, Nekogram, Graph Messenger, Telega, iMe) и F-Droid (Forkgram, Mercurygram). Уязвимости не эксплуатировались. Реальные данные пользователей не собирались. Тестовые данные (фейковые номера телефонов) использовались только для активации сетевых запросов.<br><br>
+
+           Динамический анализ охватывает только первый запуск (~90 секунд). Долгосрочное поведение (фоновые сервисы, отложенная инициализация SDK) не исследовалось. О других ограничениях исследования можно прочитать в прикрепленном файле с полным описанием работы.
+        </p>
+    </div>
+
+    <div class=" max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px] pt-[80px]">
+        <h2 class="mb-12 text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]" data-i18n="blog.alt_clients.section_findings.heading">
+            Выводы
+        </h2>
+
+        <p class="mb-[40px] text-[18px] leading-[1.55] font-normal" data-i18n="blog.alt_clients.section_findings.intro" data-i18n-html="true">
+            Три из восьми исследуемых популярных альтернативных Telegram-клиентов для Android - <a href="https://play.google.com/store/apps/details?id=ru.dahl.messenger&hl=ru&pli=1" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">Telega</a>, <a href="https://play.google.com/store/apps/details?id=ir.ilmili.telegraph&hl=ru" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">Graph Messenge</a> и <a href="https://play.google.com/store/apps/details?id=ru.dahl.messenger&hl=ru&pli=1" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">Telega</a>, <a href="https://play.google.com/store/apps/details?id=com.iMe.android&hl=ru" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">iMe</a>  - отправляют данные на серверы в Россию, где к ним могут без затруднений по <a href="https://roskomsvoboda.org/ru/39999/" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">закону</a> получить доступ силовые структуры.
+        </p>
+    </div>
+    <div class="py-[24px] border-t-[4px] border-b-[4px] border-[#e8e8e8] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px]">
+        <p class="text-[#0007ff] text-[24px] leading-[1.5] font-normal" style="font-family: 'Unbounded', sans-serif;" data-i18n="blog.alt_clients.section_findings.telega_warning" data-i18n-html="true">
+            Самое опасное приложение - Telega. Оно тайно подменяет серверы Telegram на свои собственные, расположенные в Казани. Telega заменяет 5 стандартных DC Telegram на 25 IP-адресов в Казани (АО «ТЕЛЕГА»). 
+        </p>
+    </div>
+    <div class=" max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px] pt-[40px]">
+        <p class="mb-8 text-[18px] leading-[1.55] font-normal" data-i18n="blog.alt_clients.section_findings.details" data-i18n-html="true">
+            Весь MTProto-трафик проходит через российские прокси. Это не теоретическая уязвимость - подмена подтверждена расшифрованным трафиком HTTPS и pcap.  Параллельно передаёт аналитику на серверы VK Group (MyTracker), включая Telegram user ID и статус VPN. Звонки маршрутизируются через OK.ru/Одноклассники.<br><br>
+
+            Вся переписка пользователя, который установил клиент <strong>Telega для</strong> Telegram, все его взаимодействия с другими пользователями физически оказываются в России, где по закону должны быть предоставлены властям по запросу. Параллельно Telega сообщает в VK (бывший Mail.ru) номер телефона, ID в Telegram и даже то, использует ли пользователь VPN. <br><br>
+
+            Graph Messenger и iMe отправляют данные на серверы Яндекса и VK Group через встроенные рекламные и аналитические модули.<br><br>
+
+            Были найдены и приложение, которые можно назвать наиболее безопасными. 
+            На момент исследования <a href="https://f-droid.org/ru/packages/it.belloworld.mercurygram/" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">Mercurygram</a> и <a href="https://f-droid.org/ru/packages/org.forkgram.messenger/" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">Forkgram</a> показали чистый сетевой профиль без передачи данных третьим сторонам. 
+        </p>
+    </div>
+    <div class="py-[24px] border-t-[4px] border-b-[4px] border-[#e8e8e8] max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px]">
+        <p class="text-[#0007ff] text-[24px] leading-[1.5] font-normal" style="font-family: 'Unbounded', sans-serif;" data-i18n="blog.alt_clients.section_findings.disclaimer" data-i18n-html="true">
+            Однако стоит помнить, что разработчики любого стороннего клиента могут изменить код в следующей версии и добавить любые механизмы сбора данных. Наибольшую конфиденциальность может обеспечить использование официального клиента Telegram.
+        </p>
+    </div>
+    <div class=" max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px] pt-[40px]">
+        <p class="mb-14 text-[18px] leading-[1.55] font-normal" data-i18n="blog.alt_clients.section_findings.technical_notes" data-i18n-html="true">
+            Три клиента из восьми явно включают Firebase Analytics (Plus Messenger, Graph Messenger, iMe), ещё 1 (Nekogram) не отключает его. Официальный Telegram явно деактивирует Firebase Analytics, а альтернативные клиенты отменяют это решение, и Google получает данные об использовании мессенджера.<br><br>
+
+            Количество рекламных SDK коррелирует с риском: Graph Messenger (6 SDK), iMe (15+ SDK), Plus Messenger (1 SDK) - все содержат потенциально опасные механизмы сбора данных.<br><br>
+
+            Следы VK Group присутствуют в двух приложениях: Telega (MyTracker, OK.ru) и iMe (ad.mail.ru). VK Group - крупнейший российский интернет-холдинг, имеющий законодательную обязанность предоставлять данные по запросу спецслужб (ФЗ-374).<br><br>
+
+            В ходе исследования было также обнаружено одно троянизированное приложение, маскирующееся под <a href="https://play.google.com/store/apps/details?id=org.thunderdog.challegram&hl=ru" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">Telegram X</a> - официальный альтернативный клиент от Telegram FZ-LLC, разработанный Viacheslav Krylov. Сам Telegram X получил хорошую оценку исследователей, так как показал чистый профиль, который содержит даже меньше разрешений и трекеров, чем официальный Telegram (см. подробнее в прикрепленном файле).<br><br>
+
+            Поддельный Telegram X - полноценная вредоносная программа со следами китайского происхождения. Это <a href="https://ru.wikipedia.org/wiki/%D0%A2%D1%80%D0%BE%D1%8F%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">троян</a>, полноценное шпионское ПО. Он крадет сессию Telegram, сам вступает в каналы, перехватывает сообщения с возможностью замены содержимого, а также позволяет осуществить полный захват аккаунта. Данный троян не является полноценным 
+            альтернативным клиентом Telegram, а обманывает пользователей с самого начала и представляет иную категорию угрозы, иллюстрирующую повышенные риски для пользователей при установке Telegram-клиентов (и любых других приложений) из непроверенных источников.<br><br>
+
+            Полное техническое исследование с методологией и описанным ходом работ можно найти в прикрепленном файле. 
+        </p>
+    </div>
+
+
+    
+
+
+    <div class="max-w-[860px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 min-[640px]:w-[600px] min-[1200px]:w-[860px]">
+        <h2 class="mb-12 text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]" data-i18n="blog.alt_clients.section_recommendations.heading">
+            Рекомендации
+        </h2>
+
+        <ol class="mb-20 list-decimal pl-5 space-y-4 text-[18px] leading-[1.55]  text-black" data-i18n="blog.alt_clients.section_recommendations.list" data-i18n-html="true">
+            <li>
+                Использовать официальный клиент Telegram. Это единственный клиент, код которого поддерживается командой Telegram и проходит регулярный аудит сообществом. Любой сторонний клиент - даже чистый на момент 
+                проверки - может изменить поведение в следующем обновлении без ведома пользователя. Рекомендуется устанавливать приложения через Google Play, так как перед публикацией они проходят проверку со стороны Google.
+            </li>
+            <li>
+                Не использовать Telega (ru.dahl.messenger) - подмена DC делает мессенджер непригодным для конфиденциальной переписки.
+            </li>
+            <li>
+                Не использовать Graph Messenger и iMe для чувствительных коммуникаций из-за передачи данных на серверы Яндекса и VK Group.
+            </li>
+            <li>
+               Mercurygram и Forkgram на момент исследования показали чистый сетевой профиль без передачи данных третьим сторонам. Однако это не гарантия на будущее - разработчики могут добавить любые механизмы сбора данных в следующей версии.
+            </li>
+            <li>
+                При использовании Plus Messenger следует учитывать, что Firebase Analytics активен и разработчик хранит данные на своём Firebase-бэкенде.
+            </li>
+            <li>
+               При использовании Nekogram - избегать китайских сервисов перевода (Baidu, Tencent, Sogou, Youdao).
+            </li>
+            <li>
+               Для восстановления доступа к официальному клиенту Telegram, использовать проверенные рекомендованные экспертами VPN, с которыми можно ознакомиться на сайтах: 
+               <a href="https://vpnlove.org/" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">vpnlove.org</a>, 
+               <a href="https://vpnguild.org/" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">vpnguild.org</a>, 
+               <a href="https://vpnpay.io/ru/" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">vpnpay.io</a>, 
+               <a href="https://vpn-ru.net/" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">vpn-ru.net</a>. Также можно опираться на советы 
+               <a href="https://www.privacyguides.org/" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">privacyguides.org</a> и  
+               <a href="https://ssd.eff.org/module/choosing-vpn-thats-right-you" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">руководство</a> от Electronic Frontier Foundation.
+            </li>
+        </ol>
+    </div>
+</section>
+
+<section class="px-[10px] min-[640px]:px-[20px] bg-[#e5e5e5]">
+    <div class="w-full max-w-[1200px] mx-auto py-[180px] text-center min-[640px]:max-w-[600px] min-[1200px]:max-w-[1200px]">
+        <h2 class="text-[30px] min-[640px]:text-[44px] min-[1200px]:text-[48px] leading-[1.23] font-bold" data-i18n="blog.alt_clients.download.heading" data-i18n-html="true">
+           Скачать полный текст<br> обзора
+        </h2>
+
+        <div class="flex flex-col min-[640px]:flex-row justify-center gap-6 mt-[64px]">
+            <a href="https://files.rks.global/telegram_alt_test_ru.pdf" target="_blank" class="w-full min-[640px]:w-auto text-[16px] px-[56px] py-[16px] font-medium bg-[#0007ff] hover:bg-[#3A40FF] text-white rounded-[10px] transition-colors duration-300 flex items-center justify-center" style="font-family: 'Unbounded', sans-serif;" data-i18n="blog.alt_clients.download.button_ru">
+                На русском
+            </a>
+
+            <a href="https://files.rks.global/telegram_alt_test_en.pdf" target="_blank" class="w-full min-[640px]:w-auto text-[16px] px-[56px] py-[16px] font-medium border-[3px] border-black hover:bg-[#3A40FF] bg-transparent text-black rounded-[10px] transition-colors duration-300" style="font-family: 'Unbounded', sans-serif;" data-i18n="blog.alt_clients.download.button_en">
+                На английском
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="contacts" class="bg-black pt-[clamp(140px,25vw,180px)] pb-[clamp(160px,30vw,210px)] h-[clamp(550px,120vw,790px)]">
+    <div class="mx-auto max-w-[1200px] px-[10px] min-[640px]:px-[20px]">
+        <h2 class="font-bold text-white leading-[clamp(40px,12vw,94px)] text-[clamp(34px,7vw,50px)] sm:text-[50px] lg:text-[65px]" data-i18n="blog.alt_clients.contacts.heading">
+            Контакты
+        </h2>
+        <div class="mt-[clamp(80px,25vw,220px)]">
+            <a class="font-inter text-white font-normal leading-[clamp(28px,8vw,47px)] text-[clamp(16px,4.5vw,18px)] sm:text-[30px]" href="mailto:info@rks.global">
+                info@rks.global
+            </a>
+            <div class="mt-[10px] h-[2px] bg-white w-full max-w-[1160px]"></div>
+        </div>
+        <div class="mt-[30px]">
+            <a class="font-inter text-white font-normal leading-[clamp(28px,8vw,47px)] text-[clamp(16px,4.5vw,18px)] sm:text-[30px]" href="https://x.com/RKS_global" target="_blank" data-i18n="blog.alt_clients.contacts.x">
+                RKS Global в 𝕏
+            </a>
+            <div class="mt-[10px] h-[2px] bg-white w-full max-w-[1160px]"></div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

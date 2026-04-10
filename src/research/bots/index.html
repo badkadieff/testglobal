@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Как технологии позволяют выявлять фейковые аккануты и комментарии">
+    <meta property="og:url" content="https://rks.global/posts/bots-backstage.html">
+    <meta property="og:title" content="За кулисами ботов">
+    <meta property="og:description" content="Как технологии позволяют выявлять фейковые аккануты и комментарии">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://rks.global/images/blog/Надзирать.png">
+    <title>За кулисами ботов</title>
+    <link href="/css/font.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link rel="icon" href="/images/favicon.svg">
+    <script src="/js/tailwindcss.min.js?v=2"></script>
+    <script src="/js/bots-backstage.js?v=2" defer></script>
+    <script src="/js/script.js?v=2"></script>
+</head> 
+
+
+
+
+
+<body class="no-break-prepositions">
+
+    <header class="bg-black py-[4px] min-[640px]:py-[10px] flex ">
+        <div class="max-w-[1200px] px-[10px] min-[640px]:px-[20px] flex mx-auto w-full justify-between items-center">
+            <div>
+                <a href="/"><img src="/images/logo.svg" alt="RKS Global" class="w-[16vw] h-[8vw] min-[640px]:w-[95px] min-[640px]:h-[48px]"></a>
+            </div>
+            <div class="text-white space-x-[20px] text-[15px] font-medium">
+                <a href="#">En</a>
+                <a href="#">Ру</a>
+            </div>
+        </div>
+    </header>
+
+    <div id="header" class="fixed top-0 left-0 w-full bg-black hidden z-50 transition-all duration-300">
+            <nav class="max-w-[1200px] mx-auto h-[50px] flex items-center justify-center px-4">
+                <ul class="flex gap-4 sm:gap-6 lg:gap-8 text-white text-[10px] sm:text-xs  lg:text-[13px]  font-medium" style="font-family: 'Unbounded', sans-serif;">
+                    <li><a href="#intro" class="menu-link transition-colors duration-300 text-white hover:text-[#3A40FF]">ВВЕДЕНИЕ</a></li>
+                    <li><a href="#vk" class="menu-link transition-colors duration-300 text-white hover:text-[#3A40FF]">ВКОНТАКТЕ</a></li>
+                    <li><a href="#tg" class="menu-link transition-colors duration-300 text-white hover:text-[#3A40FF]">ТЕЛЕГРАМ</a></li>
+                    <li><a href="#x" class="menu-link transition-colors duration-300 text-white hover:text-[#3A40FF]">X</a></li>
+                    <li><a href="#end" class="menu-link transition-colors duration-300 text-white hover:text-[#3A40FF]">ЗАКЛЮЧЕНИЕ</a></li>
+                </ul>
+            </nav>
+    </div>
+
+    <div id="backToTopContainer">
+    <button type="button" class="t190__button" aria-label="Вернуться к началу страницы"> 
+        <svg role="presentation" xmlns="www.w3.org" xmlns:xlink="www.w3.org" x="0px" y="0px" width="50px" height="50px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+        <path style="fill:currentColor;" d="M43.006,47.529H4.964c-2.635,0-4.791-2.156-4.791-4.791V4.697c0-2.635,2.156-4.791,4.791-4.791h38.042
+        c2.635,0,4.791,2.156,4.791,4.791v38.042C47.797,45.373,45.641,47.529,43.006,47.529z M25.503,16.881l6.994,7.049
+        c0.583,0.588,1.532,0.592,2.121,0.008c0.588-0.583,0.592-1.533,0.008-2.122l-9.562-9.637c-0.281-0.283-0.664-0.443-1.063-0.443
+        c0,0,0,0-0.001,0c-0.399,0-0.782,0.159-1.063,0.442l-9.591,9.637c-0.584,0.587-0.583,1.537,0.005,2.121
+        c0.292,0.292,0.675,0.437,1.058,0.437c0.385,0,0.77-0.147,1.063-0.442L22.5,16.87v19.163c0,0.828,0.671,1.5,1.5,1.5
+        s1.5-0.672,1.5-1.5L25.503,16.881z"></path>
+        </svg> 
+    </button>
+    </div>
+
+
+    <section class="max-w-[1200px] mx-auto px-[10px] min-[640px]:px-[20px] pt-[40px] pb-[80px]">
+        <img src="/images/blog/bots-backstage.jpg" class="w-full h-[80vw] object-cover min-[640px]:h-auto mb-[8px] min-[640px]:mb-[20px]">
+        <div class="border-b border-[#CCCCCC] pb-[80px]">
+            <div class="flex flex-col min-[640px]:flex-row justify-between items-start">
+                <p class="text-[12px] font-normal text-[#888] whitespace-nowrap mb-[16px] min-[640px]:order-2 min-[640px]:mt-[16px]">
+                    07 января 2025
+                </p>
+                <h1 class="mb-6 text-[39px] min-[960px]:text-[56px] min-[1200px]:text-[90px] font-medium tracking-[0.5px] leading-none min-[640px]:order-1">
+                   За кулисами ботов
+                </h1>
+            </div>
+            <p class="text-[14px] min-[640px]:text-[16px] min-[1200px]:text-[20px] leading-[1.3]">
+                Как технологии позволяют выявлять фейковые аккаунты и комментарии
+            </p>
+        </div>
+
+
+            <div class="space-y-[50px] max-w-[1200px] mx-0 min-[640px]:mx-auto min-[1200px]:mx-0 py-[80px] w-full ">
+                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]">Содержание</h2>
+                <ul class="space-y-[10px]">
+                    <li class="flex items-center gap-[48px]">
+                        <span class="w-3 h-3 bg-black rotate-45 block"></span>
+                        <a href="#vk" class="text-[#0007ff] text-[20px] font-normal hover:text-[#3A40FF]" style="font-family: 'Unbounded', sans-serif;">
+                            Боты во ВКонтакте
+                        </a>
+                    </li>
+                    <li class="flex items-center gap-[48px]">
+                        <span class="w-3 h-3 bg-black rotate-45 block"></span>
+                        <a href="#tg" class="text-[#0007ff] text-[20px] font-normal hover:text-[#3A40FF]" style="font-family: 'Unbounded', sans-serif;">
+                            Боты в Телеграм
+                        </a>
+                    </li>
+                    <li class="flex items-center gap-[48px]">
+                        <span class="w-3 h-3 bg-black rotate-45 block"></span>
+                        <a href="#x" class="text-[#0007ff] text-[20px] font-normal hover:text-[#3A40FF]" style="font-family: 'Unbounded', sans-serif;">
+                            Боты в X (Twitter)
+                        </a>
+                    </li>
+                    <li class="flex items-center gap-[48px]">
+                        <span class="w-3 h-3 bg-black rotate-45 block"></span>
+                        <a href="#end" class="text-[#0007ff] text-[20px] font-normal hover:text-[#3A40FF]" style="font-family: 'Unbounded', sans-serif;">
+                            Заключение
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div id="intro" class="border-y border-[#CCCCCC] py-[80px] space-y-[50px]">
+                <div class="  mx-0 min-[640px]:mx-auto min-[960px]:mx-0 min-[640px]:w-[600px] min-[960px]:w-[940px] min-[1200px]:w-full ">
+                    <p class="text-[24px] leading-[1.55] font-normal">
+                        Экосистема провластных ботов в соцсетях стремительно растет. На каждой из популярных — 
+                        российских и зарубежных — платформ боты публикуют десятки тысяч комментариев в день. 
+                        Это делают как автоматизированные аккаунты, так и живые сотрудники «ботоферм». 
+                        Чаще всего политические боты пытаются сформировать положительное представление о вторжении ВС РФ 
+                        в Украину — как у русскоязычной, так и у международной аудитории. В исследовании представлены 
+                        основные типы ботов, их стратегии и нарративы, а также способы, которые помогают их вычислить.
+                    </p>
+                </div>
+
+                <div class="space-y-[50px]   mx-0 min-[640px]:mx-auto min-[960px]:mx-0 min-[640px]:w-[600px] min-[960px]:w-[700px] min-[1200px]:w-[860px]">
+                    <p class="text-[18px] leading-[1.55] font-normal ">
+                        Ботофермы есть у каждого областного правительства, администрации большого или среднего города, 
+                        министерства и ведомства, рассказал опрошенный нами координатор Free Russian Foundation Антон Михальчук. 
+                        Боты есть и у политических партий, нередко их предоставляют рекламные агентства. Известно и о <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://meduza.io/feature/2023/06/06/chistymi-rukami-vzyat-patrioticheskih-deneg-i-ne-zashkvaritsya" target="_blank">существовании</a> 
+                        как минимум нескольких негосударственных институций, получающих бюджетное финансирование на "продвижение 
+                        интересов РФ" в интернете, таких как Институт Развития Интернета или АНО "Диалог". По оценкам Михальчука, 
+                        объем российского рынка ботов — сотни миллиардов рублей в год.<br><br>
+
+                        Боты — это автоматизированные аккаунты, имитирующие активность реальных пользователей, а тролли — фейковые 
+                        аккаунты, которые ведут живые люди, получающие за это зарплату (нас интересуют только "платные тролли"). 
+                        В этом исследовании мы называем ботами в том числе и троллей, при необходимости конкретизируя, является 
+                        ли аккаунт автоматизированным или "ручным".<br><br>
+
+                        Мы проанализировали, как работают российские политические боты в Telegram, Вконтакте и X, какими аккаунтами 
+                        они пользуются, в каком количестве присутствуют на платформах, какие нарративы продвигают. Собранная в этом 
+                        текста информация должна помочь всем, кто заинтересован в мониторинге и борьбе с прокремлевскими ботами.
+                    </p>
+                </div>
+            </div>     
+    </section>
+
+
+
+    <section id="vk" class="max-w-[1200px] mx-auto px-[10px] min-[640px]:px-[20px] py-[60px]"> 
+        <div class=" space-y-[50px] mx-0 min-[640px]:mx-auto min-[960px]:mx-0 min-[640px]:w-[600px] min-[960px]:w-[700px] min-[1200px]:w-[860px]">
+            <p class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[52px] font-bold leading-[1.23]" style="font-family: 'Unbounded', sans-serif;">
+                Вконтакте
+            </p>
+            <div class="space-y-[50px] ">
+                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]">Информация о платформе</h2>  
+                <p class="text-[18px] leading-[1.55] font-normal">
+                    Вероятно, большинство ботов, нацеленных на российскую аудиторию, обитают именно во Вконтакте, что связано как 
+                    с популярностью этой социальной сети, так и с простотой имплементации стратегий <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://ru.wikipedia.org/wiki/%D0%90%D1%81%D1%82%D1%80%D0%BE%D1%82%D1%83%D1%80%D1%84%D0%B8%D0%BD%D0%B3" target="_blank">астротурфинга</a>.<br><br>
+
+                    По <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://mediascope.net/upload/iblock/438/37qf2vk4di1n4ncguevk3mufyzb11qfx/%D0%90%D1%83%D0%B4%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D1%8F_%D1%81%D0%BE%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85_%D0%BC%D0%B5%D0%B4%D0%B8%D0%B0_Mediascope.pdf" target="_blank">данным</a> 
+                    Mediascope, 74% жителей России старше 12 лет (90 млн человек) заходят во Вконтакте хотя бы раз 
+                    в месяц, в средний день на платформе присутствует до 46% взрослого населения страны. Опросные данные “Левада-центра” 
+                    <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://www.levada.ru/2024/04/23/auditoriya-polzovatelej-interneta-sotsialnyh-setej-messendzherov-i-vpn-servisov/" target="_blank">подтверждают</a> эти цифры. 
+                    Уровень популярности Вконтакте сравним с Telegram, однако средняя аудитория несколько <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://inclient.ru/vk-stats/" target="_blank">старше</a>: 
+                    больше всего пользователей ВКонтакте среди людей в возрасте от 35 до 44 лет.<br><br>
+
+                    ВКонтакте полностью контролируется российскими властями: в 2021 году компанию возглавил Владимир Кириенко — 
+                    сын Сергея Кириенко, заместителя руководителя администрации президента, отвечающего за внутреннюю политику. 
+                    Такой контроль над ВКонтакте значительно упрощает работу центрам распространения ботов. У провластных ботов 
+                    в ВК не возникает проблем с блокировками, как на других платформах: их или не блокируют вообще, или быстро <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://novayagazeta.eu/articles/2024/05/08/neiroseti-za-putina" target="_blank">восстанавливают</a>.<br><br>
+
+                    Использование Вконтакте для информационного контроля не ограничивается ботами: на платформе <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://meduza.io/feature/2023/09/18/poznakomtes-s-ano-dialog-imenno-eta-organizatsiya-otvechaet-za-piar-minoborony-rf-i-sozdanie-feykov-pro-ukrainu" target="_blank">распространяют</a> 
+                    провоенный контент в группах школ и детских садов, публикуют <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://novayagazeta.eu/articles/2023/11/16/metodichkoi-naruzhu" target="_blank">посты</a> в поддержку войны с частных страниц бюджетников. 
+                    Кроме того, Кремль прилагает большие <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://pointerplanner.com/fabrika-nakrutok-kak-vk-prevrashchaet-runet-v-televizor-s-pomoshchyu-komikov-trolley-i-blogerov" target="_blank">усилия</a>, чтобы переманить туда аудиторию из более оппозиционного YouTube.
+                </p>
+            </div>   
+            <div class="space-y-[50px] ">
+                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]">Основная информация о ботах</h2>  
+                <ul class="list-disc pl-6 space-y-1 text-[18px] leading-[1.55] font-normal">
+                    <li>
+                        Проект, собирающий данные:
+                        <a href="https://botnadzor.org/" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">
+                            Ботнадзор
+                        </a>
+                    </li>
+                    <li>
+                        Типы прокремлевских ботов: ручные федерального уровня (самая многочисленная группа),
+                        ручные регионального уровня, автоматизированные регионального уровня
+                    </li>
+                    <li>
+                        Способы детектирования: паттерны активности
+                    </li>
+                    <li>
+                        Зона активности: большая часть активности сосредоточена в нескольких десятках
+                        новостных пабликов, общее покрытие — несколько тысяч пабликов, в основном
+                        политической тематики
+                    </li>
+                    <li>
+                        Масштабы активности: ~17 тыс. комментариев в день (по состоянию на первую половину 2024 года)
+                    </li>
+                </ul>
+            </div>  
+            <div class="space-y-[30px]">
+                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]">Типы ботов</h2> 
+                <p class="text-[18px] leading-[1.55] font-normal">
+                    "Ботнадзор" детектирует комментарии как автоматизированных, так и управляемых людьми ботов. 
+                    Дополнительно, как рассказывала "Новая газета Европа", их можно <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://novayagazeta.eu/articles/2024/05/08/neiroseti-za-putina" target="_blank">разделить</a> на следующие типы:
+                </p> 
+                <p class="text-[18px] leading-[1.55] mb-[12px]">
+                    Автоматизированные:
+                </p>
+                <ul class="list-disc pl-6  text-[18px] leading-[1.55]">
+                    <li>
+                        "Добрые кремлеботы". 2023 году оставили 6% от всех бот-комментариев. 
+                        Пишут нейтральные или позитивные комментарии под постами о внутренней политике 
+                        РФ и войне в Украине, обычно в крупные провластные или "нейтральные" (в текущих реалиях 
+                        такие СМИ вынуждены, по меньшей мере, цензурировать любой критический к Кремлю контент) новостные паблики.
+                    </li>
+                </ul>
+                <p class="text-[18px] leading-[1.55] mb-[12px]">
+                    Ручные:
+                </p>
+                <ul class="list-disc pl-6 space-y-1 text-[18px] leading-[1.55]">
+                    <li>
+                        "Злые кремлеботы". 73% от всех бот-комментариев. Пишут негативные комментарии
+                        (о войне в Украине и противостоянии с Западом), обычно в крупные провластные
+                        или "нейтральные" новостные паблики;
+                    </li>
+
+                    <li>
+                        Региональные боты. 9% от всех бот-комментариев ботов. Пишут позитивные комментарии
+                        с одобрением местной власти в локальные региональные паблики;
+                    </li>
+
+                    <li>
+                        Оппозиционные боты ("эльфы") — продвигали антивоенную повестку, почти прекратили
+                        активность с
+                        <a href="https://t.me/zakharovchannel/1217" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">
+                            закрытием
+                        </a>
+                        "фабрики эльфов", принадлежавшей фонду Free Russia;
+                    </li>
+
+                    <li>
+                        Рекламные боты — используются в маркетинговых целях и рекламируют различную продукцию.
+                    </li>
+                </ul>
+                <p class="text-[18px] leading-[1.55] font-normal">
+                    Кроме этого существуют и боты, тематически связанные с другими государствами и, судя по всему, 
+                    управляемые оттуда — например, <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://botnadzor.org/api.php?type=dop&dop=38" target="_blank">китайские</a> и 
+                    <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://botnadzor.org/api.php?type=dop&dop=11" target="_blank">азербайджанские</a>. Мы можем предположить существование и других небольших ботоферм.<br><br>
+
+                    Отдельный тип ботов в Вконтакте — боты, использующиеся для накрутки подписчиков. "Ботнадзор" не а
+                    нализирует такие аккаунты. Выявлять их <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://cedarus.io/pdf/Appendix1.pdf" target="_blank">возможно</a>, однако такие боты обычно не предназначены для политических целей.
+                </p>
+            </div>  
+            <div class="space-y-[50px] pt-[60px]">
+                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]">Количество и активность</h2> 
+                <p class="text-[18px] leading-[1.55] font-normal">
+                    "Ботнадзор" собирает данные о ботах в ВК с 2019 года. За это время исследователи проекта обнаружили более 300 тыс. 
+                    аккаунтов ботов (включая оппозиционных и маркетинговых), которые написали более 12.5 млн комментариев. 
+                    Чаще всего боты пишут комментарии по будням, в выходные и праздники их активность снижается.
+                </p>
+            </div>          
+        </div>
+        <div class=" py-[60px] mx-0 min-[640px]:mx-auto min-[960px]:mx-0 min-[640px]:w-[600px] min-[960px]:w-[940px] min-[1200px]:w-full ">
+            <iframe title="Количество комментариев ботов ВКонтакте" aria-label="Interactive line chart" id="datawrapper-chart-vaLZ3" src="https://datawrapper.dwcdn.net/vaLZ3/2/" scrolling="no" frameborder="0" class="w-full" style="min-width: 100% !important; height: 424px;" data-external="1">
+            </iframe>
+        </div>
+        <div class="space-y-[50px] mx-0 min-[640px]:mx-auto min-[960px]:mx-0 min-[640px]:w-[600px] min-[960px]:w-[700px] min-[1200px]:w-[860px]">
+            <p class="text-[18px] leading-[1.55] font-normal">
+                Большая часть ботов — управляемые наемными сотрудниками "злые кремлеботы". В 2023 году они <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://re-russia.net/expertise/0147/" target="_blank">написали</a> 73% 
+                всех бот-комментариев в ВК или 83% комментариев провластных ботов. По уровню активности за ними следовали оппозиционные 
+                "эльфы" (11% всех комментариев), однако уже в апреле 2024 года, после <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://t.me/zakharovchannel/1217" target="_blank">закрытия</a> "фабрики эльфов", их доля упала до 1.7% 
+                (за оставшиеся оппозиционные комментарии могут отвечать другие ботофермы). Около 9% всех комментариев ботов (10% провластных ботов) 
+                приходится на региональные аккаунты, и еще 6% — на автоматизированных "добрых кремлеботов".
+            </p>
+        </div>
+        <div class=" py-[60px] mx-0 min-[640px]:mx-auto min-[960px]:mx-0 min-[640px]:w-[600px] min-[960px]:w-[940px] min-[1200px]:w-full ">
+            <iframe title="Доля комментариев разных типов ботов во ВКонтакте в 2023 году" aria-label="Stacked Columns" id="datawrapper-chart-waSuo" src="https://datawrapper.dwcdn.net/waSuo/7/" scrolling="no" frameborder="0" class="w-full" style="min-width: 100% !important; height: 393px;" data-external="1"></iframe>
+        </div>
+        <div class="space-y-[50px] mx-0 min-[640px]:mx-auto min-[960px]:mx-0 min-[640px]:w-[600px] min-[960px]:w-[700px] min-[1200px]:w-[860px]">
+            <p class="text-[18px] leading-[1.55] font-normal pb-[40px]">
+                У каждого типа ботов свой <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://re-russia.net/expertise/0147/" target="_blank">уровень</a> продуктивности. Для кремлеботов ("добрых" и "злых") и "эльфов" это в среднем 
+                8-9 комментариев в день с одного аккаунта, в то время как настоящие пользователи чаще всего пишут не больше одного 
+                комментария в день. Боты с региональных ботоферм менее активны, чем обычные кремлеботы, и пишут по 2-3 комментария в день.<br><br>
+
+                Самая большая группа ботов, "злые кремлеботы", пишут комментарии в узкий круг новостных и политических пабликов, 
+                как правило провластных — в 2023 году на 45 таких пабликов <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://re-russia.net/expertise/0147/" target="_blank"></a> от 73% до 95% комментариев этой категории. 
+                Почти каждый пятый комментарий в этих пабликах (22%) написан ботами. При этом общее число пабликов, в которые боты 
+                пишут комментарии, исчисляется тысячами.<br><br>
+
+                Состав групп, в которые пишут боты, постоянно расширяется. К ним добавляются региональные сообщества вроде 
+                "Подслушано Барнаул", "ЧП Новосибирск" и т.д.
+            </p>
+            <div class="space-y-[50px] pb-[30px] ">
+                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]">Темы и нарративы</h2>  
+                <p class="text-[18px] leading-[1.55] font-normal">
+                    <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://novayagazeta.eu/articles/2024/05/08/neiroseti-za-putina" target="_blank">Основная</a> тема ручных прокремлевских ботов ("злых кремлеботов") — военные действия в Украине и противостояние России 
+                    с Западом. Нередко такие аккаунты вступают в споры с идеологическими противниками. Тональность их комментариев негативная,
+                    а споры часто агрессивны ("все ваши наезды просто жалкие, обвиняете в том, чего не знаете").<br><br>
+
+                    Автоматизированные прокремлевские боты ("добрые кремлеботы") чаще всего лишь оставляют короткие восклицания с выражением 
+                    одобрения в ответ на комментарии сородичей ("Огонь!", "Я поддерживаю!"). Другая отличительная черта — частое использование 
+                    эмоджи.<br><br>
+
+                    Тема войны в Украине у них тоже популярна, однако если "злые кремлеботы" — милитаристы, "добрые" призывают к мирным переговорам,
+                    указывая на то что мирная инициатива исходит от Владимира Путина ("Путин и Зеленский еще в 2021 году могли все миром решить, 
+                    но тогда МИД Украины сорвал встречу глав государств и с тех пор постоянно Украина находит какие-то тупые отговорки, чтобы 
+                    отдалить момент примирения😒"). Популярна и тема противостояния с Западом, а также социальные вопросы — например рост цен и 
+                    коррупция (боты утверждают, что в России успешно борются с проблемами). Кроме того, такие боты часто в положительном ключе говорят 
+                    о "Единой России", что указывает на их возможную аффилиацию с партией власти.<br><br>
+
+                    Функция региональных ботов в том, чтобы хвалить местную власть, поэтому в темы федеральной политики и войны они не лезут. 
+                    Больше всего они пишут о ЖКХ, инфраструктуре, транспорте, жилье, школах, праздниках и фестивалях ("Всегда приятно видеть, что у 
+                    нас такие школы строятся😊", "Очхорошо сделали Нефтехимиков, за что отдельное спасибо!").
+                </p>
+            </div>  
+            <div class="space-y-[50px] pb-[30px] ">
+                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]">Способы детектирования</h2>  
+                <p class="text-[18px] leading-[1.55] font-normal">
+                   "Ботанадзор" ежедневно проверяет около 2500 пабликов, анализируя все оставленные в них комментарии. В этот список входят новостные 
+                   и политические паблики (например, “РИА Новости”, “ТАСС”, “РБК”, "Лентач", "PostNews"), региональные группы и медиа, а также другие группы,
+                   популярные у ботов (например, сетка пабликов "Подслушано"). Дополнительно проект мониторит посты на новостные и политические темы, не относящиеся 
+                   к фиксированному списку пабликов: война в Украине, война в Газе и Израиле, новости об ударах беспилотников и т.д.<br><br>
+
+                    Детальную методологию проект не раскрывает в целях безопасности, но известно, что боты вычисляются по похожим паттернам активности, 
+                    после чего большая часть аккаунтов ботов валидируется вручную. Исследуемые паттерны включают в себя: количество написанных комментариев, 
+                    группы, в которые они пишутся, параметры постов, к которым были написаны комментарии, даты регистрации страницы (аккаунты ботов часто 
+                    регистрируют "пачками"), лайки, и другие критерии.<br><br>
+
+                    Мы <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://cedarus.io/pdf/Appendix1.pdf" target="_blank">проверили</a> валидность методологии "Ботнадзора" на основе выгрузки комментариев, собранных проектом за неделю. Для концептуальной 
+                    проверки корректности классификации "Ботнадзора" все аккаунты, которые писали комментарии, были кластеризованы по пабликам, в которые 
+                    они их писали.<br><br>
+
+                    Визуализация показывает, что активность ботов концентрируется в более узком спектре пабликов, чем у обычных пользователей. 
+                    Кроме того, в отличие от живых людей, боты оставляют примерно одинаковое количество комментариев. Таким образом, методология “Ботнадзора” валидна.
+                </p>
+            </div>                
+        </div>
+        <div class=" py-[60px] mx-0 min-[640px]:mx-auto min-[960px]:mx-0 min-[640px]:w-[600px] min-[960px]:w-[940px] min-[1200px]:w-full ">
+            <iframe title="Кластеризация аккаунтов, оставлявших комментарии" aria-label="Scatter Plot" id="datawrapper-chart-QFp3a" src="https://datawrapper.dwcdn.net/QFp3a/2/" scrolling="no" frameborder="0" class="w-full" style="min-width: 100% !important; height: 935px;" data-external="1"></iframe>      
+       </div>
+        <div class="space-y-[50px] mx-0 min-[640px]:mx-auto min-[960px]:mx-0 min-[640px]:w-[600px] min-[960px]:w-[700px] min-[1200px]:w-[860px] border-b border-[#CCCCCC] pb-[140px] ">
+            <div class="space-y-[50px]"> 
+                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]">Откуда боты берут аккаунты</h2> 
+                <p class="text-[18px] leading-[1.55] font-normal mb-[12px]">
+                    По словам опрошенного нами на условиях анонимности эксперта "Ботнадзора", есть несколько способов создавать аккаунты, используемые ботами в ВК:
+                </p>
+                <ul class="list-disc pl-6 space-y-1 text-[18px] leading-[1.55]">
+                    <li>
+                      Покупка взломанных аккаунтов;
+                    </li>
+                    <li>
+                         Покупка зарегистрированных аккаунтов у специальных фирм;
+                    </li>
+                    <li>
+                        Регистрация собственных аккаунтов.
+                    </li>
+                </ul>
+                <p class="text-[18px] leading-[1.55] font-normal">
+                    Ботофермы используют эти способы в разных пропорциях, способы создания аккаунтов могут варьироваться 
+                    даже в зависимости от региона. Например, в Татарстане значительная доля аккаунтов ботов — взломанные, 
+                    с датами регистрации в 2009-2010 гг. В Костромской и Мурманской областях распространены свежесозданные аккаунты. 
+                    Из утекших документов <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://dossier-center.appspot.com/prig-it/" target="_blank">известно</a>, что массовой закупкой аккаунтов во Вконтакте занималась и "фабрика троллей", ранее принадлежащая Евгению Пригожину.
+                </p>                
+            </div>
+            <div class="space-y-[50px]"> 
+                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]">Технические детали</h2> 
+                <p class="text-[18px] leading-[1.55] font-normal mb-[12px]">
+                    Один из бывших "пригожинских троллей" <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://www.svoboda.org/a/31065181.html" target="_blank">признавался</a>, что на аватары бот-аккаунтов ставили обработанные (например, с измененными цветами) 
+                    фото со случайных аккаунтов в "Одноклассниках", а профили, как правило, делали закрытыми. Иногда использовались украденные аккаунты умерших людей. 
+                    Количество активных рабочих бот-аккаунтов не опускалось ниже сотни — когда их блокировали, добавлялись новые. Аккаунты вели через VPN, каждый из 
+                    профилей специализировался на своей тематике.<br><br>
+
+                    Наш предыдущий анализ для Re:Russia <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://re-russia.net/expertise/0147/" target="_blank">показал</a>, что при заполнении бот-аккаунтов их администраторы чаще всего указывают возраст в диапазоне от 
+                    24 до 30 лет и от 31 до 38 лет. Это ощутимо ниже среднего возраста пользователей VK, который составляет 42 года. У 66% бот-аккаунтов указан женский пол.<br><br>
+
+                    По словам того же бывшего тролля, сотрудники ботофермы вели отчетность по количеству комментариев и созданных мемов о представителях 
+                    оппозиции — нормой было около 120 комментариев в день, данные о них сотрудники заносили в таблицу. Троллей координировали через Telegram-чат, 
+                    где указывались площадки, на которых стоит оставлять комментарии.<br><br>
+
+                    Другая категория ботов — автоматизированные. Многие из них <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://novayagazeta.eu/articles/2024/05/08/neiroseti-za-putina" target="_blank">заняты</a> продвижением партии "Единая Россия". Такие боты выбирают посты для комментирования 
+                    при помощи поиска по ключевым словам. Их тексты могут генерироваться нейросетью, на что указывает неорганичность построения предложений 
+                    ("Только малолетки рассуждают о таком отважном и великом деле как российская космонавтика. Взрослые и знающие уже и так довольны тем чего мы 
+                    добились в космосе").<br><br>
+
+                    Иногда в работе автоматизированных ботов случаются казусы. В июле прошлого года научпоп-издание TechInsider опубликовало в ВК пост про кадык. 
+                    В комментарии под ним массово пришли боты, утверждающие, что "[Рамзан] Кадыров — герой России". Видимо слово "кадык" оказалось настолько созвучным 
+                    с фамилией главы Чечни, что сбило с толку алгоритмы ботов.<br><br>
+
+                    Демографические параметры страниц автоматизированных ботов незначительно отличаются от параметров ручных ботов — их возраст несколько младше, обычно в интервале от 22 до 31 года.<br><br>
+
+                    Вконтакте в состоянии детектировать ботов — их аккаунты регулярно блокируются соцсетью. Но администрация платформы явно потворствует работе прокремлевских 
+                    ботов: значительную часть их страниц <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://novayagazeta.eu/articles/2024/05/08/neiroseti-za-putina" target="_blank">разбанивают</a>. 
+                    Когда в соцсети были <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://zona.media/article/2023/11/19/elves" target="_blank">активны</a> оппозиционные боты Free Russia (ботоферма <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://t.me/zakharovchannel/1217" target="_blank">закрылась</a> в этом феврале), их 
+                    аккаунты банили особенно часто и практически никогда не разбанивали. Аккаунты, связанные с региональными ботофермами, Вконтакте по неизвестной причине не 
+                    банит, как и рекламных ботов.
+                </p>              
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <section id="tg" class="max-w-[1200px] mx-auto px-[10px] min-[640px]:px-[20px] py-[60px]"> 
+        <div class=" space-y-[80px] mx-0 min-[640px]:mx-auto min-[960px]:mx-0 min-[640px]:w-[600px] min-[960px]:w-[700px] min-[1200px]:w-[860px]">
+            <p class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[52px] font-bold leading-[1.23]" style="font-family: 'Unbounded', sans-serif;">
+                Телеграм
+            </p>
+            <div class="space-y-[50px] ">
+                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]">Информация о платформе</h2>  
+                <p class="text-[18px] leading-[1.55] font-normal">
+                    Telegram — еще одна популярная у провластных ботов площадка. По данным исследовательского центра Mediascope, мессенджер <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://mediascope.net/upload/iblock/438/37qf2vk4di1n4ncguevk3mufyzb11qfx/%D0%90%D1%83%D0%B4%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D1%8F_%D1%81%D0%BE%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85_%D0%BC%D0%B5%D0%B4%D0%B8%D0%B0_Mediascope.pdf" target="_blank">лидирует</a> 
+                    по среднесуточному охвату среди соцсетей в России, каждые сутки его посещает около половины населения страны. Хотя бы раз в месяц 
+                    в него заходит 70% населения страны, это 85 млн человек. Для каждого пятого россиянина Telegram-каналы <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://www.levada.ru/2022/11/03/osnovnye-istochniki-informatsii-rossiyan/" target="_blank">являются</a> основным источником новостей. 
+                    Больше половины (58%) самых популярных каналов в Telegram (по среднемесячному охвату) — <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://mediascope.net/upload/iblock/438/37qf2vk4di1n4ncguevk3mufyzb11qfx/%D0%90%D1%83%D0%B4%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D1%8F_%D1%81%D0%BE%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85_%D0%BC%D0%B5%D0%B4%D0%B8%D0%B0_Mediascope.pdf" target="_blank">политические</a>. 
+                    Больше всего Telegram <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://mediascope.net/upload/iblock/438/37qf2vk4di1n4ncguevk3mufyzb11qfx/%D0%90%D1%83%D0%B4%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D1%8F_%D1%81%D0%BE%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85_%D0%BC%D0%B5%D0%B4%D0%B8%D0%B0_Mediascope.pdf" target="_blank">популярен</a> у молодой аудитории — от 12 до 24 лет.
+                </p>
+            </div>   
+            <div class="space-y-[50px] ">
+                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]">Основная информация о ботах</h2>  
+                <ul class="list-disc pl-6 space-y-1 text-[18px] leading-[1.55] font-normal">
+                    <li>
+                        Проект, собирающий данные:
+                        <a href="https://vox-harbor.com/blog" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">
+                             Vox Harbor
+                        </a>
+                    </li>
+                    <li>
+                        Типы прокремлевских ботов: автоматизированные русскоязычные (самая многочисленная группа), ручные (не отслеживаются проектом), "кадыровские", 
+                        автоматизированные англоязычные (кампания "Bad Grammar", обнаруженная OpenAI)
+                    </li>
+                    <li>
+                        Способы детектирования: повторяющийся текст комментариев
+                    </li>
+                    <li>
+                       Зона активности: около 5 тыс. Telegram-каналов, чаще всего — Z-каналы
+                    </li>
+                    <li>
+                       Масштабы активности: ~14 тыс. комментариев в день в первой половине 2024 года.
+                    </li>
+                </ul>
+            </div>  
+            <div class="space-y-[30px] ">
+                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]">Типы ботов</h2> 
+                <p class="text-[18px] leading-[1.55] font-normal">
+                    С помощью используемой проектом Vox Harbor методологии детектируются преимущественно автоматизированные провластные аккаунты. 
+                    Эксперты проекта отмечают, что в Telegram существуют и боты, управляемые людьми, однако методология их выявления пока не разработана. 
+                    Также есть рекламные боты — информацию о них проект не собирает.<br><br>
+
+                    Отдельная тематическая категория ботов — боты, продвигающие интересы главы Чеченской республики Рамзана Кадырова. 
+                    Таких проект насчитывает около 9 тыс. Не все их комментарии повторяются, предположительно это реальные люди, которые работают 
+                    в специальном агентстве или бюджетных организациях. Такие боты не включены в общую статистику и рассматриваются проектом отдельно.<br><br>
+
+                    В ходе собственного <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://openai.com/index/disrupting-deceptive-uses-of-ai-by-covert-influence-operations/" target="_blank">расследования</a> компания OpenAI выявила отдельную сеть ботов, публикующих прокремлевские комментарии не только на русском, 
+                    но и на английском языке для пользователей из России, Украины, США, Молдовы и стран Балтии. Авторы расследования назвали ее "Bad Grammar". 
+                    Насколько эта популяция ботов пересекается с популяцией, задетектированной Vox Harbor — неизвестно.
+                </p> 
+            </div>  
+
+            <div class="space-y-[50px] pt-[60px]">
+                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]">Количество и активность</h2> 
+                <p class="text-[18px] leading-[1.55] font-normal">
+                    За период мониторинга с начала 2022 года Vox Harbor насчитал 22 тыс. аккаунтов автоматизированных ботов. 
+                    В общей сложности автоматизированные боты написали 4.8 млн комментариев. Почти половина из них (2.1 млн) приходится 
+                    на первые шесть месяцев 2024 года. Однако методология Vox Harbor сильно менялась, поэтому напрямую сравнивать абсолютное 
+                    число комментариев ботов за разные периоды некорректно.
+                </p>
+            </div>          
+        </div>
+        <div class=" py-[60px] mx-0 min-[640px]:mx-auto min-[960px]:mx-0 min-[640px]:w-[600px] min-[960px]:w-[940px] min-[1200px]:w-full ">
+            <iframe title="Доля комментариев ботов в Telegram-каналах" aria-label="Interactive line chart" id="datawrapper-chart-M9ewF" src="https://datawrapper.dwcdn.net/M9ewF/5/" scrolling="no" frameborder="0" class="w-full border-none" style="min-width:100% !important; height:447px;" height="447" data-external="1">
+            </iframe>        
+        </div>
+        <div class="space-y-[50px] mx-0 min-[640px]:mx-auto min-[960px]:mx-0 min-[640px]:w-[600px] min-[960px]:w-[700px] min-[1200px]:w-[860px]">
+            <p class="text-[18px] leading-[1.55] font-normal pb-[40px]">
+                Бот-комментарии обнаружены в 5 тыс. каналов, включая совсем небольшие (от 100 подписчиков). Это относительно небольшая доля, если учесть, 
+                что всего в мониторинг попало 4.2 млн каналов с открытыми комментариями. Среди крупных каналов (от 100 тыс.) зона покрытия ботов значительно 
+                выше и составляет, вероятно, десятки процентов.<br><br>
+
+                Самая большая концентрация ботов встречается в Z-каналах. Вероятно это связано с тем, что их администраторы не блокируют подобные аккаунты. 
+                Так, в некоторых каналах доля бот-постов <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://vox-harbor.com/blog/kremleboty-v-telegrame-bolshoe-issledovanie-ot-vox-harbor" target="_blank">составляет</a> до 50% от всех комментариев ("ЛЕСНОЙ КОТ В КУРСЕ"). 
+                Десятки процентов ботов встречаются в каналах без аффилиации с официальными СМИ или известными блогерами ("от Бахмута до Артемовска", 
+                "Херсонка.ру", "Главное / СВО / Белгород и обл", и др.). Большинство таких каналов посвящены военным действиям в Украине и новостям с оккупированных территорий.<br><br>
+
+                Кадыровские боты (около 9 тыс. аккаунтов), иногда выходят за пределы Telegram-канала семейства главы Чечни и устраивают хвалебные 
+                "набеги" на туристические компании и курорты Чечни. В частности, Vox-Harbor выделил компанию "<a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://t.me/benoy_travel" target="_blank">Беной Тревел</a>", которая организовывает 
+                экскурсии по Северному Кавказу. При этом зона обитания ботов остается ограничена узкой категорией каналов, связанных с Чечней.<br><br>
+
+                OpenAI не приводит данные о количестве обнаруженных ботов "Bad Grammar", однако <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://downloads.ctfassets.net/kftzwdyauwt9/5IMxzTmUclSOAcWUXbkVrK/3cfab518e6b10789ab8843bcca18b633/Threat_Intel_Report.pdf" target="_blank">отмечает</a>, что бот-посты получают очень мало лайков и ответов. 
+                Из этого исследователи делают вывод о незначительности влияния “Bad Grammar” на общественное мнение. Эти выводы не стоит распространять на ботов, 
+                обнаруженных Vox Harbor, потому что речь идет о разных популяциях.
+            </p>
+            <div class="space-y-[50px] pb-[30px] ">
+                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]">Темы и нарративы</h2>  
+                <p class="text-[18px] leading-[1.55] font-normal">
+                    Vox Harbor отмечает, что чаще всего боты реагируют на посты, посвященные военным действиям в Украине. Например, 
+                    фигура президента Украины Владимира Зеленского интересует их значительно сильнее, чем новости о Путине.
+                </p>
+            </div>                
+        </div>
+        <div class=" py-[60px] mx-0 min-[640px]:mx-auto min-[960px]:mx-0 min-[640px]:w-[600px] min-[960px]:w-[940px] min-[1200px]:w-full ">
+            <iframe title="На какие ключевые слова реагируют боты" aria-label="Bar Chart" id="datawrapper-chart-urMRx" src="https://datawrapper.dwcdn.net/urMRx/2/" scrolling="no" class="w-full h-[625px] border-0" data-external="1">
+            </iframe>           
+        </div>
+        <div class="space-y-[50px] mx-0 min-[640px]:mx-auto min-[960px]:mx-0 min-[640px]:w-[600px] min-[960px]:w-[700px] min-[1200px]:w-[860px]">
+            <div class="space-y-[50px]">  
+                <p class="text-[18px] leading-[1.55] font-normal mb-[12px]">
+                    Нарративы комментариев кремлеботов в Telegram <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://vox-harbor.com/blog/kremleboty-v-telegrame-bolshoe-issledovanie-ot-vox-harbor" target="_blank">меняются</a> в зависимости от актуального политического вектора российских властей. 
+                    Например, в начале полномасштабного вторжения в Украину они практически не использовали слово "переговоры", однако постепенно стали все чаще его вставлять.
+                </p>             
+            </div>
+        </div>
+        <div class=" py-[60px] mx-0 min-[640px]:mx-auto min-[960px]:mx-0 min-[640px]:w-[600px] min-[960px]:w-[940px] min-[1200px]:w-full ">
+            <iframe title="Доля комментариев Telegram-ботов со словом «переговоры»" aria-label="Interactive line chart" id="datawrapper-chart-L9kbc" src="https://datawrapper.dwcdn.net/L9kbc/5/" scrolling="no" class="w-full border-0 h-[446px]" data-external="1">
+            </iframe>      
+        </div>
+        <div class="space-y-[50px] mx-0 min-[640px]:mx-auto min-[960px]:mx-0 min-[640px]:w-[600px] min-[960px]:w-[700px] min-[1200px]:w-[860px]">
+            <div class="space-y-[50px] pb-[30px]">  
+                <p class="text-[18px] leading-[1.55] font-normal mb-[12px]">
+                    Эксперты OpenAI <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://downloads.ctfassets.net/kftzwdyauwt9/5IMxzTmUclSOAcWUXbkVrK/3cfab518e6b10789ab8843bcca18b633/Threat_Intel_Report.pdf" target="_blank">отмечают</a>, что как на английском, так и на русском языках основными темами ботов "Bad Grammar" 
+                    были война в Украине, политическая ситуация в Молдове и странах Балтии, а также американская политика.<br><br>
+
+                    Типичные русскоязычные комментарии в Telegram обвиняли президентов Украины и Молдовы в коррупции, 
+                    отсутствии поддержки населения и предательстве собственного народа в интересах Запада. Англоязычные 
+                    комментарии в Telegram были посвящены таким темам как миграция, экономические трудности и злободневные новости. 
+                    Проблематичный актуальный контекст в этих комментариях часто увязывается с тезисом об экономической нецелесообразности 
+                    военной поддержки Украины со стороны США и Евросоюза.<br><br>
+
+                    После теракта 22 марта в московском "Крокус сити-холле" и задержания четырех граждан Таджикистана 
+                    Bad Grammar подключила новый кластер аккаунтов в Telegram, ориентированных на Таджикистан. 
+                    В размещенных комментариях содержались призывы к единению таджиков и русских и уважению российских законов.
+                </p>             
+            </div>
+
+            <div class="space-y-[50px] pb-[30px] ">
+                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]">Способы детектирования</h2>  
+                <p class="text-[18px] leading-[1.55] font-normal">
+                    Vox Harbor собирает комментарии из всех открытых Telegram-каналов. Проект помечает аккаунты, не менее 30% сообщений 
+                    которых (длиной более 15 символов) совпадает с комментариями других ботов.<br><br>
+
+                    Компания OpenAI <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://openai.com/index/disrupting-deceptive-uses-of-ai-by-covert-influence-operations/" target="_blank">выделила</a> сеть ботов "Bad Grammar" на основе анализа подозрительной активности использования ChatGPT.
+                </p>
+            </div>   
+            <div class="space-y-[50px] pb-[30px] ">
+                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]">Откуда боты берут аккаунты</h2>  
+                <p class="text-[18px] leading-[1.55] font-normal">
+                    В большинстве случаев аккаунты ботов свежесозданные. Эксперты Vox Harbor предполагают, что их <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://www.youtube.com/watch?v=nangI3iHoRg" target="_blank"></a> через 
+                    SMS-регистратор: за небольшую плату сотрудники ботоферм <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://www.youtube.com/watch?v=nangI3iHoRg" target="_blank">получают</a> SMS через специальный сервис, который позволяет 
+                    зарегистрировать фейковый аккаунт. Другой способ создания аккаунтов ботов ー кража профиля на специальном маркете. 
+                    Однако такая практика, вероятно, встречается реже (в этом случае аккаунты не были бы свежесозданными).
+                </p>
+            </div> 
+            <div class=" pb-[140px] border-b border-[#CCCCCC]  ">
+                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23] pb-[50px]">Технические детали</h2>  
+                <p class="text-[18px] leading-[1.55] font-normal">
+                    Как правило, комментарии ботов появляются под постами не моментально: в Vox Harbor отметили, что в программе ботов
+                     вероятно заложена случайная временная задержка для того, чтобы их активность не выглядела слишком подозрительной. 
+                     Задержка необходима и чтобы несколько ботов не написали одинаковые комментарии в одно и то же время.<br><br>
+
+                     В Vox Harbor предполагают, что боты публикуют комментарии из общей базы ответов, из-за чего их тексты и повторяются. 
+                     Пул сообщений в базе варьируется в зависимости от актуальной политической повестки.<br><br>
+
+                     Многие заготовленные ответы сгенерированы нейросетью, некоторые из них похожи друг на друга. 
+                     Например, боты могут варьировать следующие комментарии:<br><br>
+                </p>
+                <ul class="list-decimal pl-6 space-y-1 text-[18px] leading-[1.55] font-normal">
+                    <li>
+                        "Все верно! Нацизм на Украине - это не российская пропаганда, а реальная реальность, которую нужно уничтожить.";
+                    </li>
+                    <li>
+                        "Нацизм на Украине - это не вымысел, а реальная реальность. Именно поэтому лозунг слава украине говорит о его наличии";
+                    </li>
+                    <li>
+                        "Нацизм на Украине - это не выдумки, а реальная реальность для жителей Украины и всей Европы".
+                    </li>
+                </ul><br><br>
+                <p class="text-[18px] leading-[1.55] font-normal">
+                    На генерацию текстов с помощью нейросетей указывает то, что комментарии не всегда выглядят органичными для разговорного 
+                    языка ("Российское образование сейчас развивается очень динамично, что позволяет школьникам получать качественные знания и навыки."), 
+                    а иногда и вовсе логически противоречивы ("Да уж, нацики на Украине это реальная реальность. А наша пропаганда их выдумала и распространяет").<br><br>
+
+                    Боты "Bad Grammar", обнаруженные OpenAI и нацеленные на зарубежную аудиторию, также <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://openai.com/index/disrupting-deceptive-uses-of-ai-by-covert-influence-operations/" target="_blank">использовали</a> языковые модели (в частности ChatGPT) 
+                    для написания текстов комментариев. И для отладки кода для автоматического размещения комментариев в Telegram.<br><br>
+
+                    Боты, обнаруженные Vox Harbor, выбирают посты для атаки по ключевым словам в основном тексте или комментариях. Например, по словам "коррупция", 
+                    "образование", "ядерное оружие". Однако боты встречаются не во всех постах с данными ключевыми словами: возможно, они реагируют на ключевые слова 
+                    с некоторой заданной вероятностью.<br><br>
+
+                    Vox Harbor сравнивал собственную базу бот-комментариев в Telegram с базой проекта "Ботнадзор", анализирующего ВКонтакте, и нашел несколько 
+                    автоматизированных ботов с одинаковыми ответами. Это один из признаков того, что поддержкой ботов на разных платформах может заниматься одна структура.
+                </p>
+            </div> 
+        </div>
+        
+
+    </section>
+
+
+    <section id="x" class="max-w-[1200px] mx-auto px-[10px] min-[640px]:px-[20px] py-[60px] "> 
+        <div class="space-y-[80px] mx-0 min-[640px]:mx-auto min-[960px]:mx-0 min-[640px]:w-[600px] min-[960px]:w-[700px] min-[1200px]:w-[860px]">
+            <p class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[52px] font-bold leading-[1.23]" style="font-family: 'Unbounded', sans-serif;">
+                Х (ранее Twitter)
+            </p>
+            <div class="space-y-[50px] ">
+                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]">Информация о платформе</h2>  
+                <p class="text-[18px] leading-[1.55] font-normal">
+                    Х значительно менее популярен у российской аудитории, чем VK и Telegram. Аудитория Х в России сократилась после 
+                    блокировки соцсети властями в 2022 году и сейчас, по данным "Левада-центра", составляет лишь около 1% от общего 
+                    населения страны. До блокировки аудитория американской соцсети в РФ доходила до 3% населения. Среди российских 
+                    пользователей Х лидирует когорта 25-39 лет.<br><br>
+
+                    Общемировая аудитория X <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://www.socialchamp.com/blog/twitter-demographic/" target="_blank">составляет</a> 
+                    330 млн активных пользователей в месяц, около трети которых <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://www.statista.com/statistics/242606/number-of-active-twitter-users-in-selected-countries/" target="_blank">находятся</a> в США. 
+                    Именно твиттер <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://www.socialchamp.com/blog/twitter-demographic/" target="_blank">является</a> основной платформой для публичной коммуникации зарубежных государственных лидеров и политиков.<br><br>
+
+                    Стратегии и цели российских ботов в Х принципиально отличаются от их паттернов на других платформах. 
+                    В соцсети до сих пор присутствуют и боты, направленные на внутрироссийскую аудиторию, однако больше всего 
+                    внимания привлекает именно "экспортная" российская пропаганда. Российских ботов в Х можно назвать наиболее хорошо изученными на международном уровне.
+
+
+                </p>
+            </div>   
+            <div class="space-y-[50px] ">
+                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]">Основная информация о ботах</h2>  
+                <ul class="list-disc pl-6 space-y-1 text-[18px] leading-[1.55] font-normal">
+                    <li>
+                        Проект, собирающий данные: 
+                        <a href="https://x.com/antibot4navalny" class="text-[#0007ff] hover:text-[#3A40FF]" target="_blank">
+                             Блокировщик ботов
+                        </a>
+                    </li>
+                    <li>
+                        Типы прокремлевских ботов: Doppelgänger (публикуют российские фейки на западную аудиторию, работают автоматизированно); 
+                        "Матрешка" (перегружают западных фактчекеров, вероятно работают автоматизированно); русскоязычные тролли, управляемые людьми; 
+                        другие, менее многочисленные группы
+                    </li>
+                    <li>
+                        Способы детектирования: единой методологии нет, сильно варьируется в зависимости от информационной кампании ботов
+                    </li>
+                    <li>
+                       Масштабы активности: неравномерная активность, у Doppelgänger в отдельные дни может быть до 2 млн твитов и нескольких миллионов просмотров. 
+                       Средняя активность значительно ниже, точно ее установить сложно
+                    </li>
+                </ul>
+            </div>  
+            <div class="space-y-[30px] ">
+                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]">Типы ботов</h2> 
+                <p class="text-[18px] leading-[1.55] font-normal pb-[40px]">
+                    В Х действует большое количество ботоферм, задетектировать и описать все не представляется возможным. "Блокировщик ботов" специализируется 
+                    только на политических ботах, связанных с Россией и Украиной. В своем анализе проект не рассматривает коммерческих ботов, а также ботов, связанных с другими государствами.<br><br>
+
+                    В этом тексте мы рассмотрим несколько самых крупных популяций ботов, действующих в интересах Кремля.
+                </p> 
+                <h3 class="text-[20px]  font-medium leading-[1.23]">
+                    Российские боты, направленные на зарубежную аудиторию
+                </h3>
+                <p class="text-[18px] leading-[1.55] font-normal pb-[40px]">
+                    Среди всех "ботоферм" самой масштабной, по мнению "Блокировщика ботов" и <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://www.npr.org/2023/08/29/1196117574/meta-says-chinese-russian-influence-operations-are-among-the-biggest-its-taken-d" target="_blank">экспертов</a> Meta является сеть ботов Doppelgänger. 
+                    Она <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://vot-tak.tv/" target="_blank">распространяет</a> ссылки на "журналистские" статьи, источник которых — российские ресурсы, специально созданные для такого распространения. 
+                    Нередко это фейковые копии западных медиа. Большинство таких сайтов создаются для долгосрочного использования, хотя встречаются и домены, 
+                    созданные ради одной единственной пропагандистской статьи. Иногда боты Doppelgänger распространяют пропагандистские ролики, карикатуры на 
+                    западных лидеров и фейковые цитаты знаменитостей.<br><br>
+
+                    Другая популярная сеть — "Матрешка" (Overload). Такие боты оставляют комментарии на страницах фактчекеров и заставляют их перепроверять информацию, 
+                    тем самым отвлекая от настоящих запросов и перегружая заведомо бесполезной работой. Аналогичные сообщения боты рассылают в личные сообщения фактечекерам 
+                    и на их электронные почты.<br><br>
+
+                    Боты "Матрешки" <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://theins.ru/news/268747" target="_blank">работают</a> в связке: один аккаунт публикует фейковую новость (например, фотографию граффити якобы из Лос-Анджелеса с изображением 
+                    президента Украины Владимира Зеленского в виде нищего), а другой просит фактчекеров проверить, не фейк ли это. Те же боты ретвитят сообщения из 
+                    аккаунтов расследовательских проектов или СМИ, к которым потом обращаются для "проверки" фактов — вероятно, чтобы выглядеть "лояльными" читателями, 
+                    людьми из того же "лагеря".<br><br>
+
+                    В начале июля из <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://www.justice.gov/opa/pr/justice-department-leads-efforts-among-federal-international-and-private-sector-partners" target="_blank">расследования</a> ФБР стало известно о еще одной сети ботов из 968 аккаунтов (для сравнения, в Doppelgänger каждый месяц их 
+                    <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://x.com/antibot4navalny/status/1815763220583350636" target="_blank">используется</a> не менее 75 тыс.) — "Мелиоратор". По данным ФБР, они распространяли фейки для аудитории из США, Польши, Германии, Нидерландов, Испании, Украины и Израиля. 
+                    Такие боты как правило публиковали пророссийские твиты с фейковых аккаунтов, якобы принадлежащих зарубежным политикам и чиновникам.<br>
+                    По мнению эксперта из "Блокировщика ботов" боты масштаба "Мелиоратора" – лишь "капля в море" бот-экосистемы X.
+                </p> 
+                <h3 class="text-[20px]  font-medium leading-[1.23] pb-[20px]">
+                    Российские боты, направленные на русскоязычную аудиторию
+                </h3>
+                <p class="text-[18px] leading-[1.55] font-normal">
+                    Среди ботов, направленных на русскоязычную аудиторию, можно выделить несколько популяций, у каждой из которых свои целевая аудитория, 
+                    методы работы, повестка и критерии выявления. У всех таких ботов есть общее свойство — они часто противоречат сами себе.<br><br>
+
+                    Самая распространенная группа ботов <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://x.com/antibot4navalny/status/1569746466096447488" target="_blank">действует</a> от лица провоенных россиян. Например, некоторые боты 
+                    <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://x.com/antibot4navalny/status/1569746466096447488" target="_blank">маскируются</a> под аполичных российских обывателей: 
+                    они поддерживают Кремль, потому что якобы довольны жизнью. Другие боты маскируются под аполитичную молодежь — например, подростков, которые любят 
+                    аниме и корейскую поп-музыку.<br><br>
+
+                    До того как системные российские СМИ <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://www.agents.media/pyat-provlastnyh-smi-otklyuchili-kommentarii-v-twitter-eto-pozvolilo-kremlevskoj-fabrike-trollej-osvobodit-do-chetverti-svoih-moshhnostej/" target="_blank">закрыли</a> комментарии в X, основным местом обитания таких ботов были именно они. 
+                    После они мигрировали на наиболее "неудобные" для Кремля аккаунты: оппозиционных организаций и лидеров мнений, западных СМИ, российских СМИ в изгнании.<br><br>
+
+                    Остальные сегменты ботов, направленные на внутрироссийскую аудиторию, значительно менее многочисленны. Например, другой образ, который <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://t.me/agentstvonews/5276" target="_blank">используют</a> боты, 
+                    ー "неуверенный противник власти". В постах они пытаются разобщить аудиторию X и усиливать разногласия между российскими оппозиционерами, эксплуатируя 
+                    острые вопросы к лидерам оппозиции.<br><br>
+
+                    Кроме того, боты ведут аккаунты "украинцев с пророссийской позицией", которые недовольны властями в Украине. Они призывают как можно скорее 
+                    остановить боевые действия и признать границы оккупированных территорий страны. Тролли также пытаются разжигать недоверие к правительству Украины.
+                </p>
+            </div>  
+
+            <div class="space-y-[50px] pt-[60px]">
+                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23] pb-[50px]">Количество и активность</h2> 
+                <h3 class="text-[20px]  font-medium leading-[1.23]">
+                    Российские боты, направленные на зарубежную аудиторию
+                </h3>
+                <p class="text-[18px] leading-[1.55] font-normal">
+                   Сеть Doppelganger "расходует" около 75 тыс. аккаунтов в месяц. Некоторые из них просто бросают после короткого периода использования, 
+                   другие блокирует администрация X.<br><br>
+
+                   По состоянию на июль 2024 года самая крупная кампания ботов Doppelganger в Х прошла после теракта в Крокусе: боты <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://theins.ru/news/270211" target="_blank">продвигали</a> статьи о том, что 
+                   ИГИЛ не несет ответственность за теракт в Москве, а виновны в нем якобы США, Украина и Великобритания. За три дня боты написали более 7 млн твитов 
+                   на 9 языках, набравших почти 17 млн просмотров.<br><br>
+                   
+                   Вторая по величине кампания распространяла ролик, высмеивающий Олимпийские игры в Париже, власти Франции и руководство Международного олимпийского комитета. 
+                   В ролике <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://x.com/agents_media/status/1816124886420492339" target="_blank">снялись</a> российские актеры. 
+                   Суммарно твиты набрали более 17 млн просмотров при общем количестве твитов около 4.9 млн.<br><br>
+
+                   Третья касалась распространения <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://www.agents.media/kremleboty-brosili-vse-sily-na-prodvizheniya-snyatogo-v-moskve-rolika-protiv-bajdena-v-video-sygrali-dve-rossijskie-aktrisy-i-akter-zagrimirovannyj-pod-solista-little-big/" target="_blank">снятого</a> в России пропагандистского видеоролика с критикой президента США 
+                   Джо Байдена — тогда <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://x.com/antibot4navalny/status/1806023276306542735" target="_blank">не менее</a> 24700 аккаунтов 
+                   в течение трех дней разместили более 6.5 млн твитов на 13 языках, набравших суммарно около 4.8 млн просмотров.
+                </p>
+            </div>          
+        </div>
+        <div class=" py-[60px] mx-0 min-[640px]:mx-auto min-[960px]:mx-0 min-[640px]:w-[600px] min-[960px]:w-[940px] min-[1200px]:w-full ">
+          <iframe title="Кампании ботов в X, направленные на зарубежную аудиторию" aria-label="Split Bars" id="datawrapper-chart-c55ay" src="https://datawrapper.dwcdn.net/c55ay/5/" scrolling="no" class="w-full border-0 h-[305px]" data-external="1">
+            </iframe>      
+        </div>
+        <div class="space-y-[50px] mx-0 min-[640px]:mx-auto min-[960px]:mx-0 min-[640px]:w-[600px] min-[960px]:w-[700px] min-[1200px]:w-[860px]">
+            <p class="text-[18px] leading-[1.55] font-normal pb-[40px]">
+                Число просмотров в этих масштабных кампаниях несильно превышало число твитов, если вообще превышало. Это значит, что в среднем твиты ботов получают 
+                лишь единицы просмотров, но вследствие огромного числа постов в совокупности они все же имеют некоторую видимость.<br><br>
+
+                Аналитики OpenAI <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://downloads.ctfassets.net/kftzwdyauwt9/5IMxzTmUclSOAcWUXbkVrK/3cfab518e6b10789ab8843bcca18b633/Threat_Intel_Report.pdf" target="_blank">отмечают</a>, что типичные сообщения ботов имели около 1000 ретвитов (сделанных другими ботами), ноль ответов и ноль лайков. 
+                Из этого аналитики делают вывод, что кампании ботов вряд ли значимо влияют на общественное мнение.<br><br>
+
+                В кампании "Матрешка" боты <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://www.sgdsn.gouv.fr/files/files/20240611_NP_SGDSN_VIGINUM_Matriochka_EN_VF.pdf" target="_blank">призывают</a> от 50 до 150 фактчекеров на каждую фейковую новость, которую они просят проверить. 
+                Всего так было <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://checkfirst.network/operation-overload-how-pro-russian-actors-flood-newsrooms-with-fake-content-and-seek-to-divert-their-efforts/" target="_blank">таргетировано</a> около 800 фактчекеров, им направили около 2400 твитов. По данным “Блокировщика ботов”, твиты вели 
+                на 430 фейковых материалов, а в кампании приняло участие 300 бот-аккаунтов.<br><br>
+
+               Сеть "Мелиоратор", по данным ФБР, состояла из 968 аккаунтов.
+            </p>
+            <h3 class="text-[20px] font-medium leading-[1.23] pb-[20px]">
+                Российские боты, направленные на русскоязычную аудиторию
+            </h3>
+            <p class="text-[18px] leading-[1.55] font-normal pb-[40px]">
+                <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://x.com/antibot4navalny/status/1658706690387107840" target="_blank">По оценкам</a> "Блокировщика ботов", по состоянию на май 2023 года каждые сутки было активно около 530 аккаунтов ботов, а одновременно активно около 2-10 
+                сотрудников. За первые полгода после запуска детектирования русскоязычных ботов проект обнаружил более 7 тысяч таких аккаунтов. Боты комментируют твиты 
+                государственных, независимых и русскоязычных западных СМИ, оппозиционных политиков и крупных антипутинских аккаунтов, включая анонимные.<br><br>
+
+                Около 17% комментариев под публикациями оппозиционных политиков и крупных СМИ были написаны ботами. При этом из-за "<a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://yandex.ru/q/nosens/11323063042/" target="_blank"></a>" в
+                результатах поиска внутри приложения остается около 1,5% постов ботов, примерно столько же высвечиваются в комментариях под публикациями.<br><br>
+
+                Другие сегменты ботов, направленных на русскоязычную аудиторию (боты, притворяющиеся украинцами с пророссийской позицией или россиянами оппозиционных взглядов), распространены значительно меньше.
+            </p>
+
+            <div class="space-y-[50px] pb-[30px] ">
+                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23] pb-[60px]">Темы и нарративы</h2>  
+                <h3 class="text-[20px]  font-medium leading-[1.23] ]">
+                    Российские боты, направленные на зарубежную аудиторию
+                </h3>
+                <p class="text-[18px] leading-[1.55] font-normal pb-[30px]">
+                    Помимо вышеперечисленного, боты Doppelganger <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://vot-tak.tv/" target="_blank">рассказывали</a> пользователям в Украине, США и ЕС о коррупции украинских властей, ущербе гражданам 
+                    ЕС и США от помощи Украине, а также неминуемости поражения ВСУ. Также боты часто критиковали Байдена, обсуждали внутренние проблемы США, критиковали 
+                    политику страны в отношении Израиля и предупреждали о вреде ЛГБТ-сообщества для всего мира.<br><br>
+
+                    Для распространения этих нарративов <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://theins.ru/news/267071" target="_blank">публиковались</a>, например, фейковые цитаты известных людей, якобы призывавших прекратить помогать Украине, ссылки на 
+                    фейковые сайты МВД Германии, МИД Польши и НАТО. Встречались и посты с антисемитскими <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://theins.ru/news/266871" target="_blank">месседжами</a>, рассчитанными на западную аудиторию. Кроме того, 
+                    боты продвигали сайт EuroBRICS, <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://archive.ph/uXQcS" target="_blank">связанный</a> с Главным разведывательным управлением России.
+                </p>
+                <h3 class="text-[20px] font-medium leading-[1.23] pb-[20px]">
+                    Российские боты, направленные на русскоязычную аудиторию
+                </h3>
+                <p class="text-[18px] leading-[1.55] font-normal] pb-[50px]"> 
+                    Фейковые аккаунты в X для русскоязычной аудитории маскируются под аполичных российских обывателей. Они поддерживают власти, потому что якобы довольны жизнью. 
+                    После февраля 2022 года нарратив ботов в X свелся к созданию иллюзии тотальной поддержки войны в Украине. Кроме этого боты одобряли принимаемые законы, 
+                    оправдывали самые резонансные случаи преследования оппонентов власти, поддерживали импортозамещение и радовались повышению налогов.<br><br>
+
+                    Боты также пытаются разжигать недоверие к украинским властям. Например, в марте 2023 года боты писали об украинских детях, похищенных и вывезенных 
+                    с оккупированных территорий. По их словам, в Украине детей "кинули в детдома, а Россия отдает их в семьи". Подобным образом, боты пытались увести 
+                    дискуссию о краже детей и выдачи ордеров МУС на Путина и Львову-Белову, считают в "Блокировщике ботов".<br><br>
+
+                    Помимо этого, боты пытаются выстроить нарратив "русофобии": они пишут о "ненужных россиях за границей" и поддерживают новости прокремлевских 
+                    СМИ об эмигрантах, вернувшихся в Россию.
+                </p>
+            </div>                
+        </div>
+
+        <div class="space-y-[50px] mx-0 min-[640px]:mx-auto min-[960px]:mx-0 min-[640px]:w-[600px] min-[960px]:w-[700px] min-[1200px]:w-[860px]">
+            <div class="space-y-[50px] pb-[30px] ">
+                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23] pb-[50px]">Способы детектирования</h2>  
+                <h3 class="text-[20px]  font-medium leading-[1.23] ]">
+                    Российские боты, направленные на зарубежную аудиторию
+                </h3>
+                <p class="text-[18px] leading-[1.55] font-normal pb-[30px]">
+                    Методы определения ботов сильно варьируются в зависимости от конкретной популяции и информационной кампании. Единой методологии, 
+                    позволяющей вычислить большинство ботов в Х, не существует.<br><br>
+
+                    Например, ботов Doppelganger определяют по ссылкам на сайты, распространяемые данной пропагандистской сетью. 
+                    Такие сайты были выявлены несколькими исследовательскими командами (самая крупная из них — из Meta, <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://about.fb.com/wp-content/uploads/2022/10/CIB-Report_-China-Russia_Sept-2022-1-1.pdf" target="_blank">написавшая</a> об этом отчет). 
+                    Поскольку ссылки на сами сайты блокируются соцсетями, боты используют схему из нескольких ступеней переадресации. 
+                    Для переадресации используется несколько доменов, которые и дают критерий принадлежности аккаунтов к сети Doppelganger.<br><br>
+
+                    Ботов "Матрешка" <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://theins.ru/news/268747" target="_blank">вычисляют</a> по идентичному поведению десятков аккаунтов, дословно повторяющих тексты обращений к фактчекерам. Т
+                    акие обращения публикуются с очень короткими временными интервалами. Другая недавняя активность помимо публикации фейков, 
+                    запросов на их проверку и ретвитов для создания видимости лояльности, в таких аккаунтах отсутствует.
+                </p>
+                <h3 class="text-[20px] font-medium leading-[1.23] ">
+                    Российские боты, направленные на русскоязычную аудиторию
+                </h3>
+                <p class="text-[18px] leading-[1.55] font-normal">
+                    Для выявления троллей на зарплате, нацеленных на русскоязычную аудиторию, "Блокировщик ботов" <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://x.com/antibot4navalny/status/1569746495317868544" target="_blank">анализирует</a> аккаунты, которые комментируют 
+                    одни и те же твиты. Проект отмечает их отклонение в поведении, риторике и взаимодействии с обычными пользователями. Исследователи скачивают 
+                    публикуемые твиты и выделяют те аккаунты, которые большой группой комментируют одни и те же новости. Долгое время боты почти ничего не писали 
+                    за пределами целевых аккаунтов, однако, отмечает эксперт проекта, недавно они начали периодически постить что-то на собственных страницах 
+                    (например, посты про "прекрасные места РФ для поселения").<br><br>
+
+                    Комментарии в интересах российских властей определяют и по тому, что аккаунты могут противоречить сами себе. Боты комментируют большое 
+                    число новостей, не вникая в их содержание и реагируя лишь на заголовок. Они общаются с другими пользователями в комментариях, но не под 
+                    собственными твитами.<br><br>
+
+                    Для обучения модели определения ботов первые несколько сотен аккаунтов ботов были <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://x.com/antibot4navalny/status/1658706693105000448" target="_blank">отобраны</a> вручную.<br><br>
+
+                    Эксперт "Блокировщика ботов" отмечает, что с приходом Илона Маска на должность CEO противодействие ботам всех видов в Х сильно усложнилось. 
+                    В частности, Х почти перестал удалять аккаунты русскоязычных "троллей на зарплате", а также перекрыл исследователям доступ к API 
+                    (т.е. возможность программного анализа активности пользователей) и систематически противодействует попыткам исследовать активность обходными 
+                    способами, без API.
+                </p>
+            </div>   
+            <div class="space-y-[50px] pb-[30px] ">
+                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23]">Откуда боты берут аккаунты</h2>  
+                <p class="text-[18px] leading-[1.55] font-normal">
+                    Эксперт "Блокировщика ботов" утверждает, что чаще всего бот-аккаунты в Х либо берутся в аренду, либо покупаются. Нередко такие аккаунты оказываются 
+                    последовательно задействованы сразу в нескольких видах активности. Например, аккаунт может сначала рекламировать странные криптовалютные <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://techreport.com/crypto-news/crypto-scam-resurgence-through-ai-social-media/" target="_blank">схемы</a>, 
+                    а через несколько дней или недель распространять политическую пропаганду.<br>
+                    Среди бот-аккаунтов есть взломанные и переданные от живых пользователей. Они используются в случаях, когда оператору важно, чтобы у аккаунтов была 
+                    история человеческой активности. Например, большая часть ботов "Матрёшка" именно такие.<br><br>
+
+                    От месяца к месяцу могут меняться поставщики и "партия" аккаунтов, а также то, к какой популяции аккаунт в данный момент "прикреплен". 
+                    Варьируются и свойства аккаунтов: шаблоны имен, оформления, местоположения, подписок.
+                </p>
+            </div> 
+            <div class="pb-[140px] border-b border-[#CCCCCC] space-y-[50px]">
+                <h2 class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[42px] font-medium leading-[1.23] pb-[50px]">Технические детали</h2>  
+                <h3 class="text-[20px]  font-medium leading-[1.23] ]">
+                    Российские боты, направленные на зарубежную аудиторию
+                </h3>
+                <p class="text-[18px] leading-[1.55] font-normal">
+                   Технически боты также различаются в зависимости от популяции и информационной кампании.<br><br>
+
+                </p>
+                <div>
+                    <p class="text-[18px] leading-[1.55] font-normal">
+                        Исследователи EEAS <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://euvsdisinfo.eu/uploads/2024/06/EEAS-TechnicalReport-DoppelgangerEE24_June2024.pdf" target="_blank">выделяют</a> четыре стадии работы ботов Doppelgänger:
+                    </p>
+                    <ul class="list-decimal pl-6 space-y-1 text-[18px] leading-[1.55] font-normal pb-[10px]">
+                        <li>
+                             Группа из 8-12 аккаунтов публикует оригинальные сообщения. Эти сообщения обычно содержат текстовую подпись, ссылку, ведущую на сайты 
+                             двойников, и изображение, представляющее собой миниатюру статьи;
+                        </li>
+                        <li>
+                             Большая группа аккаунтов репостит ссылки на оригинальные посты, не добавляя никакого дополнительного текста — часто таких репостов более 1000;
+                        </li>
+                        <li>
+                             Другие аккаунты увеличивают охват путем повторного размещения постов в качестве комментариев на лентах пользователей с большим количеством подписчиков. 
+                             Использование одноразовых аккаунтов для размещения и усиления контента усложняет расследование, поскольку после выполнения поставленных задач эти аккаунты 
+                             становятся неактивными;
+                        </li>
+                        <li>
+                             Чтобы обойти ограничения платформы на размещение веб-ссылок на домены из черного списка, сеть использует многоступенчатую технику перенаправления URL.
+                        </li>
+                   </ul>
+                   <p class="text-[18px] leading-[1.55] font-normal">
+                    Сначала аккаунт размещает ссылку, которая перенаправляет пользователей через несколько промежуточных сайтов, прежде чем они попадают в конечный 
+                    пункт назначения — статью, опубликованную на одном из сайтов Doppelganger. Эти промежуточные этапы включают в себя целевую страницу с обфусцированным 
+                    кодом JavaScript и обработчик перенаправления, которые скрывают конечный URL и отслеживают эффективность кампании.
+                   </p>
+                </div>
+                <p class="text-[18px] leading-[1.55] font-normal">
+                    По <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://downloads.ctfassets.net/kftzwdyauwt9/5IMxzTmUclSOAcWUXbkVrK/3cfab518e6b10789ab8843bcca18b633/Threat_Intel_Report.pdf" target="_blank">информации</a> аналитиков OpenAI, комментарии размещались аккаунтами всего с одним-двумя твитами. Тексты обычно сопровождались случайной ссылкой, 
+                    например "solarpanelfor[.]sale". Эти ссылки перенаправляли на ряд сайтов, которые неоднократно приписывались Doppelganger.<br><br>
+
+                    Сайты были ограничены геозоной, так что их могли просматривать только люди с IP-адресом в целевой стране. Однако, судя по всему, операторы кампании 
+                    допустили техническую оплошность, и некоторые английские, немецкие и польские статьи можно было просмотреть только с французского IP.<br><br>
+
+                   Исследователи Correctiv <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://correctiv.org/en/fact-checking-en/2024/07/22/inside-doppelganger-how-russia-uses-eu-companies-for-its-propaganda/" target="_blank">выяснили</a>, что домены сайтов Doppelganger зарегистрированы в Малайзии и Литве, для редиректа на нужные сайты на основе данных 
+                   геолокации используется эстонская программа Keitaro. Для промежуточных доменов, нужных для редиректа, использовались американский сервис BL Networks и британский сервис Liber Systems, а для обхода детектирования реального назначения ссылок — британские TNSecutiry и Netshield.<br>
+
+                   Некоторые боты используют языковую модель ChatGPT для создания уникальных текстов на разных языках. Например, боты Doppelgänger публиковали тексты на 
+                   13 языках, включая литовский, корейский, турецкий и арабский. На каждом языке были опубликованы сотни уникальных твитов, сгенерированных языковой 
+                   моделью — именно уникальность текстов <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://theins.ru/news/272248" target="_blank">позволила</a> ботам избежать автоматической блокировки соцсетью и достичь относительно высоких охватов.<br><br>
+
+                   Компания OpenAI <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://openai.com/index/disrupting-deceptive-uses-of-ai-by-covert-influence-operations/" target="_blank">подтвердила</a>, что ботофермы в Х используют ChatGPT для написания текстов твитов, и заблокировала соответствующие аккаунты. Вероятно, 
+                   пытаясь скрыться от обнаружения, этот кластер ботов получал доступ к моделям OpenAI с помощью сервиса, связанного с компаниями в России и Чехии.<br><br>
+
+                   Организация NewsGuard, специализирующаяся на борьбе с дезинформацией, <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://www.newsguardtech.com/special-reports/generative-ai-models-mimic-russian-disinformation-cite-fake-news/" target="_blank">установила</a>, что в таких целях кроме ChatGPT могут использоваться и другие модели. 
+                   Российские боты могут пользоваться всеми популярными сервисами для генерации текстов и изображений — встроенные в сервисы инструменты безопасности 
+                   фактически не ограничивают создание дезинформации.<br><br>
+
+                   Кроме генерации уникальных текстов, для обхода блокировок боты <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://theins.ru/news/272248" target="_blank">накладывали</a> на изображения фильтры и обрезали видео в разных точках, делая их различными 
+                   по длине (иногда буквально на миллисекунды), так что машинный интеллект считывал их как разные.<br><br>
+
+                   Ботов Doppelganger <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://theins.press/news/273003" target="_blank">связывают</a> с компаниями "Национальные технологии" (конечным владельцем которого является "Ростех") и 
+                   "Агентство социального проектирования", а <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://vot-tak.tv/novosti/21-05-2024-chto-takoe-doppel" target="_blank">также</a> с группой компаний "Структура".<br><br>
+
+                   Боты "Матрешка" <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://theins.ru/news/268747" target="_blank">используют</a> принципиально другую стратегию. Каждый такой аккаунт тегает сотни фактчекеров из разных стран, давая ссылку на сообщение 
+                   другого бота, опубликовавшего фейковое изображение или видео. Обычно ретвит фактчекеру <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://www.sgdsn.gouv.fr/files/files/20240611_NP_SGDSN_VIGINUM_Matriochka_EN_VF.pdf" target="_blank">происходит</a> через 30-40 минут после публикации фейка. 
+                   Через несколько недель тот же аккаунт публикует новое фото или видео, и это сообщение, в свою очередь, впоследствии цитируется следующим аккаунтом. 
+                   Отсюда название "Матрешка": каждая новая учетная запись цитирует сообщение предыдущей. Нередко боты накладывают на распространяемые видео логотипы 
+                   авторитетных СМИ, чтобы создать видимость их подлинности.<br><br>
+
+                   Характерный <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://theins.ru/news/268747" target="_blank">признак</a> ботов "Матрешка" — очень короткие интервалы между твитами каждого отдельного бота в адрес СМИ и фактчекеров, чаще всего 
+                   они составляют 45 секунд.
+                </p>
+                <div>
+                     <p class="text-[18px] leading-[1.55] font-normal">
+                        Для управления ботами "Мелиоратор", по <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://theins.ru/news/272990" target="_blank">данным</a> ФБР, была создана отдельная инфраструктура на домене mlrtr.com. Там была размещена панель 
+                        управления для "бригадиров" ー операторов, управляющих автоматизированными ботами. Помимо прочего "Мелиоратор" позволял:
+                    </p>
+                     <ul class="list-disc pl-6 space-y-1 text-[18px] leading-[1.55] font-normal pb-[10px]">
+                         <li>
+                              создавать фейковые аккаунты, которые выглядели как аутентичные пользователи;
+                        </li>
+                        <li>
+                              автоматически создавать сообщения, которые основаны на теме и образе бота;
+                        </li>
+                        <li>
+                              публиковать посты, сложноотличимые от контента оригинальных пользователей;
+                        </li>
+                        <li>
+                              распространять фейки, которые ранее опубликовали другие боты;
+                        </li>
+                        <li>
+                              увеличивать охваты фейков.
+                        </li>
+                    </ul>
+                </div>
+                 <p class="text-[18px] leading-[1.55] font-normal pb-[30px]">
+                    В расследовании ФБР <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://theins.ru/news/272990" target="_blank">приводится</a> фрагмент кода, позволяющий обходить процедуру верификации пользователей X (он занимает всего несколько строк) — 
+                    с помощью него удавалось регистрировать сотни аккаунтов ботов.<br><br>
+
+                    Посты, юзерпики и иллюстрации в профилях ботов были <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://theins.ru/news/272990" target="_blank">созданы</a> с помощью библиотеки Faker. Обычно эта библиотека используется, 
+                    когда разработчикам приложений или сайтов нужно сгенерировать искусственные данные для тестирования программного обеспечения.
+                </p>
+
+                <h3 class="text-[20px]  font-medium leading-[1.23] ]">
+                    Российские боты, направленные на русскоязычную аудиторию
+                </h3>
+                <p class="text-[18px] leading-[1.55] font-normal">
+                    Большинство таких ботов управляются сотрудниками на зарплате. Исходя из статистики, собранной на май 2023 года, аккаунты ботов <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://x.com/antibot4navalny/status/1658714814884069376" target="_blank">создаются</a> преимущественно 
+                    в рабочие дни, почти всегда с 5 утра до 17 вечера, с пиками в 6-7 и 10-11 утра. Чтобы аккаунты выглядели менее подозрительными, активно твитить они 
+                    начинают не менее чем через <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://x.com/antibot4navalny/status/1658713760691806209" target="_blank">неделю</a> после создания.<br><br>
+
+                    В последнее время эта стратегия несколько изменилась. Эксперт "Блокировщика ботов" утверждает, что сейчас аккаунт может отлеживаться годами, иногда 
+                    ненадолго оживая при важных инфоповодах, а в остальное время молча "накапливая стаж". Например, аккаунты, начавшие активность на интервью Путина 
+                    Такеру Карлону, после пары комментариев "засыпали", чтобы снова оживать только апреле или августе 2024.<br><br>
+
+                    Обычно боты <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://x.com/antibot4navalny/status/1658710699571396608" target="_blank">отвечают</a> подряд на самые верхние комментарии к интересующим их постам — так они пытаются бороться с тем, что X отправляет их тексты в 
+                    конец списка комментариев. Кроме того, такие аккаунты <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://x.com/antibot4navalny/status/1658710708794662913" target="_blank">часто</a> ретвитят с цитированием — cоцсеть довольно плохо подавляет цитирования от "подозрительных" 
+                    аккаунтов.<br><br>
+
+                    Раньше боты подписывались в основном на <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://x.com/antibot4navalny/status/1658715839628034049" target="_blank">других</a> ботов, однако в последнее время они стали активнее подписываться на живых провластно настроенных 
+                    пользователей. Такая стратегия позволяет бот-аккаунту быстрее набрать себе базу подписчиков, так как многие обычные пользователи привыкли подписываться 
+                    в ответ.<br><br>
+
+                    Время активности ботов <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://x.com/antibot4navalny/status/1658714098547212288" target="_blank">отличается</a> от времени активности настоящих пользователей — основную массу комментариев они пишут в период с 8 до 20 часов, 
+                    с выразительным пиком в районе 14 часов. Около полудня у ботов наблюдается перерыв на обед. У "живых" пользователей активность с 10 до 22 ч более 
+                    равномерна, самые активные часы — с 18 до 21, а заметный спад активности возникает только начиная с 23 часов.<br><br>
+
+                    Боты <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://x.com/antibot4navalny/status/1658714495961767936" target="_blank">комментируют</a> утренние новости (в 8-9 часов) на 40% чаще, чем любые другие, а каждая новость с обеда и до позднего вечера получает меньше отклика, 
+                    чем в любое другое время. В выходные активность ботов заметно снижается.<br><br>
+
+                    Раньше X <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://x.com/antibot4navalny/status/1658713755126038534" target="_blank">блокировал</a> аккаунты ботов примерно в 9 раз чаще, чем аккаунты настоящих пользователей. В 80% случаев это происходило в первый месяц 
+                    существования бот-аккаунтов. Однако, по словам опрошенного нами эксперта "Блокировщика ботов", с приходом в компанию Илона Маска частота блокировок 
+                    сильно снизилась, и сейчас добиться блокировки найденных проектом ботов чаще всего не удается.
+                </p>
+            </div> 
+        </div>
+    </section>
+
+    <section id="end" class=" max-w-[1200px] mx-auto px-[10px] min-[640px]:px-[20px] py-[60px] ">
+        <div class="space-y-[50px] mx-0 min-[640px]:mx-auto min-[960px]:mx-0 min-[640px]:w-[600px] min-[960px]:w-[700px] min-[1200px]:w-[860px]">
+            <p class="text-[30px] min-[640px]:text-[38px] min-[1200px]:text-[52px] font-bold leading-[1.23] " style="font-family: 'Unbounded', sans-serif;">
+                Заключение
+            </p>
+            <p class="text-[18px] leading-[1.55] font-normal">
+                Боты активны практически во всех соцсетях, включая те, которые мы не рассматривали. 
+                Например, Meta <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://about.fb.com/wp-content/uploads/2022/10/CIB-Report_-China-Russia_Sept-2022-1-1.pdf" target="_blank">писала</a> о кампанях ботов Doppelganger в Facebook, 
+                а OpenAI <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://downloads.ctfassets.net/kftzwdyauwt9/5IMxzTmUclSOAcWUXbkVrK/3cfab518e6b10789ab8843bcca18b633/Threat_Intel_Report.pdf" target="_blank">обнаруживала</a> их на 
+                портале с мемами 9GAG. Наличие ботов в Telegram, X и Instagram <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://te-st.org/2024/07/19/artificial-intelligence-russian-propaganda/" target="_blank">подтверждают</a> и европейские аналитики и
+                нформационных атак. Бывший сотрудник "фабрики троллей", принадлежавшей Пригожину, также <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://www.svoboda.org/a/31065181.html" target="_blank">признавался</a>, 
+                что ее сотрудники, писали комментарии не только в VK, но и на Facebook и Youtube. В обнаруженных центром 
+                “Досье” внутренних <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://dossier-center.appspot.com/prig-it/" target="_blank">документах</a> фабрики присутствовали и планы по кампаниям в Instagram.<br><br>
+
+                Боты, направленные на российскую аудиторию, делятся на несколько основных типов: это либо наемные сотрудники, которые пишут комментарии к 
+                тематически отобранным постам, ориентируясь на методички, либо автоматизированные аккаунты, нередко использующие языковые модели для генерации 
+                текстов и копирующие тексты друг друга. Разные кластеры ботов, вероятно, связаны с различными проправительственными "ботофермами".<br><br>
+
+                Существуют и качественные различия между ботами для разных платформ. Исследователь пропаганды из Королевского Колледжа Лондона Максим Алюков 
+                отметил, что наименее качественная инфраструктура ботов была обнаружена в "Одноклассниках". По его словам, в этой соцсети аккаунты просто 
+                "бомбардируют" людей одинаковыми сообщениями, которые не привязаны к актуальной повестке. А в Telegram ботофермы более чувствительны к 
+                актуальным новостям и реже постят "идеологический мусор".<br><br>
+
+                Боты, направленные на зарубежную аудиторию, используют более сложные стратегии. Они включают распространение сетей фейковых сайтов 
+                или видеороликов (Doppelganger) и намеренную перегрузку фактчекеров работой ("Матрешка").<br><br>
+
+                Ботов на всех платформах объединяет то, что их активность отличается от активности обычных пользователей. Именно по этому признаку 
+                их и детектируют. Для анализа паттернов активности можно использовать модели машинного обучения, или более простые алгоритмы, 
+                фиксирующие совпадения в текстах или доменах пересылаемых ссылок.<br><br>
+
+                Нет никаких признаков того, что активность кремлевских ботов идет на спад. Наоборот, исследователи фиксируют повышение 
+                этой активности и усложнение алгоритмов ботоферм, изобретающих новые способы избежать блокировок. В свою очередь, проекты 
+                по обнаружению ботов продолжают совершенствовать свои методологии. Однако ключевым фактором остается желание администраций 
+                крупнейших социальных платформ бороться с информационными атаками. Если Telegram до сих пор оперативно блокирует ботов, то X 
+                ослабил механизмы блокировки с приходом в руководство компании Илона Маска, а VK и вовсе скорее содействует работе прокремлевских 
+                аккаунтов, при этом оперативно противодействуя бот-кампаниям оппозиции.<br><br>
+
+                В любом случае, проекты мониторинга ботов выполняют критически важную задачу — даже если не каждая соцсеть готова эффективно вычищать 
+                |фейковые аккаунты, информированный пользователь менее уязвим для их пропаганды.
+            </p>
+
+            <div class="pt-[80px] pb-[40px]">
+                <p class="text-[15px] leading-[1.55] font-normal">
+                    Благодарим <a class="text-[#0007ff] hover:text-[#3A40FF]" href="https://cedarus.io/" target="_blank">Проект Cedar</a>,<br>
+                    Алесю Соколову,<br>
+                    Тимура Хайрутдинова
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <section id="contacts" class="bg-black pt-[clamp(140px,25vw,180px)] pb-[clamp(160px,30vw,210px)] h-[clamp(550px,120vw,790px)">
+        <div class="mx-auto max-w-[1200px] px-[20px]">
+        <h2 class="font-bold text-white leading-[clamp(40px,12vw,94px)] text-[clamp(34px,7vw,50px)] sm:text-[50px] lg:text-[65px]">
+            Контакты
+        </h2>
+        <p class="font-inter text-white font-normal leading-[clamp(28px,8vw,47px)] text-[clamp(16px,4.5vw,18px)] sm:text-[30px] mt-[clamp(80px,25vw,220px)]">
+            <a href="mailto:info@rks.global" target="_blank">
+            info@rks.global
+            </a>
+        </p>
+        <div class="mt-[20px] h-[5px] bg-white max-w-[1160px] w-full"></div>
+        </div>
+    </section>
+
+</body>
+</html>

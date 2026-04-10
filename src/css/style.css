@@ -1,0 +1,91 @@
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+}
+
+
+
+
+
+
+
+html[lang="en"] [data-hide-lang="en"] {
+  display: none !important;
+}
+
+
+
+
+
+
+
+/* Зум изображения */
+.t107__width.is-active {
+    position: fixed !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    height: 100vh !important;
+    object-fit: cover;
+    z-index: 10001; 
+    cursor: ns-resize;
+    object-position: center 0%;
+    touch-action: none;
+}
+
+.zoom-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white; 
+    z-index: 10000;
+}
+
+body.img-is-zoomed .zoom-overlay {
+    display: block;
+}
+
+.close-zoom-btn {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    color: black;
+    border: none;
+    border-radius: 50%;
+    font-size: 32px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 10002;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body.img-is-zoomed .close-zoom-btn {
+    display: block;
+}
+
+body.img-is-zoomed {
+    overflow: hidden !important;
+    touch-action: none;
+}
+
+
+
+
+
+
+.btn-ru, .btn-en { display: none; }
+html[lang="ru"] .btn-ru { display: inline-block; }
+html[lang="en"] .btn-en { display: inline-block; }
